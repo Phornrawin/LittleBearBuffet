@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MenuViewCustomer">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc337" height="57.0" stroke="#fffbfb" strokeType="INSIDE" strokeWidth="0.0" width="1280.0" />
-      <AnchorPane layoutX="867.0" layoutY="123.0" prefHeight="587.0" prefWidth="401.0" />
-      <TabPane layoutY="56.0" prefHeight="664.0" prefWidth="867.0" tabClosingPolicy="UNAVAILABLE">
+      <AnchorPane layoutX="827.0" layoutY="57.0" prefHeight="664.0" prefWidth="453.0">
+         <children>
+            <Label layoutX="160.0" layoutY="14.0" text="Order Result">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <TabPane layoutY="56.0" prefHeight="664.0" prefWidth="828.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Meat" />
-          <Tab text="sea food" />
+          <Tab text="Sea food" />
           <Tab text="Dim Sum" />
           <Tab text="Vegetable" />
           <Tab text="Sushi" />
