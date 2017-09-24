@@ -7,17 +7,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="implements protocols, modify API diagram">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/API/src/main/java/protocols/MessageProtocol.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Database/src/main/java/controllers/CoreController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Database/src/main/java/controllers/DatabaseManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Database/src/main/java/controllers/MainController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Database/src/main/java/controllers/SQLiteManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Database/src/main/java/views/RootView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Modeling/Little Bear Buffet.vpp" afterPath="$PROJECT_DIR$/Diagram/Modeling/Little Bear Buffet.vpp" />
+    <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="implements database module: receive add order msg in controller, create add order sequence diagram">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/buffetDB.db" afterPath="$PROJECT_DIR$/Database/buffetDB.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/src/main/java/models/Category.java" afterPath="$PROJECT_DIR$/API/src/main/java/models/Category.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/src/main/java/controllers/MainController.java" afterPath="$PROJECT_DIR$/Database/src/main/java/controllers/MainController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -80,12 +73,12 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Database/src/main/java/controllers/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+            <state relative-caret-position="378">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2260#2261#0" expanded="true" />
-                <element signature="e#2302#2303#0" expanded="true" />
+                <element signature="e#2210#2211#0" expanded="true" />
+                <element signature="e#2252#2253#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -519,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506244113214</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="implements database module: receive add order msg in controller, create add order sequence diagram">
+      <created>1506257018029</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1506257018029</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -534,13 +534,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.23899034" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.7610097" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4384966" sideWeight="0.7610097" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25349087" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -589,7 +589,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="implements models, modify API diagram" />
     <MESSAGE value="implements protocols, modify API diagram" />
-    <option name="LAST_COMMIT_MESSAGE" value="implements protocols, modify API diagram" />
+    <MESSAGE value="implements database module: receive add order msg in controller, create add order sequence diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="implements database module: receive add order msg in controller, create add order sequence diagram" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -802,12 +803,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Database/src/main/java/controllers/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+        <state relative-caret-position="378">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2260#2261#0" expanded="true" />
-            <element signature="e#2302#2303#0" expanded="true" />
+            <element signature="e#2210#2211#0" expanded="true" />
+            <element signature="e#2252#2253#0" expanded="true" />
           </folding>
         </state>
       </provider>
