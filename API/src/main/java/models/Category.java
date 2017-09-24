@@ -29,4 +29,11 @@ public class Category {
     public List<Item> getItems() {
         return items;
     }
+    public Item getItem(int itemId){
+        for(Item item : items)
+            if(item.getId() == itemId)
+                return item;
+        return null;
+    }
+
 }
