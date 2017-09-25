@@ -93,13 +93,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-189">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="294">
+              <caret line="68" column="67" lean-forward="false" selection-start-line="68" selection-start-column="67" selection-end-line="68" selection-end-column="67" />
+              <folding>
+                <marker date="1506327280828" expanded="true" signature="69254:69272" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="69254:69285" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="69254:69300" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="69335:71670" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="69348:71655" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="69402:69789" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="69421:69774" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="69530:69754" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="69570:69720" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="69591:69698" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="69839:70166" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="69858:70151" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="69953:70131" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="69993:70097" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="70014:70075" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="70217:70482" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="70236:70467" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="70269:70447" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="70309:70413" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="70330:70391" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="70525:70831" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="70544:70816" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="70618:70796" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="70658:70762" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="70679:70740" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="70882:71234" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="70901:71219" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="70975:71199" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="71015:71165" ph="..." />
+                <marker date="1506327280828" expanded="true" signature="71036:71143" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainView.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Customer/src/main/resources/MainView.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="41" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
@@ -167,6 +211,7 @@
         <option value="$PROJECT_DIR$/Customer/src/main/java/controllers/SocketManager.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/controllers/CoreController.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/controllers/MainController.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -214,6 +259,43 @@
               <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
               <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Customer" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -229,6 +311,125 @@
     <property name="project.structure.side.proportion" value="0.30147058" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/src/main/java/models/Category.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/src/main/java/models/Item.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/src/main/java/protocols/MessageProtocol.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Database/src/main/java/controllers/DatabaseManager.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Database/src/main/java/controllers/MainController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Database/src/main/java/controllers/SQLiteManager.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Database/src/test/java/controllers/SQLiteManagerTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/buffetDB.db</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Database/buffetDB.db</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -497,7 +698,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506324331865</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add url link for ImageView in MainView">
+      <created>1506326318265</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1506326318266</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -570,7 +778,8 @@
     <MESSAGE value="implements protocols, modify API diagram" />
     <MESSAGE value="implements database module: receive add order msg in controller, create add order sequence diagram" />
     <MESSAGE value="create class" />
-    <option name="LAST_COMMIT_MESSAGE" value="create class" />
+    <MESSAGE value="add url link for ImageView in MainView" />
+    <option name="LAST_COMMIT_MESSAGE" value="add url link for ImageView in MainView" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -833,16 +1042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Customer/src/main/resources/MainView.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="77" lean-forward="false" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Customer/target/classes/CustomerApplication.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -976,10 +1175,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-189">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="294">
+          <caret line="68" column="67" lean-forward="false" selection-start-line="68" selection-start-column="67" selection-end-line="68" selection-end-column="67" />
+          <folding>
+            <marker date="1506327280828" expanded="true" signature="69254:69272" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="69254:69285" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="69254:69300" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="69335:71670" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="69348:71655" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="69402:69789" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="69421:69774" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="69530:69754" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="69570:69720" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="69591:69698" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="69839:70166" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="69858:70151" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="69953:70131" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="69993:70097" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="70014:70075" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="70217:70482" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="70236:70467" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="70269:70447" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="70309:70413" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="70330:70391" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="70525:70831" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="70544:70816" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="70618:70796" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="70658:70762" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="70679:70740" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="70882:71234" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="70901:71219" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="70975:71199" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="71015:71165" ph="..." />
+            <marker date="1506327280828" expanded="true" signature="71036:71143" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Customer/src/main/resources/MainView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="41" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
   </component>
