@@ -1,5 +1,6 @@
 package controllers;
 
+import models.Category;
 import models.Order;
 import protocols.MessageProtocol;
 import protocols.ProtocolParser;
@@ -7,6 +8,7 @@ import protocols.ProtocolParser;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.List;
 import java.util.Map;
 
 public class MainController implements  CoreController {
@@ -22,30 +24,32 @@ public class MainController implements  CoreController {
             System.out.println("Start server...");
             while (true) {
                 Socket connectionSocket = serverSocket.accept();
-//                BufferedReader inFromClient = new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
                 InputStream inFromClient = connectionSocket.getInputStream();
                 DataOutputStream outToClient = new DataOutputStream(connectionSocket.getOutputStream());
 
                 Map<String, String> map = parser.parseToMap(inFromClient);
                 if(MessageProtocol.Method.ADD.equals(map.get(MessageProtocol.Header.METHOD))){
                     if (MessageProtocol.Type.ORDER.equals(map.get(MessageProtocol.Header.TYPE))){
-                        Order order = parser.parseToOrder(map);
-                        Order newOrder = dbManager.addOrder(order);
-                        if(newOrder != null){
-                            String replyMsg = parser.parseToString(newOrder, SENDER, MessageProtocol.Method.REPLY);
-                            outToClient.writeBytes(replyMsg);
-                        }else{
-                            // TODO reply error can't add order
-                        }
+                        addOrder(map, outToClient);
                     }else{
                         // TODO reply bad msg
                     }
                 }else if(MessageProtocol.Method.LOAD.equals(map.get(MessageProtocol.Header.METHOD))){
+                    if (MessageProtocol.Type.CATEGORY_ID.equals(map.get(MessageProtocol.Header.TYPE))){
+                        replyCategoryID(map, outToClient);
+                    }else if (MessageProtocol.Type.CATEGORY.equals(map.get(MessageProtocol.Header.TYPE))){
+                        // TODO reply category
+                    }else if (MessageProtocol.Type.ITEM_ID.equals(map.get(MessageProtocol.Header.TYPE))){
+                        // TODO reply item id
+                    }else if (MessageProtocol.Type.ITEM.equals(map.get(MessageProtocol.Header.TYPE))){
+                        // TODO reply item
+                    } else {
+                        // TODO reply bad msg
+                    }
 
                 } else {
-                    // TODO reply bad msg
+                    replyBadMessage(outToClient);
                 }
-
                 outToClient.close();
             }
         } catch (IOException e) {
@@ -53,9 +57,48 @@ public class MainController implements  CoreController {
         }
     }
 
-//    private
+    private void addOrder(Map<String, String> map, DataOutputStream out) throws IOException {
+        Order order = parser.parseToOrder(map);
+        Order newOrder = dbManager.addOrder(order);
+        if(newOrder != null){
+            String replyMsg = parser.parseToString(newOrder, SENDER, MessageProtocol.Method.REPLY);
+            out.writeBytes(replyMsg);
+        }else{
+            // TODO reply error can't add order
+        }
+    }
 
+    private void replyCategoryID(Map<String, String> map, DataOutputStream out) throws IOException {
+        List<Integer> ids = dbManager.getCategoryIds();
+        if(ids != null){
+            String replyMsg = parser.parseToString(ids, SENDER, MessageProtocol.Method.REPLY, MessageProtocol.Type.CATEGORY_ID);
+            out.writeBytes(replyMsg);
+        }else {
+            // TODO reply error can't load category ids
+        }
+    }
+
+    private void replyCategory(Map<String, String> map, DataOutputStream out){
+        try{
+            Category category = dbManager.getCategory(Integer.parseInt(map.get(MessageProtocol.Header.ID)));
+            if(category != null){
+                String replyMsg = parser.parseToString(category, SENDER, MessageProtocol.Method.REPLY);
+                out.writeBytes(replyMsg);
+            }else {
+                // TODO reply error can't load category
+            }
+        }catch (Exception e){
+            // parse error
+            replyBadMessage(out);
+        }
+    }
+
+    private void replyBadMessage(DataOutputStream out){
+        // TODO reply bag msg
+    }
     public void setDatabaseManager(DatabaseManager dbManager) {
         this.dbManager = dbManager;
     }
+
+
 }

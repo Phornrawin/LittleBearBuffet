@@ -28,4 +28,9 @@ public class Item {
     public int getCategoryId() {
         return categoryId;
     }
+
+    @Override
+    public String toString() {
+        return "Item : " + id + "-" + name + " (" + price + ") " + "[" + categoryId + "]";
+    }
 }

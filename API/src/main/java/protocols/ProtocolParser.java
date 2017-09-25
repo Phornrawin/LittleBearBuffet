@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ProtocolParser {
@@ -49,6 +50,10 @@ public class ProtocolParser {
         msg += formatMessageLine(MessageProtocol.Header.CATE_ID, order.getItem().getCategoryId() + "");
         msg += formatMessageLine(MessageProtocol.Header.TABLE, order.getTable() + "");
         return msg;
+    }
+    public String parseToString(List<Integer> ids, String sender, String method, String type){
+        // TODO parse ids to string
+        return null;
     }
     public Item parseToItem(Map<String, String> map){
         int id = Integer.parseInt(map.get(MessageProtocol.Header.ID));

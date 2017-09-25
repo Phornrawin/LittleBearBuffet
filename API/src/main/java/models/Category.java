@@ -36,4 +36,8 @@ public class Category {
         return null;
     }
 
+    @Override
+    public String toString() {
+        return "Category : " + id + "-" + name;
+    }
 }
