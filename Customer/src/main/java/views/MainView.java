@@ -4,7 +4,7 @@ package views;
 import controllers.CoreController;
 import models.Order;
 
-public class MainViewCustomer implements RootView {
+public class MainView implements RootView {
 
     public void setController(CoreController controller) {
 
