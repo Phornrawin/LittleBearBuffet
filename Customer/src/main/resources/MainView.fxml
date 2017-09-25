@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -42,12 +43,21 @@
                   </Label>
                </children>
             </GridPane>
-            <ImageView fx:id="imageViewPandaSet" fitHeight="270.0" fitWidth="570.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+            <ImageView fx:id="imageViewPandaSet" fitHeight="270.0" fitWidth="570.0" pickOnBounds="true" GridPane.rowIndex="1">
                <effect>
                   <DropShadow />
                </effect>
+               <image>
+                  <Image url="https://firebasestorage.googleapis.com/v0/b/littlebearbuffet-c7200.appspot.com/o/Panda-set.jpg?alt=media&amp;token=04530fb9-1770-480a-934c-d2caf52bc7ba" />
+               </image>
             </ImageView>
-            <ImageView fitHeight="270.0" fitWidth="570.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fitHeight="270.0" fitWidth="570.0" nodeOrientation="INHERIT" pickOnBounds="true" smooth="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <image>
+                  <Image url="https://firebasestorage.googleapis.com/v0/b/littlebearbuffet-c7200.appspot.com/o/Koala-set.jpg?alt=media&amp;token=20d85b67-ac31-4c10-b4d6-1bd8e299e9a2" />
+               </image></ImageView>
             <ImageView fitHeight="270.0" fitWidth="570.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
             <ImageView fitHeight="270.0" fitWidth="570.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <GridPane prefHeight="62.0" prefWidth="561.0" GridPane.columnIndex="1">
