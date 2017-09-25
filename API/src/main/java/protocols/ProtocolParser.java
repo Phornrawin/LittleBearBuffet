@@ -55,6 +55,14 @@ public class ProtocolParser {
         // TODO parse ids to string
         return null;
     }
+    public String parseToString(String requestType){
+        // TODO parse to request message
+        return null;
+    }
+    public String parseToString(String requestType, int id){
+        // TODO parse to request message with id
+        return null;
+    }
     public Item parseToItem(Map<String, String> map){
         int id = Integer.parseInt(map.get(MessageProtocol.Header.ID));
         String name = map.get(MessageProtocol.Header.NAME);
@@ -77,6 +85,10 @@ public class ProtocolParser {
         int cateId = Integer.parseInt(map.get(MessageProtocol.Header.CATE_ID));
         Item tempItem = new Item(itemId, null, 0, cateId);
         return new Order(id, amt, tempItem, table);
+    }
+    public List<Integer> parseToIds(Map<String, String> map){
+        // TODO parse to id list
+        return null;
     }
     public Map<String,String> parseToMap(InputStream inputStream){
         Map<String, String> map = new HashMap<String, String>();

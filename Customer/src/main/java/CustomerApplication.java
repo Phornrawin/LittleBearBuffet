@@ -1,13 +1,17 @@
 import controllers.CoreController;
+import controllers.DatabaseManager;
 import controllers.MainController;
+import controllers.SocketManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import models.Category;
 import views.RootView;
 
 import java.io.IOException;
+import java.util.List;
 
 public class CustomerApplication extends Application {
 
@@ -17,6 +21,10 @@ public class CustomerApplication extends Application {
     private RootView rootView;
 
     public static void main(String[] args) {
+//        DatabaseManager db = new SocketManager();
+//        List<Category> categories = db.loadCategories();
+//
+//        System.out.println("categories = " + categories);
         launch(args);
     }
 
