@@ -15,13 +15,14 @@ import java.util.Map;
 /**
  * Created by PC301 on 25/9/2560.
  */
-public class SocketManager implements DatabaseManager {
+public class ClientManager implements DatabaseManager {
 
     private ProtocolParser parser;
     private final int PORT_NUMBER = 6789;
-    private final String SERVER = "127.0.0.1";
+    private final String SERVER = "localhost";
+    private final String SENDER = "customer";
 
-    public SocketManager() {
+    public ClientManager() {
         parser = new ProtocolParser();
     }
 
@@ -29,26 +30,26 @@ public class SocketManager implements DatabaseManager {
         System.out.println("loadCategories");
         ArrayList<Category> categories = new ArrayList<Category>();
         List<Integer> categoryIds = loadCategoryIds();
-        if(categoryIds != null){
-            for(int id : categoryIds){
-                Category category = loadCategoryInfo(id);
-                if(category != null)
-                    categories.add(category);
-            }
-
-
-        }
-        List<Integer> itemIds = loadItemIds();
-        if (itemIds != null){
-            for(int id : itemIds){
-                Item item = loadItemInfo(id);
-                if (item != null)
-                    for(Category category: categories){
-                        if(category.getId() == item.getCategoryId())
-                            category.addItem(item);
-                    }
-            }
-        }
+//        if(categoryIds != null){
+//            for(int id : categoryIds){
+//                Category category = loadCategoryInfo(id);
+//                if(category != null)
+//                    categories.add(category);
+//            }
+//
+//
+//        }
+//        List<Integer> itemIds = loadItemIds();
+//        if (itemIds != null){
+//            for(int id : itemIds){
+//                Item item = loadItemInfo(id);
+//                if (item != null)
+//                    for(Category category: categories){
+//                        if(category.getId() == item.getCategoryId())
+//                            category.addItem(item);
+//                    }
+//            }
+//        }
 
 
         return null;
@@ -61,7 +62,8 @@ public class SocketManager implements DatabaseManager {
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             InputStream inFormServer = clientSocket.getInputStream();
 
-            String msg = parser.parseToString(MessageProtocol.Type.CATEGORY_ID);
+            final String msg = parser.parseToString(MessageProtocol.Type.CATEGORY_ID, SENDER);
+            System.out.println("msg = " + msg);
             outToServer.writeBytes(msg);
             Map<String, String> map = parser.parseToMap(inFormServer);
             if(MessageProtocol.Type.CATEGORY_ID.equals(map.get(MessageProtocol.Header.TYPE))){
@@ -89,7 +91,7 @@ public class SocketManager implements DatabaseManager {
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             InputStream inFormServer = clientSocket.getInputStream();
 
-            String msg = parser.parseToString(MessageProtocol.Type.CATEGORY, id);
+            String msg = parser.parseToString(MessageProtocol.Type.CATEGORY, SENDER, id);
             outToServer.writeBytes(msg);
             Map<String, String> map = parser.parseToMap(inFormServer);
             if(MessageProtocol.Type.CATEGORY.equals(map.get(MessageProtocol.Header.TYPE))){
@@ -116,7 +118,7 @@ public class SocketManager implements DatabaseManager {
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             InputStream inFormServer = clientSocket.getInputStream();
 
-            String msg = parser.parseToString(MessageProtocol.Type.ITEM_ID);
+            String msg = parser.parseToString(MessageProtocol.Type.ITEM_ID, SENDER);
             outToServer.writeBytes(msg);
             Map<String, String> map = parser.parseToMap(inFormServer);
             if(MessageProtocol.Type.ITEM_ID.equals(map.get(MessageProtocol.Header.TYPE))){
@@ -144,7 +146,7 @@ public class SocketManager implements DatabaseManager {
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             InputStream inFormServer = clientSocket.getInputStream();
 
-            String msg = parser.parseToString(MessageProtocol.Type.ITEM, id);
+            String msg = parser.parseToString(MessageProtocol.Type.ITEM, SENDER, id);
             outToServer.writeBytes(msg);
             Map<String, String> map = parser.parseToMap(inFormServer);
             if(MessageProtocol.Type.ITEM.equals(map.get(MessageProtocol.Header.TYPE))){

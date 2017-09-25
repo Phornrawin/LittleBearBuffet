@@ -1,7 +1,7 @@
 import controllers.CoreController;
 import controllers.DatabaseManager;
 import controllers.MainController;
-import controllers.SocketManager;
+import controllers.ClientManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -21,7 +21,7 @@ public class CustomerApplication extends Application {
     private RootView rootView;
 
     public static void main(String[] args) {
-//        DatabaseManager db = new SocketManager();
+//        DatabaseManager db = new ClientManager();
 //        List<Category> categories = db.loadCategories();
 //
 //        System.out.println("categories = " + categories);

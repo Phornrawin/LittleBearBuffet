@@ -55,13 +55,17 @@ public class ProtocolParser {
         // TODO parse ids to string
         return null;
     }
-    public String parseToString(String requestType){
-        // TODO parse to request message
-        return null;
+    public String parseToString(String requestType, String sender){
+        String msg = "";
+        msg += formatMessageLine(MessageProtocol.Header.METHOD, MessageProtocol.Method.LOAD);
+        msg += formatMessageLine(MessageProtocol.Header.SENDER, sender);
+        msg += formatMessageLine(MessageProtocol.Header.TYPE, requestType);
+        return msg;
     }
-    public String parseToString(String requestType, int id){
-        // TODO parse to request message with id
-        return null;
+    public String parseToString(String requestType, String sender, int id){
+        String msg = parseToString(requestType, sender);
+        msg += formatMessageLine(MessageProtocol.Header.ID, id + "");
+        return msg;
     }
     public Item parseToItem(Map<String, String> map){
         int id = Integer.parseInt(map.get(MessageProtocol.Header.ID));
@@ -91,18 +95,26 @@ public class ProtocolParser {
         return null;
     }
     public Map<String,String> parseToMap(InputStream inputStream){
+        System.out.println("parse to map");
         Map<String, String> map = new HashMap<String, String>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         String line = null;
+        System.out.println("reader = " + reader);
         try {
+            System.out.println("try");
+            System.out.println("reader.readLine = " + reader.readLine());
+            // TODO readLine don't return
             while((line = reader.readLine()) != null){
+                System.out.println("line " + line);
                 String[] e = line.split(MessageProtocol.DELIMETER);
                 map.put(e[0], e[1]);
             }
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("err");
         }
 
+        System.out.println(map);
         return map;
     }
 }

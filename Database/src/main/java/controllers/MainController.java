@@ -8,6 +8,7 @@ import protocols.ProtocolParser;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.Buffer;
 import java.util.List;
 import java.util.Map;
 
@@ -21,13 +22,16 @@ public class MainController implements  CoreController {
             String clientMessage;
             String capitalizedSentence;
             ServerSocket serverSocket = new ServerSocket(6789);
-            System.out.println("Start server...");
+            System.out.println("Start server... ..");
             while (true) {
                 Socket connectionSocket = serverSocket.accept();
                 InputStream inFromClient = connectionSocket.getInputStream();
                 DataOutputStream outToClient = new DataOutputStream(connectionSocket.getOutputStream());
 
+                BufferedReader reader = new BufferedReader(new InputStreamReader(inFromClient));
+                System.out.println("force read " + reader.readLine());
                 Map<String, String> map = parser.parseToMap(inFromClient);
+                System.out.println("map = " + map);
                 if(MessageProtocol.Method.ADD.equals(map.get(MessageProtocol.Header.METHOD))){
                     if (MessageProtocol.Type.ORDER.equals(map.get(MessageProtocol.Header.TYPE))){
                         addOrder(map, outToClient);
