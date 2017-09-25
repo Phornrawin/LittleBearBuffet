@@ -118,8 +118,8 @@
       <file leaf-file-name="CustomerApplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            <state relative-caret-position="187">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding>
                 <element signature="e#483#484#0" expanded="true" />
                 <element signature="e#511#512#0" expanded="true" />
@@ -1628,7 +1628,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506326318266</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="create main for customer">
+      <created>1506327209665</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1506327209665</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1725,7 +1732,8 @@
     <MESSAGE value="implements database module: receive add order msg in controller, create add order sequence diagram" />
     <MESSAGE value="create class" />
     <MESSAGE value="add url link for ImageView in MainView" />
-    <option name="LAST_COMMIT_MESSAGE" value="add url link for ImageView in MainView" />
+    <MESSAGE value="create main for customer" />
+    <option name="LAST_COMMIT_MESSAGE" value="create main for customer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2124,8 +2132,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="187">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
             <element signature="e#483#484#0" expanded="true" />
             <element signature="e#511#512#0" expanded="true" />
