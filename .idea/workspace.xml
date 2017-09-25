@@ -84,8 +84,8 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="517">
+              <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#617#618#0" expanded="true" />
@@ -737,7 +737,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506324066413</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="create class">
+      <created>1506324331865</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1506324331865</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -810,7 +817,8 @@
     <MESSAGE value="implements models, modify API diagram" />
     <MESSAGE value="implements protocols, modify API diagram" />
     <MESSAGE value="implements database module: receive add order msg in controller, create add order sequence diagram" />
-    <option name="LAST_COMMIT_MESSAGE" value="implements database module: receive add order msg in controller, create add order sequence diagram" />
+    <MESSAGE value="create class" />
+    <option name="LAST_COMMIT_MESSAGE" value="create class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1225,8 +1233,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        <state relative-caret-position="517">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#617#618#0" expanded="true" />
