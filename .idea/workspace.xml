@@ -7,19 +7,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="implement SQLite manager">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Diagram/Modeling/.Little Bear Buffet.vpp.lck" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Backlog10/API Module.jpg" afterPath="$PROJECT_DIR$/Diagram/Backlog10/API Module.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Backlog10/Add order.jpg" afterPath="$PROJECT_DIR$/Diagram/Backlog10/Add order.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Backlog10/Customer Module.jpg" afterPath="$PROJECT_DIR$/Diagram/Backlog10/Customer Module.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Backlog10/Database Module.jpg" afterPath="$PROJECT_DIR$/Diagram/Backlog10/Database Module.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Backlog10/database.jpg" afterPath="$PROJECT_DIR$/Diagram/Backlog10/database.jpg" />
+    <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Modeling/Little Bear Buffet.vpp" afterPath="$PROJECT_DIR$/Diagram/Modeling/Little Bear Buffet.vpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buffetDB.db" afterPath="$PROJECT_DIR$/buffetDB.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer/src/main/resources/MainView.fxml" afterPath="$PROJECT_DIR$/Customer/src/main/resources/MainView.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer/src/main/resources/MenuView.fxml" afterPath="$PROJECT_DIR$/Customer/src/main/resources/MenuView.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/java/views/MainViewCustomer.java" afterPath="$PROJECT_DIR$/Customer/src/main/java/views/MainView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/java/views/MenuViewCustomer.java" afterPath="$PROJECT_DIR$/Customer/src/main/java/views/MenuView.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -96,7 +87,7 @@
       <file leaf-file-name="MenuView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MenuView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
+            <state relative-caret-position="102">
               <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
@@ -5804,7 +5795,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506327249605</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="rename class, modify diagram">
+      <created>1506356314174</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1506356314175</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -5908,7 +5906,8 @@
     <MESSAGE value="add url link for ImageView in MainView" />
     <MESSAGE value="create main for customer" />
     <MESSAGE value="implement SQLite manager" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement SQLite manager" />
+    <MESSAGE value="rename class, modify diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename class, modify diagram" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -6090,11 +6089,11 @@
         <state relative-caret-position="1166">
           <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#480#481#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#453#454#0" expanded="false" />
+            <element signature="e#480#481#0" expanded="false" />
+            <element signature="e#516#517#0" expanded="false" />
+            <element signature="e#544#545#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -6179,6 +6178,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="68" column="67" lean-forward="false" selection-start-line="68" selection-start-column="67" selection-end-line="68" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -6315,7 +6315,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MenuView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
+        <state relative-caret-position="102">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
