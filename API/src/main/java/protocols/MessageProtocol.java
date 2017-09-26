@@ -61,7 +61,6 @@ package protocols;
  * type:item
  * id:<id></id>
  * name:<name></name>
- * price:<price></price>
  * category-id:<cate-id></cate-id>
  * end:end
  *
@@ -73,7 +72,6 @@ package protocols;
  * amount:<amt></amt>
  * item-id:<item-id></item-id>
  * name:<name></name>
- * price:<price></price>
  * category-id:<cate-id></cate-id>
  * end:end
  *
@@ -86,7 +84,6 @@ package protocols;
  * amount:<amt></amt>
  * item-id:<item-id></item-id>
  * name:<name></name>
- * price:<price></price>
  * category-id:<cate-id></cate-id>
  * end:end
  *

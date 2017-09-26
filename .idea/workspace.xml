@@ -8,9 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer/target/classes/CustomerApplication.class" afterPath="$PROJECT_DIR$/Customer/target/classes/CustomerApplication.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java" afterPath="$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/src/main/java/models/Item.java" afterPath="$PROJECT_DIR$/API/src/main/java/models/Item.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/src/main/java/models/Order.java" afterPath="$PROJECT_DIR$/API/src/main/java/models/Order.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/src/main/java/protocols/MessageProtocol.java" afterPath="$PROJECT_DIR$/API/src/main/java/protocols/MessageProtocol.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java" afterPath="$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ProtocolParser.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProtocolParser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="72" column="34" lean-forward="true" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+            <state relative-caret-position="83">
+              <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,16 +43,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="337">
               <caret line="97" column="43" lean-forward="false" selection-start-line="97" selection-start-column="43" selection-end-line="97" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Database/src/main/java/controllers/DatabaseManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -68,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerApplication.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomerApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            <state relative-caret-position="22">
+              <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,28 +72,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Package.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/src/main/java/models/Package.java">
+      <file leaf-file-name="CustomerApplication2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Customer/src/main/java/CustomerApplication2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="583">
+              <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/main/java/models/Item.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
               <folding>
-                <element signature="e#274#275#0" expanded="true" />
-                <element signature="e#299#300#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#357#358#0" expanded="true" />
-                <element signature="e#389#390#0" expanded="true" />
-                <element signature="e#417#418#0" expanded="true" />
+                <element signature="e#282#283#0" expanded="true" />
+                <element signature="e#307#308#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Database/src/main/java/DatabaseApplication.java">
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/main/java/models/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-353">
-              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state relative-caret-position="156">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -119,12 +117,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MenuView.java">
+      <file leaf-file-name="MessageProtocol.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/main/java/protocols/MessageProtocol.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="2120">
+              <caret line="85" column="21" lean-forward="false" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
+              <folding>
+                <marker date="1506440646160" expanded="true" signature="20:182" ph="/**...*/" />
+                <marker date="1506440646160" expanded="true" signature="2527:2535" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -167,9 +168,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/Database/pom.xml" />
         <option value="$PROJECT_DIR$/API/src/main/java/models/Items.java" />
-        <option value="$PROJECT_DIR$/API/src/main/java/models/Item.java" />
-        <option value="$PROJECT_DIR$/API/src/main/java/models/Order.java" />
-        <option value="$PROJECT_DIR$/API/src/main/java/protocols/MessageProtocol.java" />
         <option value="$PROJECT_DIR$/Database/src/main/java/controllers/CoreController.java" />
         <option value="$PROJECT_DIR$/Database/src/main/java/views/RootView.java" />
         <option value="$PROJECT_DIR$/Database/src/main/java/controllers/DatabaseManager.java" />
@@ -191,9 +189,13 @@
         <option value="$PROJECT_DIR$/API/src/main/java/models/Package.java" />
         <option value="$PROJECT_DIR$/Database/src/main/java/DatabaseApplication.java" />
         <option value="$PROJECT_DIR$/Database/src/main/java/controllers/MainController.java" />
-        <option value="$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/controllers/ClientManager.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java" />
+        <option value="$PROJECT_DIR$/Customer/src/main/java/CustomerApplication2.java" />
+        <option value="$PROJECT_DIR$/API/src/main/java/models/Order.java" />
+        <option value="$PROJECT_DIR$/API/src/main/java/models/Item.java" />
+        <option value="$PROJECT_DIR$/API/src/main/java/protocols/MessageProtocol.java" />
+        <option value="$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java" />
       </list>
     </option>
   </component>
@@ -406,6 +408,11 @@
     <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="SearchEverywhereHistoryKey" value="versi&#9;ACTION&#9;ActivateVersionControlToolWindow" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
@@ -1690,7 +1697,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506440083285</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="create 'customer full work' sequence diagram">
+      <created>1506440139752</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1506440139752</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1722,7 +1736,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.23899034" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30751708" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4259681" sideWeight="0.7610097" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1866,13 +1880,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Database/src/main/java/views/RootView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Database/src/main/java/controllers/DatabaseManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -2003,16 +2010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/main/java/models/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding>
-            <element signature="e#375#376#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Customer/target/classes/CustomerApplication.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -2048,25 +2045,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/main/java/models/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#326#327#0" expanded="false" />
-            <element signature="e#351#352#0" expanded="false" />
-            <element signature="e#381#382#0" expanded="false" />
-            <element signature="e#410#411#0" expanded="false" />
-            <element signature="e#439#440#0" expanded="false" />
-            <element signature="e#466#467#0" expanded="false" />
-            <element signature="e#495#496#0" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-            <element signature="e#554#555#0" expanded="false" />
-            <element signature="e#601#602#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Diagram/Backlog10/Customer Module.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2084,19 +2062,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/main/java/protocols/MessageProtocol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5777">
-          <caret line="120" column="51" lean-forward="false" selection-start-line="120" selection-start-column="51" selection-end-line="120" selection-end-column="51" />
-          <folding>
-            <marker date="1506430220997" expanded="true" signature="20:182" ph="/**...*/" />
-            <marker date="1506430220997" expanded="true" signature="2602:2610" ph="{...}" />
-            <marker date="1506430220997" expanded="true" signature="2642:2773" ph="{...}" />
-            <marker date="1506430220997" expanded="true" signature="2805:2962" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2235,14 +2200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="72" column="34" lean-forward="true" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/ClientManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
@@ -2273,11 +2230,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        <state relative-caret-position="22">
+          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/CustomerApplication2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/main/java/models/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/main/java/models/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding>
+            <element signature="e#282#283#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/main/java/protocols/MessageProtocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2120">
+          <caret line="85" column="21" lean-forward="false" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
+          <folding>
+            <marker date="1506440646160" expanded="true" signature="20:182" ph="/**...*/" />
+            <marker date="1506440646160" expanded="true" signature="2527:2535" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

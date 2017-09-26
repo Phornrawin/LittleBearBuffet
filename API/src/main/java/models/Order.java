@@ -29,7 +29,5 @@ public class Order {
         return table;
     }
 
-    public double getPrice(){
-        return amount * item.getPrice();
-    }
+
 }

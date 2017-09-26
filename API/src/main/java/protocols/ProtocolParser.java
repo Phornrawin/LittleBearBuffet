@@ -29,7 +29,6 @@ public class ProtocolParser {
         msg += formatMessageLine(MessageProtocol.Header.TYPE, MessageProtocol.Type.ITEM);
         msg += formatMessageLine(MessageProtocol.Header.ID, item.getId() + "");
         msg += formatMessageLine(MessageProtocol.Header.NAME, item.getName());
-        msg += formatMessageLine(MessageProtocol.Header.PRICE, item.getPrice() + "");
         msg += formatMessageLine(MessageProtocol.Header.CATE_ID, item.getCategoryId() + "");
         msg += endMessage();
         return msg;
@@ -96,10 +95,9 @@ public class ProtocolParser {
     public Item parseToItem(Map<String, String> map){
         int id = Integer.parseInt(map.get(MessageProtocol.Header.ID));
         String name = map.get(MessageProtocol.Header.NAME);
-        double price = Double.parseDouble(map.get(MessageProtocol.Header.PRICE));
         int cateID = Integer.parseInt(map.get(MessageProtocol.Header.CATE_ID));
 
-        return new Item(id, name, price, cateID);
+        return new Item(id, name, cateID);
     }
     public Category parseToCategory(Map<String, String> map){
         int id = Integer.parseInt(map.get(MessageProtocol.Header.ID));
@@ -113,7 +111,7 @@ public class ProtocolParser {
         int table = Integer.parseInt(map.get(MessageProtocol.Header.TABLE));
         int itemId = Integer.parseInt(map.get(MessageProtocol.Header.ITEM_ID));
         int cateId = Integer.parseInt(map.get(MessageProtocol.Header.CATE_ID));
-        Item tempItem = new Item(itemId, null, 0, cateId);
+        Item tempItem = new Item(itemId, null, cateId);
         return new Order(id, amt, tempItem, table);
     }
     public List<Integer> parseToIds(Map<String, String> map){
