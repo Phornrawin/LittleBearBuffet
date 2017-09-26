@@ -105,4 +105,18 @@ public class ProtocolParser {
 
         return map;
     }
+
+    public Map<String, String> parseToMap(BufferedReader reader){
+        Map<String, String> map = new HashMap<String, String>();
+        String line = null;
+        try {
+            while((line = reader.readLine()) != null){
+                String[] e = line.split(MessageProtocol.DELIMETER);
+                map.put(e[0], e[1]);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return map;
+    }
 }
