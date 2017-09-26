@@ -1,11 +1,48 @@
 package models;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class UrlStorage {
     private Map<String, String> imageGrilledUrl;
+    private Map<String, String> imageDelicatessenUrl;
+    private Map<String, String> imageDessertUrl;
+    private Map<String, String> imageBeverageUrl;
 
-    public void putImageUrl(){
+    public UrlStorage(){
+        imageGrilledUrl = new HashMap<String, String>();
+        imageDelicatessenUrl = new HashMap<String, String>();
+        imageDessertUrl = new HashMap<String, String>();
+        imageBeverageUrl = new HashMap<String, String>();
+
+        putallImageUrl();
+
+    }
+
+    public Map<String, String> getImageGrilledUrl() {
+        return imageGrilledUrl;
+    }
+
+    public Map<String, String> getImageDelicatessenUrl() {
+        return imageDelicatessenUrl;
+    }
+
+    public Map<String, String> getImageDessertUrl() {
+        return imageDessertUrl;
+    }
+
+    public Map<String, String> getImageBeverageUrl() {
+        return imageBeverageUrl;
+    }
+
+    public void putallImageUrl(){
+        putImageGrilledUrl();
+        putImageDelicatessenUrl();
+        putImageDessertUrl();
+        putImageBeverageUrl();
+    }
+
+    public void putImageGrilledUrl(){
         imageGrilledUrl.put("Asparagus", "https://goo.gl/Az5j7H");
         imageGrilledUrl.put("BabyCorn", "https://goo.gl/mfZjrM");
         imageGrilledUrl.put("Bacon", "https://goo.gl/313Vpr");
@@ -31,7 +68,30 @@ public class UrlStorage {
         imageGrilledUrl.put("Narutomaki", "https://goo.gl/wmXiP3");
         imageGrilledUrl.put("PorkSlide", "https://goo.gl/LCRdbM");
         imageGrilledUrl.put("PorkLiver", "https://goo.gl/3jedio");
-        imageGrilledUrl.put("punpkin", "https://goo.gl/c2Gguj");
+        imageGrilledUrl.put("Pumpkin", "https://goo.gl/c2Gguj");
+        imageGrilledUrl.put("RawHam", "https://goo.gl/FNise7");
+        imageGrilledUrl.put("SalmonFillet", "https://goo.gl/retMY1");
+        imageGrilledUrl.put("Scallop", "https://goo.gl/Mu5DaA");
+        imageGrilledUrl.put("Shiitake", "https://goo.gl/shPhZG");
+        imageGrilledUrl.put("SquidBall", "https://goo.gl/fT2kAm");
+        imageGrilledUrl.put("SquidTentacle", "https://goo.gl/sK1d9u");
+        imageGrilledUrl.put("Squid", "https://goo.gl/M1nFut");
+        imageGrilledUrl.put("StreakyPork", "https://goo.gl/9QmmEa");
+        imageGrilledUrl.put("Tofu", "https://goo.gl/pRJR34");
+        imageGrilledUrl.put("Udon", "https://goo.gl/smCtcM");
+        imageGrilledUrl.put("WhiteBunaShimeji", "https://goo.gl/cPVAzq");
+        imageGrilledUrl.put("WhiteFungus", "https://goo.gl/1skVji");
+    }
+
+    public void putImageDelicatessenUrl(){
+
+    }
+
+    public void putImageDessertUrl(){
+
+    }
+
+    public void putImageBeverageUrl(){
 
     }
 }

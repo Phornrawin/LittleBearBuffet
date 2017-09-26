@@ -18,15 +18,14 @@
                </font>
             </Label>
          </children></AnchorPane>
-      <TabPane layoutY="56.0" prefHeight="664.0" prefWidth="828.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="tabPaneMenu" layoutY="56.0" prefHeight="664.0" prefWidth="828.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Grilled food">
                <content>
-                  <AnchorPane fx:id="paneGrill" prefHeight="570.0" prefWidth="828.0" >
-                          <fx:include source="MenuBar.fxml" fx:id="menubar"/>
+                  <AnchorPane fx:id="paneGrill" prefHeight="570.0" prefWidth="828.0">
+                      <fx:include source="MenuBar.fxml" fx:id="menugrilled"/>
                   </AnchorPane>
-               </content>
-          </Tab>
+               </content></Tab>
           <Tab text="delicatessen">
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" />
