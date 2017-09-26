@@ -8,10 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Diagram/Modeling/.Little Bear Buffet.vpp.lck" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Backlog10/database.jpg" afterPath="$PROJECT_DIR$/Diagram/Backlog10/database.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Backlog10/API Module.jpg" afterPath="$PROJECT_DIR$/Diagram/Backlog10/API Module.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Backlog10/Customer Module.jpg" afterPath="$PROJECT_DIR$/Diagram/Backlog10/Customer Module.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Modeling/Little Bear Buffet.vpp" afterPath="$PROJECT_DIR$/Diagram/Modeling/Little Bear Buffet.vpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buffetDB.db" afterPath="$PROJECT_DIR$/buffetDB.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -97,8 +96,8 @@
       <file leaf-file-name="CustomerApplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+            <state relative-caret-position="246">
+              <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1676,7 +1675,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506413845666</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="restructure database, add package entity">
+      <created>1506431814024</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1506431814024</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1708,8 +1714,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.23899034" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4259681" sideWeight="0.7610097" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6230068" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4259681" sideWeight="0.7610097" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1836,7 +1842,8 @@
     <MESSAGE value="build MenuBar fxml file and implement UrlStorage class" />
     <MESSAGE value="implement UrlStorage class continue" />
     <MESSAGE value="implement UrlStorage class continue(recommit)" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement UrlStorage class continue(recommit)" />
+    <MESSAGE value="restructure database, add package entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="restructure database, add package entity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2181,8 +2188,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        <state relative-caret-position="246">
+          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
