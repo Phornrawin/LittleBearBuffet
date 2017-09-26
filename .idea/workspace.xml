@@ -8,12 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer/target/classes/CustomerApplication.class" afterPath="$PROJECT_DIR$/Customer/target/classes/CustomerApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Backlog10/API Module.jpg" afterPath="$PROJECT_DIR$/Diagram/Backlog10/API Module.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Backlog10/Add order.jpg" afterPath="$PROJECT_DIR$/Diagram/Backlog10/Add order.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Backlog10/Customer Module.jpg" afterPath="$PROJECT_DIR$/Diagram/Backlog10/Customer Module.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Backlog10/database.jpg" afterPath="$PROJECT_DIR$/Diagram/Backlog10/database.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Diagram/Modeling/Little Bear Buffet.vpp" afterPath="$PROJECT_DIR$/Diagram/Modeling/Little Bear Buffet.vpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Customer/Customer.jar" afterPath="$PROJECT_DIR$/out/artifacts/Customer/Customer.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Database/Database.jar" afterPath="$PROJECT_DIR$/out/artifacts/Database/Database.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java" afterPath="$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java" afterPath="$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer/src/main/java/controllers/ClientManager.java" afterPath="$PROJECT_DIR$/Customer/src/main/java/controllers/ClientManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/src/main/java/DatabaseApplication.java" afterPath="$PROJECT_DIR$/Database/src/main/java/DatabaseApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/src/main/java/controllers/MainController.java" afterPath="$PROJECT_DIR$/Database/src/main/java/controllers/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Customer/Customer.jnlp" afterPath="$PROJECT_DIR$/out/artifacts/Customer/Customer.jnlp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Database/Database.jnlp" afterPath="$PROJECT_DIR$/out/artifacts/Database/Database.jnlp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -113,7 +118,7 @@
       <file leaf-file-name="ClientManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/ClientManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
+            <state relative-caret-position="538">
               <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -1679,7 +1684,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506434088605</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fix sent message between process">
+      <created>1506435791975</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1506435791975</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1710,12 +1722,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.23899034" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4259681" sideWeight="0.7610097" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1557465" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1557465" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1841,7 +1853,8 @@
     <MESSAGE value="restructure database, add package entity" />
     <MESSAGE value="restructure class diagram" />
     <MESSAGE value="implement Package" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement Package" />
+    <MESSAGE value="fix sent message between process" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix sent message between process" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2259,7 +2272,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/ClientManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
+        <state relative-caret-position="538">
           <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
