@@ -76,11 +76,12 @@ public class MainView implements RootView {
     }
 
     public void addOrder(Order order) {
+        boolean isSuccess = controller.addOrder(order);
 
     }
 
     public void checkBill() {
-
+        boolean isSuccess = controller.checkBill();
     }
 
 }

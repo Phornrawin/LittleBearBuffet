@@ -13,7 +13,6 @@ public interface CoreController {
 
     public boolean checkBill();
 
-    // เอ๋ยังไม่ได้เขียนลง classdiagrams
     public int getTable();
 
     public void setDatabaseManager(DatabaseManager dbManager);
