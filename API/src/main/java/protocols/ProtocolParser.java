@@ -55,13 +55,17 @@ public class ProtocolParser {
         // TODO parse ids to string
         return null;
     }
-    public String parseToString(String requestType){
-        // TODO parse to request message
-        return null;
+    public String parseToString(String requestType, String sender){
+        String msg = "";
+        msg += formatMessageLine(MessageProtocol.Header.METHOD, MessageProtocol.Method.LOAD);
+        msg += formatMessageLine(MessageProtocol.Header.SENDER, sender);
+        msg += formatMessageLine(MessageProtocol.Header.TYPE, requestType);
+        return msg;
     }
-    public String parseToString(String requestType, int id){
-        // TODO parse to request message with id
-        return null;
+    public String parseToString(String requestType, String sender, int id){
+        String msg = parseToString(requestType, sender);
+        msg += formatMessageLine(MessageProtocol.Header.ID, id + "");
+        return msg;
     }
     public Item parseToItem(Map<String, String> map){
         int id = Integer.parseInt(map.get(MessageProtocol.Header.ID));

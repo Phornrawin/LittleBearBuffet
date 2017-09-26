@@ -27,7 +27,10 @@ public class MainController implements  CoreController {
                 InputStream inFromClient = connectionSocket.getInputStream();
                 DataOutputStream outToClient = new DataOutputStream(connectionSocket.getOutputStream());
 
-                Map<String, String> map = parser.parseToMap(inFromClient);
+                BufferedReader reader = new BufferedReader(new InputStreamReader(inFromClient));
+//                Map<String, String> map = parser.parseToMap(inFromClient);
+                Map<String, String> map = parser.parseToMap(reader);
+                System.out.println("map = " + map);
                 if(MessageProtocol.Method.ADD.equals(map.get(MessageProtocol.Header.METHOD))){
                     if (MessageProtocol.Type.ORDER.equals(map.get(MessageProtocol.Header.TYPE))){
                         addOrder(map, outToClient);

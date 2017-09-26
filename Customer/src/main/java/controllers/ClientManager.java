@@ -19,7 +19,8 @@ public class ClientManager implements DatabaseManager {
 
     private ProtocolParser parser;
     private final int PORT_NUMBER = 6789;
-    private final String SERVER = "127.0.0.1";
+    private final String SERVER = "localhost";
+    private final String SENDER = "client";
 
     public ClientManager() {
         parser = new ProtocolParser();
@@ -61,7 +62,7 @@ public class ClientManager implements DatabaseManager {
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             InputStream inFormServer = clientSocket.getInputStream();
 
-            String msg = parser.parseToString(MessageProtocol.Type.CATEGORY_ID);
+            String msg = parser.parseToString(MessageProtocol.Type.CATEGORY_ID, SENDER);
             outToServer.writeBytes(msg);
             Map<String, String> map = parser.parseToMap(inFormServer);
             if(MessageProtocol.Type.CATEGORY_ID.equals(map.get(MessageProtocol.Header.TYPE))){
@@ -89,7 +90,7 @@ public class ClientManager implements DatabaseManager {
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             InputStream inFormServer = clientSocket.getInputStream();
 
-            String msg = parser.parseToString(MessageProtocol.Type.CATEGORY, id);
+            String msg = parser.parseToString(MessageProtocol.Type.CATEGORY, SENDER, id);
             outToServer.writeBytes(msg);
             Map<String, String> map = parser.parseToMap(inFormServer);
             if(MessageProtocol.Type.CATEGORY.equals(map.get(MessageProtocol.Header.TYPE))){
@@ -116,7 +117,7 @@ public class ClientManager implements DatabaseManager {
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             InputStream inFormServer = clientSocket.getInputStream();
 
-            String msg = parser.parseToString(MessageProtocol.Type.ITEM_ID);
+            String msg = parser.parseToString(MessageProtocol.Type.ITEM_ID, SENDER);
             outToServer.writeBytes(msg);
             Map<String, String> map = parser.parseToMap(inFormServer);
             if(MessageProtocol.Type.ITEM_ID.equals(map.get(MessageProtocol.Header.TYPE))){
@@ -144,7 +145,7 @@ public class ClientManager implements DatabaseManager {
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             InputStream inFormServer = clientSocket.getInputStream();
 
-            String msg = parser.parseToString(MessageProtocol.Type.ITEM, id);
+            String msg = parser.parseToString(MessageProtocol.Type.ITEM, SENDER, id);
             outToServer.writeBytes(msg);
             Map<String, String> map = parser.parseToMap(inFormServer);
             if(MessageProtocol.Type.ITEM.equals(map.get(MessageProtocol.Header.TYPE))){

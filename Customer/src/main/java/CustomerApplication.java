@@ -1,13 +1,17 @@
+import controllers.ClientManager;
 import controllers.CoreController;
+import controllers.DatabaseManager;
 import controllers.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import models.Category;
 import views.RootView;
 
 import java.io.IOException;
+import java.util.List;
 
 public class CustomerApplication extends Application {
 
