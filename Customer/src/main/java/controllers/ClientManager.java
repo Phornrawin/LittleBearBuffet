@@ -15,13 +15,13 @@ import java.util.Map;
 /**
  * Created by PC301 on 25/9/2560.
  */
-public class SocketManager implements DatabaseManager {
+public class ClientManager implements DatabaseManager {
 
     private ProtocolParser parser;
     private final int PORT_NUMBER = 6789;
     private final String SERVER = "127.0.0.1";
 
-    public SocketManager() {
+    public ClientManager() {
         parser = new ProtocolParser();
     }
 

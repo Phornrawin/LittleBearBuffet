@@ -44,7 +44,7 @@ public class MainView implements RootView {
     }
 
     @FXML
-    public void imageViewPolaSetClicked(javafx.scene.input.MouseEvent event){
+    public void imageViewPolarSetClicked(javafx.scene.input.MouseEvent event){
 
     }
 
