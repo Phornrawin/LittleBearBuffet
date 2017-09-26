@@ -8,7 +8,7 @@ import protocols.ProtocolParser;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.Buffer;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -18,6 +18,7 @@ public class MainController implements  CoreController {
     public final String SENDER = "server";
 
     public void start() {
+        dbManager = new SQLiteManager();
         try {
             String clientMessage;
             String capitalizedSentence;
@@ -29,8 +30,10 @@ public class MainController implements  CoreController {
                 DataOutputStream outToClient = new DataOutputStream(connectionSocket.getOutputStream());
 
                 BufferedReader reader = new BufferedReader(new InputStreamReader(inFromClient));
-                System.out.println("force read " + reader.readLine());
-                Map<String, String> map = parser.parseToMap(inFromClient);
+//                Map<String, String> map = parser.parseToMap(inFromClient);
+                System.out.println("calling parse to map");
+                Map<String, String> map = parser.parseToMap(reader);
+//                Map<String, String> map = new HashMap<String, String>();
                 System.out.println("map = " + map);
                 if(MessageProtocol.Method.ADD.equals(map.get(MessageProtocol.Header.METHOD))){
                     if (MessageProtocol.Type.ORDER.equals(map.get(MessageProtocol.Header.TYPE))){
@@ -40,6 +43,7 @@ public class MainController implements  CoreController {
                     }
                 }else if(MessageProtocol.Method.LOAD.equals(map.get(MessageProtocol.Header.METHOD))){
                     if (MessageProtocol.Type.CATEGORY_ID.equals(map.get(MessageProtocol.Header.TYPE))){
+                        System.out.println("load category id");
                         replyCategoryID(map, outToClient);
                     }else if (MessageProtocol.Type.CATEGORY.equals(map.get(MessageProtocol.Header.TYPE))){
                         // TODO reply category
@@ -74,6 +78,7 @@ public class MainController implements  CoreController {
 
     private void replyCategoryID(Map<String, String> map, DataOutputStream out) throws IOException {
         List<Integer> ids = dbManager.getCategoryIds();
+        System.out.println("category id " + ids);
         if(ids != null){
             String replyMsg = parser.parseToString(ids, SENDER, MessageProtocol.Method.REPLY, MessageProtocol.Type.CATEGORY_ID);
             out.writeBytes(replyMsg);

@@ -1,7 +1,7 @@
+import controllers.ClientManager;
 import controllers.CoreController;
 import controllers.DatabaseManager;
 import controllers.MainController;
-import controllers.ClientManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

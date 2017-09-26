@@ -43,7 +43,7 @@
                   </Label>
                </children>
             </GridPane>
-            <ImageView fx:id="imageViewPandaSet" fitHeight="270.0" fitWidth="570.0" pickOnBounds="true" GridPane.rowIndex="1">
+            <ImageView fx:id="imageViewPandaSet" fitHeight="270.0" fitWidth="570.0" onMousePressed="#imageViewPandaSetClicked" pickOnBounds="true" GridPane.rowIndex="1">
                <effect>
                   <DropShadow />
                </effect>
@@ -51,21 +51,21 @@
                   <Image url="https://firebasestorage.googleapis.com/v0/b/littlebearbuffet-c7200.appspot.com/o/Panda-set.jpg?alt=media&amp;token=04530fb9-1770-480a-934c-d2caf52bc7ba" />
                </image>
             </ImageView>
-            <ImageView fitHeight="270.0" fitWidth="570.0" nodeOrientation="INHERIT" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <ImageView fx:id="imageViewKoalaSet" fitHeight="270.0" fitWidth="570.0" nodeOrientation="INHERIT" onMousePressed="#imageViewKoalaSetClicked" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <effect>
                   <DropShadow />
                </effect>
                <image>
                   <Image url="https://firebasestorage.googleapis.com/v0/b/littlebearbuffet-c7200.appspot.com/o/Koala-set.jpg?alt=media&amp;token=20d85b67-ac31-4c10-b4d6-1bd8e299e9a2" />
                </image></ImageView>
-            <ImageView fitHeight="270.0" fitWidth="570.0" pickOnBounds="true" GridPane.rowIndex="2">
+            <ImageView fx:id="imageViewGrizzlySet" fitHeight="270.0" fitWidth="570.0" onMousePressed="#imageViewGrizzlySetClicked" pickOnBounds="true" GridPane.rowIndex="2">
                <image>
                   <Image url="https://firebasestorage.googleapis.com/v0/b/littlebearbuffet-c7200.appspot.com/o/Pola-set.jpg?alt=media&amp;token=044daa4f-5bfc-41b6-9d74-2f19ea08afe2" />
                </image>
                <effect>
                   <DropShadow />
                </effect></ImageView>
-            <ImageView fitHeight="270.0" fitWidth="570.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <ImageView fx:id="imageViewPolaSet" fitHeight="270.0" fitWidth="570.0" onMousePressed="#imageViewPolarSetClicked" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <image>
                   <Image url="https://firebasestorage.googleapis.com/v0/b/littlebearbuffet-c7200.appspot.com/o/Grizzly-set.jpg?alt=media&amp;token=514f435c-fe41-4606-8748-ce880ec25708" />
                </image>

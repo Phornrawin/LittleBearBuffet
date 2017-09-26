@@ -30,26 +30,26 @@ public class ClientManager implements DatabaseManager {
         System.out.println("loadCategories");
         ArrayList<Category> categories = new ArrayList<Category>();
         List<Integer> categoryIds = loadCategoryIds();
-//        if(categoryIds != null){
-//            for(int id : categoryIds){
-//                Category category = loadCategoryInfo(id);
-//                if(category != null)
-//                    categories.add(category);
-//            }
-//
-//
-//        }
-//        List<Integer> itemIds = loadItemIds();
-//        if (itemIds != null){
-//            for(int id : itemIds){
-//                Item item = loadItemInfo(id);
-//                if (item != null)
-//                    for(Category category: categories){
-//                        if(category.getId() == item.getCategoryId())
-//                            category.addItem(item);
-//                    }
-//            }
-//        }
+        if(categoryIds != null){
+            for(int id : categoryIds){
+                Category category = loadCategoryInfo(id);
+                if(category != null)
+                    categories.add(category);
+            }
+
+
+        }
+        List<Integer> itemIds = loadItemIds();
+        if (itemIds != null){
+            for(int id : itemIds){
+                Item item = loadItemInfo(id);
+                if (item != null)
+                    for(Category category: categories){
+                        if(category.getId() == item.getCategoryId())
+                            category.addItem(item);
+                    }
+            }
+        }
 
 
         return null;
@@ -62,8 +62,8 @@ public class ClientManager implements DatabaseManager {
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             InputStream inFormServer = clientSocket.getInputStream();
 
-            final String msg = parser.parseToString(MessageProtocol.Type.CATEGORY_ID, SENDER);
-            System.out.println("msg = " + msg);
+            String msg = parser.parseToString(MessageProtocol.Type.CATEGORY_ID, SENDER);
+            System.out.println("msg to server " + msg);
             outToServer.writeBytes(msg);
             Map<String, String> map = parser.parseToMap(inFormServer);
             if(MessageProtocol.Type.CATEGORY_ID.equals(map.get(MessageProtocol.Header.TYPE))){
