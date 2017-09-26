@@ -3,6 +3,7 @@ package controllers;
 import models.Category;
 import models.Item;
 import models.Order;
+import models.Package;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -15,10 +16,6 @@ public class SQLiteManager implements DatabaseManager{
 
     private String url = "buffetDB.db";
 
-    public List<Category> loadCategories(){
-
-        return null;
-    }
 
     public Order addOrder(Order order) {
         return null;
@@ -62,6 +59,71 @@ public class SQLiteManager implements DatabaseManager{
             connection = prepareConnection();
             if (connection != null){
                 String sql = "select id from item";
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(sql);
+
+                List<Integer> ids = new ArrayList<Integer>();
+
+                while(resultSet.next()){
+                    int id = resultSet.getInt(1);
+                    ids.add(id);
+                }
+
+                return ids;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (connection != null){
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return null;
+    }
+
+    public List<Integer> getItemIds(int packageID) {
+        Connection connection = null;
+        try {
+            connection = prepareConnection();
+            if (connection != null){
+                String sql = "select id from item join package_item on package_item.item_id=item.id where package_id=" + packageID;
+                System.out.println("sql = " + sql);
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(sql);
+
+                List<Integer> ids = new ArrayList<Integer>();
+
+                while(resultSet.next()){
+                    int id = resultSet.getInt(1);
+                    ids.add(id);
+                }
+
+                return ids;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (connection != null){
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return null;
+    }
+
+    public List<Integer> getPackageIds() {
+        Connection connection = null;
+        try {
+            connection = prepareConnection();
+            if (connection != null){
+                String sql = "select id from package";
                 Statement statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery(sql);
 
@@ -133,7 +195,6 @@ public class SQLiteManager implements DatabaseManager{
                 if (resultSet.next()){
                     int idItem = resultSet.getInt("id");
                     String name = resultSet.getString("name");
-                    Double price = resultSet.getDouble("price");
                     int cateId = resultSet.getInt("cate_id");
 
                     return new Item(idItem, name, cateId);
@@ -145,9 +206,33 @@ public class SQLiteManager implements DatabaseManager{
         return null;
     }
 
-    public boolean checkBill() {
+    public Package getPackage(int id) {
+        Connection connection;
+        try{
+            connection = prepareConnection();
+            if(connection != null){
+                String sql = "select * from package where id="+id;
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(sql);
+
+                if (resultSet.next()){
+                    int idItem = resultSet.getInt("id");
+                    String name = resultSet.getString("name");
+                    double price = resultSet.getDouble("price");
+
+                    return new Package(id, name, price);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public boolean checkBill(Package packageObj, int amount) {
         return false;
     }
+
 
     private Connection prepareConnection(){
         try {

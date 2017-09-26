@@ -14,9 +14,9 @@
     <root id="root">
       <element id="archive" name="Database.jar">
         <element id="module-output" name="Database" />
+        <element id="file-copy" path="$PROJECT_DIR$/buffetDB.db" />
       </element>
       <element id="module-output" name="API" />
-      <element id="file-copy" path="$PROJECT_DIR$/Database/buffetDB.db" />
       <element id="library" level="project" name="Maven: org.xerial:sqlite-jdbc:3.20.0" />
     </root>
   </artifact>

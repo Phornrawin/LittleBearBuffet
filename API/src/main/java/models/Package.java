@@ -22,4 +22,9 @@ public class Package {
     public double getPrice() {
         return price;
     }
+
+    @Override
+    public String toString() {
+        return "Package : " + id + "-" + name + " (" + price + ")";
+    }
 }
