@@ -39,7 +39,7 @@ public class ProtocolParser {
         msg += formatMessageLine(MessageProtocol.Header.METHOD, method);
         msg += formatMessageLine(MessageProtocol.Header.SENDER, sender);
         msg += formatMessageLine(MessageProtocol.Header.TYPE, MessageProtocol.Type.CATEGORY);
-        msg += formatMessageLine(MessageProtocol.Header.ID, category.getName() + "");
+        msg += formatMessageLine(MessageProtocol.Header.ID, category.getId() + "");
         msg += formatMessageLine(MessageProtocol.Header.NAME, category.getName());
         msg += endMessage();
         return msg;
@@ -63,11 +63,11 @@ public class ProtocolParser {
         msg += formatMessageLine(MessageProtocol.Header.METHOD, method);
         msg += formatMessageLine(MessageProtocol.Header.SENDER, sender);
         msg += formatMessageLine(MessageProtocol.Header.TYPE, type);
-        msg += formatMessageLine(MessageProtocol.Header.IDS, converIdsToString(ids));
+        msg += formatMessageLine(MessageProtocol.Header.IDS, convertIdsToString(ids));
         msg += endMessage();
-        return null;
+        return msg;
     }
-    private String converIdsToString(List<Integer> ids){
+    private String convertIdsToString(List<Integer> ids){
         String s = "";
         for(int i=0; i<ids.size()-1; i++){
             s += ids.get(i) + ",";

@@ -21,11 +21,11 @@ public class CustomerApplication extends Application {
     private RootView rootView;
 
     public static void main(String[] args) {
-//        DatabaseManager db = new ClientManager();
-//        List<Category> categories = db.loadCategories();
-//
-//        System.out.println("categories = " + categories);
-        launch(args);
+        DatabaseManager db = new ClientManager();
+        List<Category> categories = db.loadCategories();
+
+        System.out.println("categories = " + categories);
+//        launch(args);
     }
 
     @Override

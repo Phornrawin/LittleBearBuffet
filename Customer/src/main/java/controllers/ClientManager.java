@@ -36,23 +36,22 @@ public class ClientManager implements DatabaseManager {
                 if(category != null)
                     categories.add(category);
             }
-
-
-        }
-        List<Integer> itemIds = loadItemIds();
-        if (itemIds != null){
-            for(int id : itemIds){
-                Item item = loadItemInfo(id);
-                if (item != null)
-                    for(Category category: categories){
-                        if(category.getId() == item.getCategoryId())
-                            category.addItem(item);
-                    }
-            }
         }
 
+//        List<Integer> itemIds = loadItemIds();
+//        if (itemIds != null){
+//            for(int id : itemIds){
+//                Item item = loadItemInfo(id);
+//                if (item != null)
+//                    for(Category category: categories){
+//                        if(category.getId() == item.getCategoryId())
+//                            category.addItem(item);
+//                    }
+//            }
+//        }
 
-        return null;
+
+        return categories;
     }
 
     private List<Integer> loadCategoryIds(){
@@ -65,11 +64,13 @@ public class ClientManager implements DatabaseManager {
             String msg = parser.parseToString(MessageProtocol.Type.CATEGORY_ID, SENDER);
             System.out.println("msg to server " + msg);
             outToServer.writeBytes(msg);
-            Map<String, String> map = parser.parseToMap(inFormServer);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inFormServer));
+            Map<String, String> map = parser.parseToMap(reader);
             if(MessageProtocol.Type.CATEGORY_ID.equals(map.get(MessageProtocol.Header.TYPE))){
                 List<Integer> ids = parser.parseToIds(map);
-                if (ids != null)
+                if (ids != null) {
                     return ids;
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -93,7 +94,8 @@ public class ClientManager implements DatabaseManager {
 
             String msg = parser.parseToString(MessageProtocol.Type.CATEGORY, SENDER, id);
             outToServer.writeBytes(msg);
-            Map<String, String> map = parser.parseToMap(inFormServer);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inFormServer));
+            Map<String, String> map = parser.parseToMap(reader);
             if(MessageProtocol.Type.CATEGORY.equals(map.get(MessageProtocol.Header.TYPE))){
                 Category category = parser.parseToCategory(map);
                 if (category != null)

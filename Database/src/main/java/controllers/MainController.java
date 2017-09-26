@@ -25,6 +25,7 @@ public class MainController implements  CoreController {
             ServerSocket serverSocket = new ServerSocket(6789);
             System.out.println("Start server... ..");
             while (true) {
+                System.out.println("wait ...");
                 Socket connectionSocket = serverSocket.accept();
                 InputStream inFromClient = connectionSocket.getInputStream();
                 DataOutputStream outToClient = new DataOutputStream(connectionSocket.getOutputStream());
@@ -46,7 +47,8 @@ public class MainController implements  CoreController {
                         System.out.println("load category id");
                         replyCategoryID(map, outToClient);
                     }else if (MessageProtocol.Type.CATEGORY.equals(map.get(MessageProtocol.Header.TYPE))){
-                        // TODO reply category
+                        System.out.println("load category");
+                        replyCategory(map, outToClient);
                     }else if (MessageProtocol.Type.ITEM_ID.equals(map.get(MessageProtocol.Header.TYPE))){
                         // TODO reply item id
                     }else if (MessageProtocol.Type.ITEM.equals(map.get(MessageProtocol.Header.TYPE))){
@@ -92,6 +94,8 @@ public class MainController implements  CoreController {
             Category category = dbManager.getCategory(Integer.parseInt(map.get(MessageProtocol.Header.ID)));
             if(category != null){
                 String replyMsg = parser.parseToString(category, SENDER, MessageProtocol.Method.REPLY);
+                System.out.println("msg to client");
+                System.out.println(replyMsg);
                 out.writeBytes(replyMsg);
             }else {
                 // TODO reply error can't load category
