@@ -22,21 +22,19 @@
         <tabs>
           <Tab text="Grilled food">
                <content>
-                  <AnchorPane fx:id="paneGrill" prefHeight="570.0" prefWidth="828.0">
-                      <fx:include source="MenuBar.fxml" fx:id="menugrilled"/>
-                  </AnchorPane>
+                  <fx:include fx:id="MenuBarGrilled" source="MenuBarGrilled.fxml" />
                </content></Tab>
           <Tab text="delicatessen">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                  <fx:include source="MenuBarDelicatessen.fxml" fx:id="MenuBarDelicatessen"/>
                </content></Tab>
           <Tab text="Dessert">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                  <fx:include source="MenuBarDessert.fxml" fx:id="MenuBarDessert"/>
                </content></Tab>
           <Tab text="Beverage">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                  <fx:include source="MenuBarBeverage.fxml" fx:id="MenuBarBeverage"/>
                </content></Tab>
         </tabs>
       </TabPane>
