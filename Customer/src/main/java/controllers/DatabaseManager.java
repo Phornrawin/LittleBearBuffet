@@ -1,9 +1,10 @@
 package controllers;
 
 import models.Category;
+import models.Item;
 import models.Order;
+import models.Package;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,9 +16,11 @@ public interface DatabaseManager {
 
     public Order addOrder(Order order);
 
-    public boolean cancleOrder(Order order);
-
-    public boolean cancleOrder(int orderId);
-
     public boolean checkBill();
+
+    public void setUrl(String url);
+
+    public List<Package> loadPackages();
+
+    public List<Item> loadItems(Package pk);
 }

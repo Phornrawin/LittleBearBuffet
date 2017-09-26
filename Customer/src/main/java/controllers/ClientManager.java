@@ -3,6 +3,7 @@ package controllers;
 import models.Category;
 import models.Item;
 import models.Order;
+import models.Package;
 import protocols.MessageProtocol;
 import protocols.ProtocolParser;
 
@@ -186,4 +187,17 @@ public class ClientManager implements DatabaseManager {
     public boolean checkBill() {
         return false;
     }
+
+    public void setUrl(String url) {
+
+    }
+
+    public List<Package> loadPackages() {
+        return null;
+    }
+
+    public List<Item> loadItems(Package pk) {
+        return null;
+    }
+
 }

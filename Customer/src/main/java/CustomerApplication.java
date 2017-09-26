@@ -1,22 +1,22 @@
 import controllers.ClientManager;
 import controllers.CoreController;
-import controllers.DatabaseManager;
 import controllers.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import models.Category;
+import models.*;
 import views.RootView;
 
 import java.io.IOException;
-import java.util.List;
 
 public class CustomerApplication extends Application {
 
-
-    private CoreController controller;
+    private CustomerStorage customerManager;
+    private RestuarantStorage restuarantManager;
+    private ClientManager dbManager;
+    private CoreController coreController;
     private Stage primaryStage;
     private RootView rootView;
 
@@ -30,8 +30,16 @@ public class CustomerApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        this.controller = new MainController();
-        this.controller.start();
+        this.customerManager = new CustomerStorage();
+        this.restuarantManager = new RestuarantStorage();
+        this.dbManager = new ClientManager();
+        this.coreController = new MainController();
+
+        coreController.setDatabaseManager(dbManager);
+        coreController.setCustomerManager(customerManager);
+        coreController.setRestuarantManager(restuarantManager);
+
+        this.coreController.start();
         this.primaryStage = primaryStage;
         initRoot();
     }
@@ -42,7 +50,7 @@ public class CustomerApplication extends Application {
             loader.setLocation(getClass().getResource("/MainView.fxml"));
             Pane mainLayout = loader.load();
             rootView = loader.getController();
-            rootView.setController(controller);
+            rootView.setController(coreController);
 
             Scene sc = new Scene(mainLayout);
             primaryStage.setScene(sc);
