@@ -136,7 +136,7 @@ public class SQLiteManager implements DatabaseManager{
                     Double price = resultSet.getDouble("price");
                     int cateId = resultSet.getInt("cate_id");
 
-                    return new Item(idItem, name, price, cateId);
+                    return new Item(idItem, name, cateId);
                 }
             }
         } catch (SQLException e) {

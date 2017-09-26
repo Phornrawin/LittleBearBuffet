@@ -9,10 +9,10 @@
   <component name="ChangeListManager">
     <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/src/main/java/models/Item.java" afterPath="$PROJECT_DIR$/API/src/main/java/models/Item.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/src/main/java/models/Order.java" afterPath="$PROJECT_DIR$/API/src/main/java/models/Order.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/src/main/java/protocols/MessageProtocol.java" afterPath="$PROJECT_DIR$/API/src/main/java/protocols/MessageProtocol.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java" afterPath="$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer/src/main/java/controllers/ClientManager.java" afterPath="$PROJECT_DIR$/Customer/src/main/java/controllers/ClientManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/src/main/java/controllers/SQLiteManager.java" afterPath="$PROJECT_DIR$/Database/src/main/java/controllers/SQLiteManager.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,12 +28,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ProtocolParser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProtocolParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="316">
+              <caret line="139" column="44" lean-forward="false" selection-start-line="139" selection-start-column="44" selection-end-line="139" selection-end-column="44" />
+              <folding>
+                <element signature="e#6653#6721#0" expanded="false" />
+                <marker date="1506441781255" expanded="false" signature="6769:6785" ph="&lt;~&gt;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,8 +111,8 @@
       <file leaf-file-name="ClientManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/ClientManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+            <state relative-caret-position="210">
+              <caret line="154" column="62" lean-forward="false" selection-start-line="154" selection-start-column="62" selection-end-line="154" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,22 +123,25 @@
       <file leaf-file-name="MessageProtocol.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/src/main/java/protocols/MessageProtocol.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2120">
-              <caret line="85" column="21" lean-forward="false" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
+            <state relative-caret-position="2104">
+              <caret line="156" column="61" lean-forward="false" selection-start-line="156" selection-start-column="61" selection-end-line="156" selection-end-column="61" />
               <folding>
-                <marker date="1506440646160" expanded="true" signature="20:182" ph="/**...*/" />
-                <marker date="1506440646160" expanded="true" signature="2527:2535" ph="{...}" />
+                <marker date="1506441580044" expanded="true" signature="20:182" ph="/**...*/" />
+                <marker date="1506441580044" expanded="true" signature="3065:3074" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SQLiteManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SQLiteManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Database/src/main/java/controllers/SQLiteManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2811">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="402">
+              <caret line="138" column="58" lean-forward="true" selection-start-line="138" selection-start-column="58" selection-end-line="138" selection-end-column="58" />
+              <folding>
+                <element signature="method#getCategoryIds#0;class#SQLiteManager#0" expanded="false" />
+                <element signature="method#getItemIds#0;class#SQLiteManager#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -171,7 +177,6 @@
         <option value="$PROJECT_DIR$/Database/src/main/java/controllers/CoreController.java" />
         <option value="$PROJECT_DIR$/Database/src/main/java/views/RootView.java" />
         <option value="$PROJECT_DIR$/Database/src/main/java/controllers/DatabaseManager.java" />
-        <option value="$PROJECT_DIR$/Database/src/main/java/controllers/SQLiteManager.java" />
         <option value="$PROJECT_DIR$/API/src/main/java/models/Category.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/views/RootView.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/controllers/MainController.java" />
@@ -189,13 +194,14 @@
         <option value="$PROJECT_DIR$/API/src/main/java/models/Package.java" />
         <option value="$PROJECT_DIR$/Database/src/main/java/DatabaseApplication.java" />
         <option value="$PROJECT_DIR$/Database/src/main/java/controllers/MainController.java" />
-        <option value="$PROJECT_DIR$/Customer/src/main/java/controllers/ClientManager.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/CustomerApplication2.java" />
         <option value="$PROJECT_DIR$/API/src/main/java/models/Order.java" />
         <option value="$PROJECT_DIR$/API/src/main/java/models/Item.java" />
         <option value="$PROJECT_DIR$/API/src/main/java/protocols/MessageProtocol.java" />
+        <option value="$PROJECT_DIR$/Customer/src/main/java/controllers/ClientManager.java" />
         <option value="$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java" />
+        <option value="$PROJECT_DIR$/Database/src/main/java/controllers/SQLiteManager.java" />
       </list>
     </option>
   </component>
@@ -1704,7 +1710,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506440139752</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="change item structure">
+      <created>1506440670066</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1506440670066</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1736,13 +1749,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.23899034" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30751708" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4259681" sideWeight="0.7610097" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4259681" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24145786" sideWeight="0.7610097" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1557465" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32801822" sideWeight="0.49784946" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1774,7 +1788,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16516854" sideWeight="0.4924812" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295711" sideWeight="0.49784946" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19602577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844242" sideWeight="0.49784946" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout>
@@ -1869,7 +1882,8 @@
     <MESSAGE value="implement Package" />
     <MESSAGE value="fix sent message between process" />
     <MESSAGE value="create 'customer full work' sequence diagram" />
-    <option name="LAST_COMMIT_MESSAGE" value="create 'customer full work' sequence diagram" />
+    <MESSAGE value="change item structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="change item structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2192,24 +2206,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database/src/main/java/controllers/SQLiteManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2811">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/ClientManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Database/src/main/java/controllers/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
@@ -2267,20 +2263,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/src/main/java/protocols/MessageProtocol.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2120">
-          <caret line="85" column="21" lean-forward="false" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
+        <state relative-caret-position="2104">
+          <caret line="156" column="61" lean-forward="false" selection-start-line="156" selection-start-column="61" selection-end-line="156" selection-end-column="61" />
           <folding>
-            <marker date="1506440646160" expanded="true" signature="20:182" ph="/**...*/" />
-            <marker date="1506440646160" expanded="true" signature="2527:2535" ph="{...}" />
+            <marker date="1506441580044" expanded="true" signature="20:182" ph="/**...*/" />
+            <marker date="1506441580044" expanded="true" signature="3065:3074" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/ClientManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="154" column="62" lean-forward="false" selection-start-line="154" selection-start-column="62" selection-end-line="154" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="316">
+          <caret line="139" column="44" lean-forward="false" selection-start-line="139" selection-start-column="44" selection-end-line="139" selection-end-column="44" />
+          <folding>
+            <element signature="e#6653#6721#0" expanded="false" />
+            <marker date="1506441781255" expanded="false" signature="6769:6785" ph="&lt;~&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/src/main/java/controllers/SQLiteManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="138" column="58" lean-forward="true" selection-start-line="138" selection-start-column="58" selection-end-line="138" selection-end-column="58" />
+          <folding>
+            <element signature="method#getCategoryIds#0;class#SQLiteManager#0" expanded="false" />
+            <element signature="method#getItemIds#0;class#SQLiteManager#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -122,7 +122,8 @@ public class ClientManager implements DatabaseManager {
 
             String msg = parser.parseToString(MessageProtocol.Type.ITEM_ID, SENDER);
             outToServer.writeBytes(msg);
-            Map<String, String> map = parser.parseToMap(inFormServer);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inFormServer));
+            Map<String, String> map = parser.parseToMap(reader);
             if(MessageProtocol.Type.ITEM_ID.equals(map.get(MessageProtocol.Header.TYPE))){
                 List<Integer> ids = parser.parseToIds(map);
                 if (ids != null)
@@ -150,7 +151,8 @@ public class ClientManager implements DatabaseManager {
 
             String msg = parser.parseToString(MessageProtocol.Type.ITEM, SENDER, id);
             outToServer.writeBytes(msg);
-            Map<String, String> map = parser.parseToMap(inFormServer);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inFormServer));
+            Map<String, String> map = parser.parseToMap(reader);
             if(MessageProtocol.Type.ITEM.equals(map.get(MessageProtocol.Header.TYPE))){
                 Item item = parser.parseToItem(map);
                 if (item != null)

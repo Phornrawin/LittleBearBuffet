@@ -3,6 +3,7 @@ package protocols;
 import models.Category;
 import models.Item;
 import models.Order;
+import models.Package;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -57,7 +58,6 @@ public class ProtocolParser {
         return msg;
     }
     public String parseToString(List<Integer> ids, String sender, String method, String type){
-        // TODO parse ids to string
         String msg = "";
         msg += formatMessageLine(MessageProtocol.Header.METHOD, method);
         msg += formatMessageLine(MessageProtocol.Header.SENDER, sender);
@@ -73,6 +73,17 @@ public class ProtocolParser {
         }
         s += ids.get(ids.size()-1);
         return s;
+    }
+    private String parseToString(Package packageObj, String sender, String method){
+        String msg = "";
+        msg += formatMessageLine(MessageProtocol.Header.METHOD, method);
+        msg += formatMessageLine(MessageProtocol.Header.SENDER, sender);
+        msg += formatMessageLine(MessageProtocol.Header.ID, packageObj.getId() + "");
+        msg += formatMessageLine(MessageProtocol.Header.NAME, packageObj.getName());
+        msg += formatMessageLine(MessageProtocol.Header.PRICE, packageObj.getPrice() + "");
+        msg += formatMessageLine(MessageProtocol.Header.TYPE, MessageProtocol.Type.PACKAGE);
+        msg += endMessage();
+        return msg;
     }
     public String parseToString(String requestType, String sender){
         String msg = "";
@@ -121,21 +132,28 @@ public class ProtocolParser {
             ids.add(Integer.parseInt(sid));
         return ids;
     }
-    public Map<String,String> parseToMap(InputStream inputStream){
-        Map<String, String> map = new HashMap<String, String>();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-        String line = null;
-        try {
-            while((line = reader.readLine()) != null ){
-                String[] e = line.split(MessageProtocol.DELIMITER);
-                map.put(e[0], e[1]);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public Package parseToPackage(Map<String, String> map){
+        int id = Integer.parseInt(map.get(MessageProtocol.Header.ID));
+        String name = map.get(MessageProtocol.Header.NAME);
+        double price = Double.parseDouble(map.get(MessageProtocol.Header.PRICE));
 
-        return map;
+        return new Package(id, name, price);
     }
+//    public Map<String,String> parseToMap(InputStream inputStream){
+//        Map<String, String> map = new HashMap<String, String>();
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+//        String line = null;
+//        try {
+//            while((line = reader.readLine()) != null ){
+//                String[] e = line.split(MessageProtocol.DELIMITER);
+//                map.put(e[0], e[1]);
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//        return map;
+//    }
 
     public Map<String, String> parseToMap(BufferedReader reader){
         Map<String, String> map = new HashMap<String, String>();

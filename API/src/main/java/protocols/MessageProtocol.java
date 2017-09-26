@@ -87,6 +87,34 @@ package protocols;
  * category-id:<cate-id></cate-id>
  * end:end
  *
+ * -- request package id message --
+ * method:load
+ * sender:<sender></sender>
+ * type:package-id
+ * end:end
+ *
+ * -- response package id message --
+ * result:200 OK
+ * method:reply
+ * sender:<sender></sender>
+ * type:package-id
+ * ids:<id-list></id-list>
+ * end:end
+ *
+ * -- request package message --
+ * method:load
+ * sender:<sender></sender>
+ * type:package
+ * id:<id></id>
+ * end:end
+ *
+ * -- response package message --
+ * result:200 OK
+ * method:reply
+ * type:package
+ * id:<id></id>
+ * name:<name></name>
+ * price:<price></price>
  */
 public class MessageProtocol {
 
@@ -105,6 +133,7 @@ public class MessageProtocol {
         public static final String PRICE = "price";
         public static final String IDS = "ids";
         public static final String END = "end";
+
     }
 
     public static class Result{
@@ -124,6 +153,8 @@ public class MessageProtocol {
         public static final String CATEGORY = "category";
         public static final String CATEGORY_ID = "category-id";
         public static final String ITEM_ID = "item-id";
+        public static final String PACKAGE = "package";
+        public static final String PACKAGE_ID = "package-id";
     }
 
 
