@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -58,7 +59,21 @@ public class ProtocolParser {
     }
     public String parseToString(List<Integer> ids, String sender, String method, String type){
         // TODO parse ids to string
+        String msg = "";
+        msg += formatMessageLine(MessageProtocol.Header.METHOD, method);
+        msg += formatMessageLine(MessageProtocol.Header.SENDER, sender);
+        msg += formatMessageLine(MessageProtocol.Header.TYPE, type);
+        msg += formatMessageLine(MessageProtocol.Header.IDS, converIdsToString(ids));
+        msg += endMessage();
         return null;
+    }
+    private String converIdsToString(List<Integer> ids){
+        String s = "";
+        for(int i=0; i<ids.size()-1; i++){
+            s += ids.get(i) + ",";
+        }
+        s += ids.get(ids.size()-1);
+        return s;
     }
     public String parseToString(String requestType, String sender){
         String msg = "";
@@ -102,8 +117,11 @@ public class ProtocolParser {
         return new Order(id, amt, tempItem, table);
     }
     public List<Integer> parseToIds(Map<String, String> map){
-        // TODO parse to id list
-        return null;
+        String[] sids = map.get(MessageProtocol.Header.IDS).split(",");
+        List<Integer> ids = new ArrayList<Integer>();
+        for(String sid : sids)
+            ids.add(Integer.parseInt(sid));
+        return ids;
     }
     public Map<String,String> parseToMap(InputStream inputStream){
         Map<String, String> map = new HashMap<String, String>();

@@ -18,6 +18,7 @@ public class MainController implements  CoreController {
     public final String SENDER = "server";
 
     public void start() {
+        dbManager = new SQLiteManager();
         try {
             String clientMessage;
             String capitalizedSentence;
@@ -42,6 +43,7 @@ public class MainController implements  CoreController {
                     }
                 }else if(MessageProtocol.Method.LOAD.equals(map.get(MessageProtocol.Header.METHOD))){
                     if (MessageProtocol.Type.CATEGORY_ID.equals(map.get(MessageProtocol.Header.TYPE))){
+                        System.out.println("load category id");
                         replyCategoryID(map, outToClient);
                     }else if (MessageProtocol.Type.CATEGORY.equals(map.get(MessageProtocol.Header.TYPE))){
                         // TODO reply category
@@ -76,6 +78,7 @@ public class MainController implements  CoreController {
 
     private void replyCategoryID(Map<String, String> map, DataOutputStream out) throws IOException {
         List<Integer> ids = dbManager.getCategoryIds();
+        System.out.println("category id " + ids);
         if(ids != null){
             String replyMsg = parser.parseToString(ids, SENDER, MessageProtocol.Method.REPLY, MessageProtocol.Type.CATEGORY_ID);
             out.writeBytes(replyMsg);
