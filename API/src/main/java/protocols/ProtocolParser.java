@@ -3,7 +3,6 @@ package protocols;
 import models.Category;
 import models.Item;
 import models.Order;
-import sun.plugin2.message.Message;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,7 +16,10 @@ public class ProtocolParser {
 
 
     private String formatMessageLine(String header, String value){
-        return header + MessageProtocol.DELIMETER + value + "\n";
+        return header + MessageProtocol.DELIMITER + value + "\n";
+    }
+    private String endMessage(){
+        return formatMessageLine(MessageProtocol.Header.END, MessageProtocol.Header.END) + "\n";
     }
     public String parseToString(Item item, String sender, String method){
         String msg = "";
@@ -28,6 +30,7 @@ public class ProtocolParser {
         msg += formatMessageLine(MessageProtocol.Header.NAME, item.getName());
         msg += formatMessageLine(MessageProtocol.Header.PRICE, item.getPrice() + "");
         msg += formatMessageLine(MessageProtocol.Header.CATE_ID, item.getCategoryId() + "");
+        msg += endMessage();
         return msg;
     }
     public String parseToString(Category category, String sender, String method){
@@ -37,6 +40,7 @@ public class ProtocolParser {
         msg += formatMessageLine(MessageProtocol.Header.TYPE, MessageProtocol.Type.CATEGORY);
         msg += formatMessageLine(MessageProtocol.Header.ID, category.getName() + "");
         msg += formatMessageLine(MessageProtocol.Header.NAME, category.getName());
+        msg += endMessage();
         return msg;
     }
     public String parseToString(Order order, String sender, String method){
@@ -49,6 +53,7 @@ public class ProtocolParser {
         msg += formatMessageLine(MessageProtocol.Header.ITEM_ID, order.getItem().getId() + "");
         msg += formatMessageLine(MessageProtocol.Header.CATE_ID, order.getItem().getCategoryId() + "");
         msg += formatMessageLine(MessageProtocol.Header.TABLE, order.getTable() + "");
+        msg += endMessage();
         return msg;
     }
     public String parseToString(List<Integer> ids, String sender, String method, String type){
@@ -60,13 +65,19 @@ public class ProtocolParser {
         msg += formatMessageLine(MessageProtocol.Header.METHOD, MessageProtocol.Method.LOAD);
         msg += formatMessageLine(MessageProtocol.Header.SENDER, sender);
         msg += formatMessageLine(MessageProtocol.Header.TYPE, requestType);
+        msg += endMessage();
         return msg;
     }
     public String parseToString(String requestType, String sender, int id){
-        String msg = parseToString(requestType, sender);
+        String msg = "";
+        msg += formatMessageLine(MessageProtocol.Header.METHOD, MessageProtocol.Method.LOAD);
+        msg += formatMessageLine(MessageProtocol.Header.SENDER, sender);
+        msg += formatMessageLine(MessageProtocol.Header.TYPE, requestType);
         msg += formatMessageLine(MessageProtocol.Header.ID, id + "");
+        msg += endMessage();
         return msg;
     }
+
     public Item parseToItem(Map<String, String> map){
         int id = Integer.parseInt(map.get(MessageProtocol.Header.ID));
         String name = map.get(MessageProtocol.Header.NAME);
@@ -99,8 +110,8 @@ public class ProtocolParser {
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         String line = null;
         try {
-            while((line = reader.readLine()) != null){
-                String[] e = line.split(MessageProtocol.DELIMETER);
+            while((line = reader.readLine()) != null ){
+                String[] e = line.split(MessageProtocol.DELIMITER);
                 map.put(e[0], e[1]);
             }
         } catch (IOException e) {
@@ -115,11 +126,16 @@ public class ProtocolParser {
         String line = null;
         try {
             while((line = reader.readLine()) != null){
-                String[] e = line.split(MessageProtocol.DELIMETER);
+                System.out.println(line);
+                String[] e = line.split(MessageProtocol.DELIMITER);
+                if(MessageProtocol.Header.END.equals(e[0])){
+                    break;
+                }
                 map.put(e[0], e[1]);
             }
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("parse to map err");
         }
         return map;
     }

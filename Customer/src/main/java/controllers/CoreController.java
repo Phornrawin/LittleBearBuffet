@@ -16,4 +16,5 @@ public interface CoreController {
     public int getTable();
 
     public void setDatabaseManager(DatabaseManager dbManager);
+
 }

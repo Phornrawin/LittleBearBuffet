@@ -63,7 +63,9 @@ public class ClientManager implements DatabaseManager {
             InputStream inFormServer = clientSocket.getInputStream();
 
             String msg = parser.parseToString(MessageProtocol.Type.CATEGORY_ID, SENDER);
+            System.out.println("msg to server " + msg);
             outToServer.writeBytes(msg);
+            outToServer.writeBytes("hello");
             Map<String, String> map = parser.parseToMap(inFormServer);
             if(MessageProtocol.Type.CATEGORY_ID.equals(map.get(MessageProtocol.Header.TYPE))){
                 List<Integer> ids = parser.parseToIds(map);

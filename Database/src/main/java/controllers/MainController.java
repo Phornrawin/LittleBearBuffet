@@ -8,6 +8,7 @@ import protocols.ProtocolParser;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -29,7 +30,9 @@ public class MainController implements  CoreController {
 
                 BufferedReader reader = new BufferedReader(new InputStreamReader(inFromClient));
 //                Map<String, String> map = parser.parseToMap(inFromClient);
+                System.out.println("calling parse to map");
                 Map<String, String> map = parser.parseToMap(reader);
+//                Map<String, String> map = new HashMap<String, String>();
                 System.out.println("map = " + map);
                 if(MessageProtocol.Method.ADD.equals(map.get(MessageProtocol.Header.METHOD))){
                     if (MessageProtocol.Type.ORDER.equals(map.get(MessageProtocol.Header.TYPE))){
