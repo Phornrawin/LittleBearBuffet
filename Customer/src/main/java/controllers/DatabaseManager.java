@@ -16,7 +16,7 @@ public interface DatabaseManager {
 
     public Order addOrder(Order order);
 
-    public boolean checkBill();
+    public boolean checkBill(Package pk, int amount);
 
     public void setUrl(String url);
 

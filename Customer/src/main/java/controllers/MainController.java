@@ -48,7 +48,7 @@ public class MainController implements CoreController {
     public boolean checkBill() {
         Package pk = customerManager.getPackage();
         int amount = customerManager.getAmount();
-        return dbManager.checkBill();
+        return dbManager.checkBill(pk, amount);
     }
 
     public int getTable() {

@@ -176,15 +176,15 @@ public class ClientManager implements DatabaseManager {
         return null;
     }
 
+    public boolean checkBill(Package pk, int amount) {
+        return false;
+    }
+
     public boolean cancleOrder(Order order) {
         return false;
     }
 
     public boolean cancleOrder(int orderId) {
-        return false;
-    }
-
-    public boolean checkBill() {
         return false;
     }
 
