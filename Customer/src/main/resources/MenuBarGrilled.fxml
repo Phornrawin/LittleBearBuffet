@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.FlowPane?>
-
-
 <?import views.MenuBarGrilledView?>
+<?import javafx.scene.control.Button?>
 <MenuBarGrilledView id="menuBarGrilled" xmlns:fx="http://javafx.com/fxml" translateY="40" translateX="20" fx:controller="views.MenuBarGrilledView" >
     <children>
-        <Button text="Test">
-
-        </Button>
+        <Button text="TEST"/>
     </children>
 </MenuBarGrilledView>
 
-        <!--<AnchorPane fx:id="anchorPaneMain" prefHeight="570.0" prefWidth="828.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MenuBarGrilledView">-->
-   <!--<children>-->
-      <!--<FlowPane fx:id="flowPaneMenu" layoutX="14.0" layoutY="14.0" prefHeight="544.0" prefWidth="803.0">-->
-         <!--<children>-->
-
-         <!--</children>-->
-      <!--</FlowPane>-->
-   <!--</children>-->
-<!--</AnchorPane>-->
