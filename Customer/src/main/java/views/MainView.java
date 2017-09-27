@@ -20,6 +20,7 @@ import java.io.IOException;
 public class MainView implements RootView {
     @FXML private TextField textViewAmountCustomer;
     @FXML private ImageView imageViewPandaSet, imageViewKoalaSet, imageViewGrizzlySet, imageViewPolaSet;
+    @FXML private Pane menuLayout;
     private CoreController controller;
 
     @FXML
@@ -54,13 +55,12 @@ public class MainView implements RootView {
             Stage secondStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainView.class.getResource("/MenuView.fxml"));
-            Pane mainLayout = null;
-            mainLayout = (AnchorPane) loader.load();
+            menuLayout = (AnchorPane) loader.load();
             MenuView menuView = loader.getController();
             menuView.setController(controller);
 
             // Show the scene containing the root layout.
-            Scene scene = new Scene(mainLayout);
+            Scene scene = new Scene(menuLayout);
             secondStage.setScene(scene);
             secondStage.setResizable(false);
             secondStage.setTitle("Select Menu");

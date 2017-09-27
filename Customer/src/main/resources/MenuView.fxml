@@ -7,12 +7,12 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MenuView">
+<AnchorPane fx:id="menuLayout" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MenuView">
     <fx:define>
-        <fx:include source="MenuBarGrilled.fxml" fx:id="menuBarGrilled"/>
-        <fx:include source="MenuBarDelicatessen.fxml" fx:id="menuBarDelicatessen"/>
-        <fx:include source="MenuBarDessert.fxml" fx:id="menuBarDessert"/>
-        <fx:include source="MenuBarBeverage.fxml" fx:id="menuBarBeverage"/>
+        <fx:include fx:id="menuBarGrilled"      source="MenuBarGrilled.fxml" />
+        <fx:include fx:id="menuBarDelicatessen" source="MenuBarDelicatessen.fxml" />
+        <fx:include fx:id="menuBarDessert"      source="MenuBarDessert.fxml" />
+        <fx:include fx:id="menuBarBeverage"     source="MenuBarBeverage.fxml" />
     </fx:define>
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc337" height="57.0" stroke="#fffbfb" strokeType="INSIDE" strokeWidth="0.0" width="1280.0" />
@@ -23,13 +23,15 @@
                   <Font size="24.0" />
                </font>
             </Label>
-         </children></AnchorPane>
+            <AnchorPane fx:id="tableLayout" layoutX="15.0" layoutY="49.0" prefHeight="557.0" prefWidth="419.0" />
+         </children>
+      </AnchorPane>
       <TabPane fx:id="tabPaneMenu" layoutY="56.0" prefHeight="664.0" prefWidth="828.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Grilled" fx:id="GrilledTab" content="$menuBarGrilled" closable="false" />
-          <Tab text="Delicatessen" fx:id="DelicatessenTab" content="$menuBarDelicatessen" closable="false"/>
-          <Tab text="Dessert" fx:id="DessertTab" content="$menuBarDessert" closable="false"/>
-          <Tab text="Beverage" fx:id="BeverageTab" content="$menuBarBeverage" closable="false"/>
+          <Tab fx:id="GrilledTab"       closable="false" text="Grilled"         content="$menuBarGrilled"/>
+          <Tab fx:id="DelicatessenTab"  closable="false" text="Delicatessen"    content="$menuBarDelicatessen"/>
+          <Tab fx:id="DessertTab"       closable="false" text="Dessert"         content="$menuBarDessert"/>
+          <Tab fx:id="BeverageTab"      closable="false" text="Beverage"        content="$menuBarBeverage"/>
         </tabs>
       </TabPane>
    </children>
