@@ -30,6 +30,7 @@ public class CustomerApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        System.out.println("start 1");
 //        this.customerManager = new CustomerStorage();
 //        this.restuarantManager = new RestuarantStorage();
         this.dbManager = new ClientManager();
@@ -41,10 +42,12 @@ public class CustomerApplication extends Application {
 
         this.coreController.start();
         this.primaryStage = primaryStage;
+        System.out.println("start 2");
         initRoot();
     }
 
     private void initRoot() {
+        System.out.println("init root");
         try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/MainView.fxml"));

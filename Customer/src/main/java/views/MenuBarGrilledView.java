@@ -13,8 +13,8 @@ import models.Order;
 import models.UrlStorage;
 
 
-public class MenuBarGrilledView implements RootView {
-//    @FXML private AnchorPane anchorPaneMain;
+public class MenuBarGrilledView extends FlowPane implements RootView {
+    @FXML private MenuBarGrilledView menuBarGrilled;
     private CoreController controller;
     private UrlStorage url;
 
@@ -22,17 +22,16 @@ public class MenuBarGrilledView implements RootView {
     @FXML
     public void initialize(){
 
-
     }
     public void createMenuBar(){
-        FlowPane root = new FlowPane();
         ImageView imageView = new ImageView();
         imageView.setImage(new Image(url.getImageGrilledUrl().get("Asparagus")));
         VBox vbox1 = new VBox();
         vbox1.getChildren().add(imageView);
-        root.getChildren().add(vbox1);
-//        anchorPaneMain.getChildren().add(root);
+        menuBarGrilled.getChildren().add(vbox1);
+        menuBarGrilled.initialize();
 
+//        anchorPaneMain.getChildren().add(root);
 //        UrlStorage urlStorage = new UrlStorage();
 //        ArrayList<String> urls = new ArrayList<String>();
 //        urls.addAll(urlStorage.getImageGrilledUrl().values());
@@ -47,7 +46,9 @@ public class MenuBarGrilledView implements RootView {
 //
 //        }
     }
-
+    public void setMenuBarGrilled(MenuBarGrilledView root){
+        this.menuBarGrilled = root;
+    }
 
     public void setController(CoreController controller) {
         System.out.println("in MenuBar class");
