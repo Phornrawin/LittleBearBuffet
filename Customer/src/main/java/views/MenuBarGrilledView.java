@@ -25,18 +25,13 @@ public class MenuBarGrilledView extends FlowPane implements RootView {
 
     }
     public void createMenuBar(){
-//        ImageView imageView = new ImageView();
-//        imageView.setImage(new Image(url.getImageGrilledUrl().get("Asparagus")));
-//        VBox vbox1 = new VBox();
-//        vbox1.getChildren().add(imageView);
-
         UrlStorage urlStorage = new UrlStorage();
-        ArrayList<String> urls = new ArrayList<String>();
-        urls.addAll(urlStorage.getImageGrilledUrl().values());
+        ArrayList<String> urls = urlStorage.getImageGrilledUrl();
         for(int i = 0; i < urls.size(); i++){
-            System.out.println(urls.get(i));
+            String s = String.format("/images/" + urls.get(i) + ".jpg");
+            System.out.println(s);
             ImageView imageView = new ImageView();
-            imageView.setImage(new Image(urls.get(i)));
+            imageView.setImage(new Image(s));
             imageView.setFitHeight(100);
             imageView.setFitWidth(100);
             VBox vBox = new VBox();
