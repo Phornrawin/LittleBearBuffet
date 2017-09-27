@@ -3,6 +3,7 @@ package views;
 import controllers.CoreController;
 import javafx.event.EventHandler;
 import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -13,6 +14,9 @@ import models.Order;
 public class MenuVbox extends VBox implements RootView{
     private ImageView menuImage;
     private Label menuName;
+    private MenuView menuView;
+
+
 
     public MenuVbox(String urlImage, String menuName) {
         this.menuImage = new ImageView();
@@ -28,6 +32,16 @@ public class MenuVbox extends VBox implements RootView{
         });
     }
 
+    public void setMenuView(MenuView menuView){
+        this.menuView = menuView;
+    }
+    public ImageView getMenuImage() {
+        return menuImage;
+    }
+
+    public Label getMenuName() {
+        return menuName;
+    }
     public void setController(CoreController controller) {
 
     }

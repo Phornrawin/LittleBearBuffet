@@ -28,6 +28,7 @@ public class MenuView extends AnchorPane implements RootView{
     public void setController(CoreController controller) {
         this.controller = controller;
         menuBarGrilled.setMenuBarGrilled(this.menuBarGrilled);
+        menuBarGrilled.setMenuView(this);
         menuBarGrilled.setController(controller);
         buildTableView();
     }
