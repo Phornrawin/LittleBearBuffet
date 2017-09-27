@@ -4,6 +4,7 @@ import controllers.CoreController;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
@@ -30,17 +31,12 @@ public class MenuBarGrilledView extends FlowPane implements RootView {
         for(int i = 0; i < urls.size(); i++){
             String s = String.format("/images/" + urls.get(i) + ".jpg");
             System.out.println(s);
-            ImageView imageView = new ImageView();
-            imageView.setImage(new Image(s));
-            imageView.setFitHeight(100);
-            imageView.setFitWidth(100);
-            VBox vBox = new VBox();
-            vBox.setAlignment(Pos.CENTER);
-            vBox.getChildren().add(imageView);
+            MenuVbox vBox = new MenuVbox(s, urls.get(i));
             vBox.setPadding(new Insets(10));
             menuBarGrilled.getChildren().add(vBox);
         }
-        menuBarGrilled.initialize();
+
+
     }
     public void setMenuBarGrilled(MenuBarGrilledView root){
         this.menuBarGrilled = root;
@@ -50,7 +46,6 @@ public class MenuBarGrilledView extends FlowPane implements RootView {
         System.out.println("in MenuBar class");
         this.controller = controller;
         url = new UrlStorage();
-        createMenuBar();
     }
     public void setMenuView(MenuView menuView){
         this.menuView = menuView;

@@ -2,6 +2,7 @@ package views;
 
 import controllers.CoreController;
 import javafx.fxml.FXML;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
@@ -30,7 +31,10 @@ public class MenuView extends AnchorPane implements RootView{
         menuBarGrilled.setMenuBarGrilled(this.menuBarGrilled);
         menuBarGrilled.setMenuView(this);
         menuBarGrilled.setController(controller);
+        menuBarGrilled.createMenuBar();
         buildTableView();
+
+
     }
 
     public void buildTableView(){

@@ -22,6 +22,10 @@ public class MenuVbox extends VBox implements RootView{
         this.menuImage = new ImageView();
         this.menuImage.setImage(new Image(urlImage));
         this.menuName = new Label(menuName);
+        this.menuImage.setFitWidth(150);
+        this.menuImage.setFitHeight(150);
+        this.getChildren().addAll(this.menuImage, this.menuName);
+
     }
 
     public void setVBoxListener(){
@@ -32,9 +36,11 @@ public class MenuVbox extends VBox implements RootView{
         });
     }
 
+
     public void setMenuView(MenuView menuView){
         this.menuView = menuView;
     }
+
     public ImageView getMenuImage() {
         return menuImage;
     }
@@ -42,6 +48,7 @@ public class MenuVbox extends VBox implements RootView{
     public Label getMenuName() {
         return menuName;
     }
+
     public void setController(CoreController controller) {
 
     }

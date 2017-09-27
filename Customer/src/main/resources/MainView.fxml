@@ -48,7 +48,7 @@
                   <DropShadow />
                </effect>
                <image>
-                  <Image url="https://firebasestorage.googleapis.com/v0/b/littlebearbuffet-c7200.appspot.com/o/Panda-set.jpg?alt=media&amp;token=04530fb9-1770-480a-934c-d2caf52bc7ba" />
+                  <Image url="images/Panda-set.jpg" />
                </image>
             </ImageView>
             <ImageView fx:id="imageViewKoalaSet" fitHeight="270.0" fitWidth="570.0" nodeOrientation="INHERIT" onMousePressed="#imageViewKoalaSetClicked" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -56,7 +56,7 @@
                   <DropShadow />
                </effect>
                <image>
-                  <Image url="https://firebasestorage.googleapis.com/v0/b/littlebearbuffet-c7200.appspot.com/o/Koala-set.jpg?alt=media&amp;token=20d85b67-ac31-4c10-b4d6-1bd8e299e9a2" />
+                  <Image url="images/Koala-set.jpg" />
                </image></ImageView>
             <ImageView fx:id="imageViewGrizzlySet" fitHeight="270.0" fitWidth="570.0" onMousePressed="#imageViewGrizzlySetClicked" pickOnBounds="true" GridPane.rowIndex="2">
                <image>
