@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Category;
+import models.Item;
 import models.Order;
 import protocols.MessageProtocol;
 import protocols.ProtocolParser;
@@ -8,7 +9,6 @@ import protocols.ProtocolParser;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -38,7 +38,7 @@ public class MainController implements  CoreController {
                 System.out.println("map = " + map);
                 if(MessageProtocol.Method.ADD.equals(map.get(MessageProtocol.Header.METHOD))){
                     if (MessageProtocol.Type.ORDER.equals(map.get(MessageProtocol.Header.TYPE))){
-                        addOrder(map, outToClient);
+                        replyAddOrder(map, outToClient);
                     }else{
                         // TODO reply bad msg
                     }
@@ -50,13 +50,16 @@ public class MainController implements  CoreController {
                         System.out.println("load category");
                         replyCategory(map, outToClient);
                     }else if (MessageProtocol.Type.ITEM_ID.equals(map.get(MessageProtocol.Header.TYPE))){
-                        // TODO reply item id
+                        if(map.get(MessageProtocol.Header.PACKAGE_ID) != null) {
+                            replyItemIDwithPackage(map, outToClient);
+                        } else {
+                            replyItemID(map, outToClient);
+                        }
                     }else if (MessageProtocol.Type.ITEM.equals(map.get(MessageProtocol.Header.TYPE))){
-                        // TODO reply item
+                        replyItem(map, outToClient);
                     } else {
                         // TODO reply bad msg
                     }
-
                 } else {
                     replyBadMessage(outToClient);
                 }
@@ -67,7 +70,39 @@ public class MainController implements  CoreController {
         }
     }
 
-    private void addOrder(Map<String, String> map, DataOutputStream out) throws IOException {
+    private void replyItem(Map<String, String> map, DataOutputStream out) throws IOException {
+        int id = Integer.parseInt(map.get(MessageProtocol.Header.ID));
+        Item item = dbManager.getItem(id);
+        if (item != null){
+            String replyMsg = parser.parseToString(item, SENDER, MessageProtocol.Method.REPLY);
+            out.writeBytes(replyMsg);
+        } else {
+            // TODO reply error message
+        }
+    }
+
+    private void replyItemIDwithPackage(Map<String, String> map, DataOutputStream out) throws IOException {
+        int packageId = Integer.parseInt(map.get(MessageProtocol.Header.PACKAGE_ID));
+        List<Integer> ids = dbManager.getItemIds(packageId);
+        if(ids != null){
+            String replyMsg = parser.parseToString(ids, SENDER, MessageProtocol.Method.REPLY, MessageProtocol.Type.ITEM_ID);
+            out.writeBytes(replyMsg);
+        } else {
+            // TODO reply error message
+        }
+    }
+
+    private void replyItemID(Map<String, String> map, DataOutputStream out) throws IOException {
+        List<Integer> ids = dbManager.getItemIds();
+        if (ids != null){
+            String replyMsg = parser.parseToString(ids, SENDER, MessageProtocol.Method.REPLY, MessageProtocol.Type.ITEM_ID);
+            out.writeBytes(replyMsg);
+        } else {
+            // TODO reply error message
+        }
+    }
+
+    private void replyAddOrder(Map<String, String> map, DataOutputStream out) throws IOException {
         Order order = parser.parseToOrder(map);
         Order newOrder = dbManager.addOrder(order);
         if(newOrder != null){

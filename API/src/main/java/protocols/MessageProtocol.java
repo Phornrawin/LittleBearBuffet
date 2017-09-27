@@ -39,6 +39,13 @@ package protocols;
  * type:item-id
  * end:end
  *
+ * -- request item id message --
+ * method:load
+ * sender:<sender></sender>
+ * type:item-id
+ * package-id:<package-id></package-id>
+ * end:end
+ *
  * -- response item id message --
  * result:200 OK
  * method:reply
@@ -128,6 +135,7 @@ public class MessageProtocol {
         public static final String ID = "id";
         public static final String CATE_ID = "category-id";
         public static final String ITEM_ID = "item-id";
+        public static final String PACKAGE_ID = "package-id";
         public static final String TABLE = "table";
         public static final String AMOUNT = "amount";
         public static final String PRICE = "price";
