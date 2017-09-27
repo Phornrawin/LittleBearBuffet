@@ -262,7 +262,77 @@ public class ClientManager implements DatabaseManager {
     }
 
     public List<Item> loadItems(Package pk) {
+        int packageId = pk.getId();
+        List<Integer> ids = loadItemIds(packageId);
+        if (ids != null){
+            List<Item> items = new ArrayList<Item>();
+            for(int id : ids){
+                Item item = loadItem(id);
+                if (item != null)
+                    items.add(item);
+            }
+
+            return items;
+        }
         return null;
     }
+
+    private List<Integer> loadItemIds(int packageId){
+        Socket clientSocket = null;
+        try {
+            clientSocket = new Socket(url, PORT_NUMBER);
+            DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+            InputStream inFormServer = clientSocket.getInputStream();
+
+            String msg = parser.parseToString(MessageProtocol.Type.ITEM_ID, SENDER, packageId);
+            outToServer.writeBytes(msg);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inFormServer));
+            Map<String, String> map = parser.parseToMap(reader);
+
+            if(MessageProtocol.Type.ITEM_ID.equals(map.get(MessageProtocol.Header.TYPE))){
+                return parser.parseToIds(map);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(clientSocket != null)
+                try {
+                    clientSocket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+        }
+        return null;
+    }
+
+    private Item loadItem(int id){
+        Socket clientSocket = null;
+        try {
+            clientSocket = new Socket(url, PORT_NUMBER);
+            DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+            InputStream inFormServer = clientSocket.getInputStream();
+
+            String msg = parser.parseToString(MessageProtocol.Type.ITEM, SENDER, id);
+            outToServer.writeBytes(msg);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inFormServer));
+            Map<String, String> map = parser.parseToMap(reader);
+
+            if(MessageProtocol.Type.ITEM.equals(map.get(MessageProtocol.Header.TYPE))){
+                return parser.parseToItem(map);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(clientSocket != null)
+                try {
+                    clientSocket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+        }
+        return null;
+    }
+
+    
 
 }
