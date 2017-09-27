@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Button?>
 <MenuBarGrilledView id="menuBarGrilled" xmlns:fx="http://javafx.com/fxml" translateY="40" translateX="20" fx:controller="views.MenuBarGrilledView" >
     <children>
-        <Button text="TEST"/>
     </children>
 </MenuBarGrilledView>
 
