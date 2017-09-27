@@ -13,8 +13,8 @@ import java.io.IOException;
 
 public class CustomerApplication extends Application {
 
-//    private CustomerStorage customerManager;
-//    private RestuarantStorage restuarantManager;
+    private CustomerStorage customerManager;
+    private RestaurantStorage restaurantManager;
     private ClientManager dbManager;
     private CoreController coreController;
     private Stage primaryStage;
@@ -30,19 +30,18 @@ public class CustomerApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        System.out.println("start 1");
-//        this.customerManager = new CustomerStorage();
-//        this.restuarantManager = new RestuarantStorage();
+        this.customerManager = new CustomerStorage();
+        this.restaurantManager = new RestaurantStorage();
         this.dbManager = new ClientManager();
+        customerManager.setTable(1);
         this.coreController = new MainController();
 
         coreController.setDatabaseManager(dbManager);
-//        coreController.setCustomerManager(customerManager);
-//        coreController.setRestuarantManager(restuarantManager);
+        coreController.setCustomerManager(customerManager);
+        coreController.setRestaurantManager(restaurantManager);
 
-//        this.coreController.start();
+        this.coreController.start();
         this.primaryStage = primaryStage;
-        System.out.println("start 2");
         initRoot();
     }
 

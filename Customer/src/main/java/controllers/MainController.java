@@ -11,74 +11,77 @@ import java.util.List;
 public class MainController implements CoreController {
 
     private DatabaseManager dbManager;
-//    private RestuarantManager restuarantManager;
-//    private CustomerManager customerManager;
+    private RestaurantManager restaurantManager;
+    private CustomerManager customerManager;
 
 
     public void start() {
         List<Package> packages = null;
-        packages = dbManager.loadPackages();
-
-//        restuarantManager.setPackages(packages);
+        while(packages == null){
+            System.out.println("loading packages ...");
+            packages = dbManager.loadPackages();
+        }
+        restaurantManager.setPackages(packages);
     }
 
     public boolean addOrder(Order order) {
         Order newOrder = dbManager.addOrder(order);
 
         if (newOrder != null) {
-//            customerManager.addOrder(order);
+            System.out.println("add order complete");
+            customerManager.addOrder(order);
             return true;
         }
+        System.out.println("add order fail");
         return false;
     }
 
     public void selectPackage(Package pk, int amount) {
-//        customerManager.setPackage(pk);
-//        customerManager.setAmount(amount);
+        customerManager.setPackageObj(pk);
+        customerManager.setAmount(amount);
 
         List<Item> items = null;
-        while (items == null)
+        while (items == null) {
+            System.out.println("loading item list ...");
             items = dbManager.loadItems(pk);
+        }
+        System.out.println("load item complete");
 
-//        customerManager.addItemsToCategory(items);
+        restaurantManager.addItemsToCategory(items);
     }
 
     public boolean checkBill() {
-//        Package pk = customerManager.getPackage();
-//        int amount = customerManager.getAmount();
-        return true;
-//        return dbManager.checkBill(pk, amount);
+        Package pk = customerManager.getPackageObj();
+        int amount = customerManager.getAmount();
+        return dbManager.checkBill(pk, amount);
     }
 
     public int getTable() {
-        return 0;
+        return customerManager.getTable();
     }
 
     public void setTable(int table) {
-
+        customerManager.setTable(table);
     }
 
     public void setDatabaseManager(DatabaseManager dbManager) {
         this.dbManager = dbManager;
     }
 
-    public List<Category> getCategories() {
-        return null;
+    public void setCustomerManager(CustomerManager customerManager) {
+        this.customerManager = customerManager;
     }
 
-//    public void setCustomerManager(CustomerManager customerManager) {
-//        this.customerManager = customerManager;
-//    }
+    public void setRestaurantManager(RestaurantManager restaurantManager) {
+        this.restaurantManager = restaurantManager;
+    }
 
-//    public void setRestuarantManager(RestuarantManager restuarantManager) {
-//        this.restuarantManager = restuarantManager;
-//    }
+    public List<Category> getCategories() {
+        return restaurantManager.categories();
+    }
 
-//    public List<Category> getCategories() {
-//        return restuarantManager.getCategories();
-//    }
 
     public List<Order> getOrders() {
-        return null;
+        return customerManager.getOrders();
     }
 }
