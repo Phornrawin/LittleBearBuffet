@@ -11,8 +11,8 @@ import java.util.List;
 public class MainController implements CoreController {
 
     private DatabaseManager dbManager;
-    private RestuarantManager restuarantManager;
-    private CustomerManager customerManager;
+//    private RestuarantManager restuarantManager;
+//    private CustomerManager customerManager;
 
 
     public void start() {
@@ -21,34 +21,35 @@ public class MainController implements CoreController {
             packages = dbManager.loadPackages();
         }
 
-        restuarantManager.setPackages(packages);
+//        restuarantManager.setPackages(packages);
     }
 
     public boolean addOrder(Order order) {
         Order newOrder = dbManager.addOrder(order);
 
         if (newOrder != null) {
-            customerManager.addOrder(order);
+//            customerManager.addOrder(order);
             return true;
         }
         return false;
     }
 
     public void selectPackage(Package pk, int amount) {
-        customerManager.setPackage(pk);
-        customerManager.setAmount(amount);
+//        customerManager.setPackage(pk);
+//        customerManager.setAmount(amount);
 
         List<Item> items = null;
         while (items == null)
             items = dbManager.loadItems(pk);
 
-        customerManager.addItemsToCategory(items);
+//        customerManager.addItemsToCategory(items);
     }
 
     public boolean checkBill() {
-        Package pk = customerManager.getPackage();
-        int amount = customerManager.getAmount();
-        return dbManager.checkBill(pk, amount);
+//        Package pk = customerManager.getPackage();
+//        int amount = customerManager.getAmount();
+        return true;
+//        return dbManager.checkBill(pk, amount);
     }
 
     public int getTable() {
@@ -63,17 +64,21 @@ public class MainController implements CoreController {
         this.dbManager = dbManager;
     }
 
-    public void setCustomerManager(CustomerManager customerManager) {
-        this.customerManager = customerManager;
-    }
-
-    public void setRestuarantManager(RestuarantManager restuarantManager) {
-        this.restuarantManager = restuarantManager;
-    }
-
     public List<Category> getCategories() {
-        return restuarantManager.getCategories();
+        return null;
     }
+
+//    public void setCustomerManager(CustomerManager customerManager) {
+//        this.customerManager = customerManager;
+//    }
+
+//    public void setRestuarantManager(RestuarantManager restuarantManager) {
+//        this.restuarantManager = restuarantManager;
+//    }
+
+//    public List<Category> getCategories() {
+//        return restuarantManager.getCategories();
+//    }
 
     public List<Order> getOrders() {
         return null;

@@ -1,10 +1,10 @@
 package controllers;
 
 import models.Category;
-import models.CustomerManager;
+//import models.CustomerManager;
 import models.Order;
 import models.Package;
-import models.RestuarantManager;
+//import models.RestuarantManager;
 
 import java.util.List;
 
@@ -27,9 +27,9 @@ public interface CoreController {
 
     public void setDatabaseManager(DatabaseManager dbManager);
 
-    public void setCustomerManager(CustomerManager customerManager);
-
-    public void setRestuarantManager(RestuarantManager restuarantManager);
+//    public void setCustomerManager(CustomerManager customerManager);
+//
+//    public void setRestuarantManager(RestuarantManager restuarantManager);
 
     public List<Category> getCategories();
 
