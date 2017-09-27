@@ -17,9 +17,7 @@ public class MainController implements CoreController {
 
     public void start() {
         List<Package> packages = null;
-        while (packages == null) {
-            packages = dbManager.loadPackages();
-        }
+        packages = dbManager.loadPackages();
 
 //        restuarantManager.setPackages(packages);
     }

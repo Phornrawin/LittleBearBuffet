@@ -8,6 +8,12 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MenuView">
+    <fx:define>
+        <fx:include source="MenuBarGrilled.fxml" fx:id="menuBarGrilled"/>
+        <fx:include source="MenuBarDelicatessen.fxml" fx:id="menuBarDelicatessen"/>
+        <fx:include source="MenuBarDessert.fxml" fx:id="menuBarDessert"/>
+        <fx:include source="MenuBarBeverage.fxml" fx:id="menuBarBeverage"/>
+    </fx:define>
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc337" height="57.0" stroke="#fffbfb" strokeType="INSIDE" strokeWidth="0.0" width="1280.0" />
       <AnchorPane layoutX="827.0" layoutY="57.0" prefHeight="664.0" prefWidth="453.0">
@@ -20,22 +26,10 @@
          </children></AnchorPane>
       <TabPane fx:id="tabPaneMenu" layoutY="56.0" prefHeight="664.0" prefWidth="828.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Grilled food">
-               <content>
-                  <fx:include fx:id="MenuBarGrilled" source="MenuBarGrilled.fxml" />
-               </content></Tab>
-          <Tab text="delicatessen">
-               <content>
-                  <fx:include source="MenuBarDelicatessen.fxml" fx:id="MenuBarDelicatessen"/>
-               </content></Tab>
-          <Tab text="Dessert">
-               <content>
-                  <fx:include source="MenuBarDessert.fxml" fx:id="MenuBarDessert"/>
-               </content></Tab>
-          <Tab text="Beverage">
-               <content>
-                  <fx:include source="MenuBarBeverage.fxml" fx:id="MenuBarBeverage"/>
-               </content></Tab>
+          <Tab text="Grilled" fx:id="GrilledTab" content="$menuBarGrilled" closable="false" />
+          <Tab text="Delicatessen" fx:id="DelicatessenTab" content="$menuBarDelicatessen" closable="false"/>
+          <Tab text="Dessert" fx:id="DessertTab" content="$menuBarDessert" closable="false"/>
+          <Tab text="Beverage" fx:id="BeverageTab" content="$menuBarBeverage" closable="false"/>
         </tabs>
       </TabPane>
    </children>
