@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
 import models.Order;
@@ -41,13 +42,17 @@ public class MenuView extends AnchorPane implements RootView{
     }
 
     public void buildTableView(){
-        menuList = FXCollections.observableArrayList();
         tableOrder = new TableView<MenuVbox>();
         tableOrder.setEditable(false);
-        TableColumn nameMenu = new TableColumn("Menu");
-        TableColumn amount = new TableColumn("Amount");
-        nameMenu.setMinWidth(250);
+        TableColumn<MenuVbox, String> nameMenu = new TableColumn<MenuVbox, String>("Menu");
+        TableColumn<MenuVbox, Integer> amount = new TableColumn<MenuVbox, Integer>("Amount");
+        nameMenu.setCellValueFactory(new PropertyValueFactory<MenuVbox, String>("Menu"));
+        amount.setCellValueFactory(new PropertyValueFactory<MenuVbox, Integer>("Amount"));
+
+        menuList = FXCollections.observableArrayList();
+        tableOrder.setItems(menuList);
         tableOrder.getColumns().addAll(nameMenu, amount);
+
         tableOrder.setMinSize(400,550);
         tableOrder.setColumnResizePolicy(tableOrder.CONSTRAINED_RESIZE_POLICY);
         tableLayout.getChildren().add(tableOrder);

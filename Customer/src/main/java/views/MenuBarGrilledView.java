@@ -33,6 +33,7 @@ public class MenuBarGrilledView extends FlowPane implements RootView {
             System.out.println(s);
             MenuVbox vBox = new MenuVbox(s, urls.get(i));
             vBox.setPadding(new Insets(10));
+//            vBox.setVBoxListener();
             menuBarGrilled.getChildren().add(vBox);
         }
 
