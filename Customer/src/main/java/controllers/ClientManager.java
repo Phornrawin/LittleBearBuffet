@@ -20,7 +20,7 @@ public class ClientManager implements DatabaseManager {
 
     private ProtocolParser parser;
     private final int PORT_NUMBER = 6789;
-    private final String SERVER = "localhost";
+    private String url = "localhost";
     private final String SENDER = "customer";
 
     public ClientManager() {
@@ -58,7 +58,7 @@ public class ClientManager implements DatabaseManager {
     private List<Integer> loadCategoryIds(){
         Socket clientSocket = null;
         try {
-            clientSocket = new Socket(SERVER, PORT_NUMBER);
+            clientSocket = new Socket(url, PORT_NUMBER);
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             InputStream inFormServer = clientSocket.getInputStream();
 
@@ -89,7 +89,7 @@ public class ClientManager implements DatabaseManager {
     private Category loadCategoryInfo(int id){
         Socket clientSocket = null;
         try {
-            clientSocket = new Socket(SERVER, PORT_NUMBER);
+            clientSocket = new Socket(url, PORT_NUMBER);
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             InputStream inFormServer = clientSocket.getInputStream();
 
@@ -117,7 +117,7 @@ public class ClientManager implements DatabaseManager {
     private List<Integer> loadItemIds(){
         Socket clientSocket = null;
         try {
-            clientSocket = new Socket(SERVER, PORT_NUMBER);
+            clientSocket = new Socket(url, PORT_NUMBER);
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             InputStream inFormServer = clientSocket.getInputStream();
 
@@ -146,7 +146,7 @@ public class ClientManager implements DatabaseManager {
     private Item loadItemInfo(int id){
         Socket clientSocket = null;
         try {
-            clientSocket = new Socket(SERVER, PORT_NUMBER);
+            clientSocket = new Socket(url, PORT_NUMBER);
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             InputStream inFormServer = clientSocket.getInputStream();
 
@@ -155,9 +155,7 @@ public class ClientManager implements DatabaseManager {
             BufferedReader reader = new BufferedReader(new InputStreamReader(inFormServer));
             Map<String, String> map = parser.parseToMap(reader);
             if(MessageProtocol.Type.ITEM.equals(map.get(MessageProtocol.Header.TYPE))){
-                Item item = parser.parseToItem(map);
-                if (item != null)
-                    return item;
+                return parser.parseToItem(map);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -189,10 +187,77 @@ public class ClientManager implements DatabaseManager {
     }
 
     public void setUrl(String url) {
-
+        this.url = url;
     }
 
     public List<Package> loadPackages() {
+        List<Integer> ids = loadPackageIds();
+        List<Package> packages = new ArrayList<Package>();
+        System.out.println("ids = " + ids);
+        if(ids != null){
+            for(int id : ids){
+                Package packageObj = loadPackage(id);
+                if(packageObj != null)
+                    packages.add(packageObj);
+            }
+        }
+        return packages;
+    }
+
+    private Package loadPackage(int id) {
+        Socket clientSocket = null;
+        try {
+            clientSocket = new Socket(url, PORT_NUMBER);
+            DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+            InputStream inFormServer = clientSocket.getInputStream();
+
+            String msg = parser.parseToString(MessageProtocol.Type.PACKAGE, SENDER, id);
+            outToServer.writeBytes(msg);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inFormServer));
+            Map<String, String> map = parser.parseToMap(reader);
+
+            if(MessageProtocol.Type.PACKAGE.equals(map.get(MessageProtocol.Header.TYPE))){
+                return parser.parseToPackage(map);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(clientSocket != null)
+                try {
+                    clientSocket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+        }
+        return null;
+    }
+
+    private List<Integer> loadPackageIds(){
+        Socket clientSocket = null;
+        try {
+            clientSocket = new Socket(url, PORT_NUMBER);
+            DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+            InputStream inFormServer = clientSocket.getInputStream();
+
+            String msg = parser.parseToString(MessageProtocol.Type.PACKAGE_ID, SENDER);
+            outToServer.writeBytes(msg);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inFormServer));
+            Map<String, String> map = parser.parseToMap(reader);
+
+            if(MessageProtocol.Type.PACKAGE_ID.equals(map.get(MessageProtocol.Header.TYPE))){
+                return parser.parseToIds(map);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(clientSocket != null)
+                try {
+                    clientSocket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+        }
         return null;
     }
 

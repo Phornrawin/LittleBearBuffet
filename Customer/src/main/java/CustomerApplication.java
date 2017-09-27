@@ -40,7 +40,7 @@ public class CustomerApplication extends Application {
 //        coreController.setCustomerManager(customerManager);
 //        coreController.setRestuarantManager(restuarantManager);
 
-        this.coreController.start();
+//        this.coreController.start();
         this.primaryStage = primaryStage;
         System.out.println("start 2");
         initRoot();

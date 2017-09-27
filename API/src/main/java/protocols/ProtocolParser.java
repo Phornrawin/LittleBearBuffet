@@ -74,7 +74,7 @@ public class ProtocolParser {
         s += ids.get(ids.size()-1);
         return s;
     }
-    private String parseToString(Package packageObj, String sender, String method){
+    public String parseToString(Package packageObj, String sender, String method){
         String msg = "";
         msg += formatMessageLine(MessageProtocol.Header.METHOD, method);
         msg += formatMessageLine(MessageProtocol.Header.SENDER, sender);

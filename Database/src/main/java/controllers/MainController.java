@@ -3,6 +3,7 @@ package controllers;
 import models.Category;
 import models.Item;
 import models.Order;
+import models.Package;
 import protocols.MessageProtocol;
 import protocols.ProtocolParser;
 
@@ -57,8 +58,12 @@ public class MainController implements  CoreController {
                         }
                     }else if (MessageProtocol.Type.ITEM.equals(map.get(MessageProtocol.Header.TYPE))){
                         replyItem(map, outToClient);
+                    } else if (MessageProtocol.Type.PACKAGE_ID.equals(map.get(MessageProtocol.Header.TYPE))){
+                        replyPackageIds(map, outToClient);
+                    } else if (MessageProtocol.Type.PACKAGE.equals(map.get(MessageProtocol.Header.TYPE))){
+                        replyPackage(map, outToClient);
                     } else {
-                        // TODO reply bad msg
+                        replyPackage(map, outToClient);
                     }
                 } else {
                     replyBadMessage(outToClient);
@@ -67,6 +72,25 @@ public class MainController implements  CoreController {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    private void replyPackage(Map<String, String> map, DataOutputStream out) throws IOException {
+        int id = Integer.parseInt(map.get(MessageProtocol.Header.ID));
+        Package packageObj = dbManager.getPackage(id);
+        if (packageObj != null){
+            String replyMsg = parser.parseToString(packageObj, SENDER, MessageProtocol.Method.REPLY);
+            out.writeBytes(replyMsg);
+        }
+    }
+
+    private void replyPackageIds(Map<String, String> map, DataOutputStream out) throws IOException {
+        List<Integer> ids = dbManager.getPackageIds();
+        if(ids != null){
+            String replyMsg = parser.parseToString(ids, SENDER, MessageProtocol.Method.REPLY, MessageProtocol.Type.PACKAGE_ID);
+            out.writeBytes(replyMsg);
+        }else{
+
         }
     }
 
