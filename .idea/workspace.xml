@@ -8,81 +8,118 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Coffee-Float2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Coke-Float2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Coke2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Ice-Coffee2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Lime-Soda2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Lime-Squash2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Milk-tea-Float1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Orange-juice.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Plum-Juice2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Sugar-Cane-Squash2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Water-Melon-smoothies.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/lemon-tea1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/milk-tea1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Bacon-with-corn.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Bacon-with-mushroom-and-asparagus.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Crab-stick-Salad.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Fried-Eringi-mushroom-with-soy-sauce.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Fried-Gyoza.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Garlic-Riceedit.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Grilled-Shishamo-in-soy-sauce.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Kimji.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Salad.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Yakisoba.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Chocolate-Ice-Cream1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Coffee-Jelly-Ice-Cream1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Coffee-Jelly1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Custard-Jelly-Ice-Cream1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Custard-Jelly1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Green-Tea-Ice-Cream-with-Azuka-Bean-Paste1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Green-Tea-Ice-Cream1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Red-bean.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Vanilla-Ice-Cream1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Zalacca-in-light-syrup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Baby-Corn.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Bacon.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Bamboo-Pulp.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Beef slide.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Black-buna-shimeji.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Cabbage.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Carrot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Chicken.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Chrimp.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Egg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Enoki-Mushroom.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Eringi-Mushroom.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Fish-noodle.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Guangdong.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Japanese-Vermicelli.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Jellyfish.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Kamakobo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Lean beef.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Mahi-Mahi-Fish.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Narutomaki.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Pork slide.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Pork-Liver.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Pumpkin.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Raw-Ham.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Salmon-Fillet.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Scallop.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Squid-Ball.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Squid-Tentacle.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Squid.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Tofu.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Udon.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/White-Fungus.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/White-buna-shimeji.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/asparagus.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/cow-tongue.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/heart-pork.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/shiitake.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/streaky-pork.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grizzly-set.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Pola-set.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Koala-set.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Panda-set.jpg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Baby-Corn.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Bacon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Bamboo-Pulp.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Beef slide.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Black-buna-shimeji.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Cabbage.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Carrot.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Chicken.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Chrimp.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Egg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Enoki-Mushroom.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Eringi-Mushroom.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Fish-noodle.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Guangdong.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Japanese-Vermicelli.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Jellyfish.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Kamakobo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Lean beef.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Mahi-Mahi-Fish.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Narutomaki.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Pork slide.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Pork-Liver.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Pumpkin.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Raw-Ham.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Salmon-Fillet.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Scallop.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Squid-Ball.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Squid-Tentacle.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Squid.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Tofu.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Udon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/White-Fungus.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/White-buna-shimeji.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/asparagus.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/cow-tongue.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/heart-pork.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/shiitake.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/streaky-pork.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer/src/main/resources/MainView.fxml" afterPath="$PROJECT_DIR$/Customer/src/main/resources/MainView.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Coffee-Float2.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Coffee-Float2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Coke-Float2.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Coke-Float2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Coke2.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Coke2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Ice-Coffee2.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Ice-Coffee2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Lime-Soda2.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Lime-Soda2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Lime-Squash2.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Lime-Squash2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Milk-tea-Float1.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Milk-tea-Float1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Orange-juice.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Orange-juice.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Plum-Juice2.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Plum-Juice2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Sugar-Cane-Squash2.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Sugar-Cane-Squash2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/Water-Melon-smoothies.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Water-Melon-smoothies.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/lemon-tea1.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/lemon-tea1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Beverage/milk-tea1.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/milk-tea1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Bacon-with-corn.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Bacon-with-corn.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Bacon-with-mushroom-and-asparagus.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Bacon-with-mushroom-and-asparagus.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Crab-stick-Salad.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Crab-stick-Salad.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Fried-Eringi-mushroom-with-soy-sauce.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Fried-Eringi-mushroom-with-soy-sauce.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Fried-Gyoza.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Fried-Gyoza.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Garlic-Riceedit.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Garlic-Riceedit.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Grilled-Shishamo-in-soy-sauce.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled-Shishamo-in-soy-sauce.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Kimji.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Kimji.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Salad.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Salad.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Delicatessen/Yakisoba.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Yakisoba.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Chocolate-Ice-Cream1.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Chocolate-Ice-Cream1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Coffee-Jelly-Ice-Cream1.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Coffee-Jelly-Ice-Cream1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Coffee-Jelly1.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Coffee-Jelly1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Custard-Jelly-Ice-Cream1.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Custard-Jelly-Ice-Cream1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Custard-Jelly1.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Custard-Jelly1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Green-Tea-Ice-Cream-with-Azuka-Bean-Paste1.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Green-Tea-Ice-Cream-with-Azuka-Bean-Paste1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Green-Tea-Ice-Cream1.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Green-Tea-Ice-Cream1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Red-bean.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Red-bean.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Vanilla-Ice-Cream1.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Vanilla-Ice-Cream1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Dessert/Zalacca-in-light-syrup.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Zalacca-in-light-syrup.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Baby-Corn.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Baby-Corn.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Bacon.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Bacon.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Bamboo-Pulp.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Bamboo-Pulp.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Beef slide.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Beef slide.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Black-buna-shimeji.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Black-buna-shimeji.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Cabbage.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Cabbage.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Carrot.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Carrot.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Chicken.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Chicken.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Chrimp.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Chrimp.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Egg.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Egg.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Enoki-Mushroom.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Enoki-Mushroom.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Eringi-Mushroom.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Eringi-Mushroom.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Fish-noodle.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Fish-noodle.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Guangdong.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Guangdong.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Japanese-Vermicelli.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Japanese-Vermicelli.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Jellyfish.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Jellyfish.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Kamakobo.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Kamakobo.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Lean beef.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Lean beef.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Mahi-Mahi-Fish.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Mahi-Mahi-Fish.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Narutomaki.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Narutomaki.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Pork slide.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Pork slide.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Pork-Liver.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Pork-Liver.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Pumpkin.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Pumpkin.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Raw-Ham.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Raw-Ham.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Salmon-Fillet.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Salmon-Fillet.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Scallop.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Scallop.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Squid-Ball.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Squid-Ball.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Squid-Tentacle.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Squid-Tentacle.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Squid.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Squid.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Tofu.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Tofu.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/Udon.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/Udon.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/White-Fungus.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/White-Fungus.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/White-buna-shimeji.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/White-buna-shimeji.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/asparagus.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/asparagus.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/cow-tongue.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/cow-tongue.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/heart-pork.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/heart-pork.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/shiitake.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/shiitake.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Customer/src/main/resources/images/Grilled/streaky-pork.jpg" afterPath="$PROJECT_DIR$/Customer/src/main/resources/images/streaky-pork.jpg" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -176,8 +213,8 @@
       <file leaf-file-name="MainView.fxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Customer/src/main/resources/MainView.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2007">
-              <caret line="95" column="13" lean-forward="true" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+            <state relative-caret-position="-666">
+              <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -410,46 +447,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
-              <item name="Customer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="Beverage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
-              <item name="Customer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="Delicatessen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
-              <item name="Customer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="Dessert" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
-              <item name="Customer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="Grilled" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
@@ -6276,7 +6273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506503520049</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add image folder to customer resources">
+      <created>1506508114485</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1506508114485</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -6289,7 +6293,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -6299,12 +6302,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3494382" sideWeight="0.3426423" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36404493" sideWeight="0.6573577" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15505618" sideWeight="0.6573577" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46067417" sideWeight="0.4924812" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295711" sideWeight="0.49784946" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1933405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1933405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -6417,7 +6420,8 @@
     <MESSAGE value="implement UrlStorage class and change buffetDB file" />
     <MESSAGE value="commit check" />
     <MESSAGE value="implement tableView in MenuView and fixbug it !!" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement tableView in MenuView and fixbug it !!" />
+    <MESSAGE value="add image folder to customer resources" />
+    <option name="LAST_COMMIT_MESSAGE" value="add image folder to customer resources" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -6798,8 +6802,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/resources/MainView.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2007">
-          <caret line="95" column="13" lean-forward="true" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+        <state relative-caret-position="-666">
+          <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
           <folding />
         </state>
       </provider>
