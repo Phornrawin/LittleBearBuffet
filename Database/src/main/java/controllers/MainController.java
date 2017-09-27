@@ -39,6 +39,7 @@ public class MainController implements  CoreController {
                 System.out.println("map = " + map);
                 if(MessageProtocol.Method.ADD.equals(map.get(MessageProtocol.Header.METHOD))){
                     if (MessageProtocol.Type.ORDER.equals(map.get(MessageProtocol.Header.TYPE))){
+                        System.out.println("add order");
                         replyAddOrder(map, outToClient);
                     }else{
                         // TODO reply bad msg

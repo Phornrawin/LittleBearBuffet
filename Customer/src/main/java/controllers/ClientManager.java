@@ -171,6 +171,30 @@ public class ClientManager implements DatabaseManager {
     }
 
     public Order addOrder(Order order) {
+        Socket clientSocket = null;
+        try {
+            clientSocket = new Socket(url, PORT_NUMBER);
+            DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+            InputStream inFormServer = clientSocket.getInputStream();
+
+            String msg = parser.parseToString(order, SENDER, MessageProtocol.Method.ADD);
+            outToServer.writeBytes(msg);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inFormServer));
+            Map<String, String> map = parser.parseToMap(reader);
+
+            if(MessageProtocol.Type.ORDER.equals(map.get(MessageProtocol.Header.TYPE))){
+                return parser.parseToOrder(map);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(clientSocket != null)
+                try {
+                    clientSocket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+        }
         return null;
     }
 
