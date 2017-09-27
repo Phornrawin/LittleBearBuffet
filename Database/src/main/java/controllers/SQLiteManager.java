@@ -9,7 +9,9 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class SQLiteManager implements DatabaseManager{
@@ -18,6 +20,47 @@ public class SQLiteManager implements DatabaseManager{
 
 
     public Order addOrder(Order order) {
+        Connection connection = null;
+        try {
+            connection = prepareConnection();
+            if (connection != null){
+                Calendar calendar = Calendar.getInstance();
+                SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+                int amt = order.getAmount();
+                int table = order.getTable();
+                int itemId = order.getItem().getId();
+                String timeStamp = format.format(calendar.getTime());
+                String sql = "insert into 'order' " +
+                             "(amount, 'table', item_id, time_stamp) " +
+                             "values ('" + amt + "', '" + table + "', '" + itemId + "', '" + timeStamp + "')";
+                Statement statement = connection.createStatement();
+                int result = statement.executeUpdate(sql);
+                System.out.println("insert result " + result);
+
+                sql = "select * " +
+                        "from 'order' " +
+                        "where amount='" + amt + "' and 'order'.'table'='" + table + "' and item_id='" + itemId + "' and time_stamp='" + timeStamp + "'";
+                System.out.println("sql = " + sql);
+                ResultSet resultSet = statement.executeQuery(sql);
+
+//                System.out.println("resultSet. = " + resultSet.);
+                if(resultSet.next()){
+                    int id = resultSet.getInt("id");
+                    Order newOrder = new Order(id, amt, order.getItem(), table);
+
+                    return newOrder;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (connection != null)
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+        }
         return null;
     }
 
@@ -141,6 +184,7 @@ public class SQLiteManager implements DatabaseManager{
         } finally {
             if (connection != null){
                 try {
+                    System.out.println("close connection");
                     connection.close();
                 } catch (SQLException e) {
                     e.printStackTrace();
@@ -184,7 +228,7 @@ public class SQLiteManager implements DatabaseManager{
     }
 
     public Item getItem(int id) {
-        Connection connection;
+        Connection connection = null;
         try{
             connection = prepareConnection();
             if(connection != null){
@@ -202,12 +246,19 @@ public class SQLiteManager implements DatabaseManager{
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            if (connection != null)
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
         }
         return null;
     }
 
     public Package getPackage(int id) {
-        Connection connection;
+        Connection connection = null;
         try{
             connection = prepareConnection();
             if(connection != null){
@@ -225,6 +276,14 @@ public class SQLiteManager implements DatabaseManager{
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            if (connection != null)
+                try {
+                    System.out.println("close connect");
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
         }
         return null;
     }

@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import models.Category;
 import models.Item;
+import models.Order;
 import models.Package;
 
 import java.util.ArrayList;
@@ -56,6 +57,12 @@ public class DatabaseApplication extends Application {
                 items.add(item);
         }
         System.out.println("items = " + items);
+
+        Item item = new Item(1, "test item", 2);
+
+        Order order = new Order(0, 3, item, 1);
+        Order newOrder = db.addOrder(order);
+        System.out.println(newOrder);
 
 //        launch(args);
     }
