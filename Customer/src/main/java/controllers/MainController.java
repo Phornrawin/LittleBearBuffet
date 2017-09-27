@@ -53,11 +53,19 @@ public class MainController implements CoreController {
     public boolean checkBill() {
         Package pk = customerManager.getPackageObj();
         int amount = customerManager.getAmount();
-        return dbManager.checkBill(pk, amount);
+        boolean isSuccess = dbManager.checkBill(pk, amount);
+        if (isSuccess){
+            customerManager.clearOrder();
+        }
+        return isSuccess;
     }
 
     public int getTable() {
         return customerManager.getTable();
+    }
+
+    public List<Package> getPackages() {
+        return restaurantManager.getPackages();
     }
 
     public void setTable(int table) {
@@ -80,8 +88,11 @@ public class MainController implements CoreController {
         return restaurantManager.categories();
     }
 
-
     public List<Order> getOrders() {
         return customerManager.getOrders();
+    }
+
+    public double getTotalPrice() {
+        return customerManager.getTotalPrice();
     }
 }

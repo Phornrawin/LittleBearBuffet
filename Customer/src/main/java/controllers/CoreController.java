@@ -22,6 +22,8 @@ public interface CoreController {
 
     public int getTable();
 
+    public List<Package> getPackages();
+
     public void setTable(int table);
 
     public void setDatabaseManager(DatabaseManager dbManager);
@@ -34,4 +36,5 @@ public interface CoreController {
 
     public List<Order> getOrders();
 
+    public double getTotalPrice();
 }

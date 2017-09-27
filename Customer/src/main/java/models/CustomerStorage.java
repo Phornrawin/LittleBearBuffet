@@ -48,4 +48,8 @@ public class CustomerStorage implements CustomerManager{
     public void clearOrder() {
         orders.clear();
     }
+
+    public double getTotalPrice() {
+        return amount * packageObj.getPrice();
+    }
 }

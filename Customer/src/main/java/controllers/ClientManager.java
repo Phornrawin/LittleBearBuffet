@@ -38,20 +38,6 @@ public class ClientManager implements DatabaseManager {
                     categories.add(category);
             }
         }
-
-//        List<Integer> itemIds = loadItemIds();
-//        if (itemIds != null){
-//            for(int id : itemIds){
-//                Item item = loadItemInfo(id);
-//                if (item != null)
-//                    for(Category category: categories){
-//                        if(category.getId() == item.getCategoryId())
-//                            category.addItem(item);
-//                    }
-//            }
-//        }
-
-
         return categories;
     }
 
@@ -141,32 +127,6 @@ public class ClientManager implements DatabaseManager {
                 }
         }
 
-        return null;
-    }
-    private Item loadItemInfo(int id){
-        Socket clientSocket = null;
-        try {
-            clientSocket = new Socket(url, PORT_NUMBER);
-            DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
-            InputStream inFormServer = clientSocket.getInputStream();
-
-            String msg = parser.parseToString(MessageProtocol.Type.ITEM, SENDER, id);
-            outToServer.writeBytes(msg);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(inFormServer));
-            Map<String, String> map = parser.parseToMap(reader);
-            if(MessageProtocol.Type.ITEM.equals(map.get(MessageProtocol.Header.TYPE))){
-                return parser.parseToItem(map);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if(clientSocket != null)
-                try {
-                    clientSocket.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-        }
         return null;
     }
 
