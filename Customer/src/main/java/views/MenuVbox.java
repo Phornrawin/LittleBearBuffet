@@ -1,9 +1,12 @@
 package views;
 
 import controllers.CoreController;
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -31,9 +34,18 @@ public class MenuVbox extends VBox implements RootView{
     public void setVBoxListener(){
         this.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
-
+                TableView tableView = menuView.getTableOrder();
+                ObservableList<MenuVbox> menulist = menuView.getMenuList();
+                if (getTableColumnByName(tableView, menuName.getText().toString()).equals(null)){
+                    menulist.add(MenuVbox.this);
+                }
             }
         });
+    }
+    public  <T> TableColumn<T, ?> getTableColumnByName(TableView<T> tableView, String name) {
+        for (TableColumn<T, ?> col : tableView.getColumns())
+            if (col.getText().equals(name)) return col ;
+        return null ;
     }
 
 

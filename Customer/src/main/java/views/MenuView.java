@@ -1,6 +1,8 @@
 package views;
 
 import controllers.CoreController;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
@@ -16,7 +18,8 @@ public class MenuView extends AnchorPane implements RootView{
     @FXML private MenuBarDessertView menuBarDessertView;
     @FXML private MenuBarBeverageView menuBarBeverageView;
     @FXML private AnchorPane tableLayout;
-    private TableView tableOrder;
+    private ObservableList<MenuVbox> menuList;
+    private TableView<MenuVbox> tableOrder;
     private CoreController controller;
 
 
@@ -38,7 +41,8 @@ public class MenuView extends AnchorPane implements RootView{
     }
 
     public void buildTableView(){
-        tableOrder = new TableView();
+        menuList = FXCollections.observableArrayList();
+        tableOrder = new TableView<MenuVbox>();
         tableOrder.setEditable(false);
         TableColumn nameMenu = new TableColumn("Menu");
         TableColumn amount = new TableColumn("Amount");
@@ -48,6 +52,24 @@ public class MenuView extends AnchorPane implements RootView{
         tableOrder.setColumnResizePolicy(tableOrder.CONSTRAINED_RESIZE_POLICY);
         tableLayout.getChildren().add(tableOrder);
 
+    }
+
+
+
+    public TableView getTableOrder() {
+        return tableOrder;
+    }
+
+    public void setTableOrder(TableView tableOrder) {
+        this.tableOrder = tableOrder;
+    }
+
+    public ObservableList<MenuVbox> getMenuList() {
+        return menuList;
+    }
+
+    public void setMenuList(ObservableList<MenuVbox> menuList) {
+        this.menuList = menuList;
     }
 
     public void addOrder(Order order) {
