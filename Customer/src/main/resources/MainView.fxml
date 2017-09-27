@@ -60,14 +60,14 @@
                </image></ImageView>
             <ImageView fx:id="imageViewGrizzlySet" fitHeight="270.0" fitWidth="570.0" onMousePressed="#imageViewGrizzlySetClicked" pickOnBounds="true" GridPane.rowIndex="2">
                <image>
-                  <Image url="https://firebasestorage.googleapis.com/v0/b/littlebearbuffet-c7200.appspot.com/o/Pola-set.jpg?alt=media&amp;token=044daa4f-5bfc-41b6-9d74-2f19ea08afe2" />
+                  <Image url="images/Grizzly-set.jpg" />
                </image>
                <effect>
                   <DropShadow />
                </effect></ImageView>
             <ImageView fx:id="imageViewPolaSet" fitHeight="270.0" fitWidth="570.0" onMousePressed="#imageViewPolarSetClicked" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <image>
-                  <Image url="https://firebasestorage.googleapis.com/v0/b/littlebearbuffet-c7200.appspot.com/o/Grizzly-set.jpg?alt=media&amp;token=514f435c-fe41-4606-8748-ce880ec25708" />
+                  <Image url="images/Pola-set.jpg" />
                </image>
                <effect>
                   <DropShadow />
