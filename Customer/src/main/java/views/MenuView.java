@@ -38,14 +38,12 @@ public class MenuView extends AnchorPane implements RootView{
         tableOrder.setEditable(false);
         TableColumn nameMenu = new TableColumn("Menu");
         TableColumn amount = new TableColumn("Amount");
+        nameMenu.setMinWidth(250);
         tableOrder.getColumns().addAll(nameMenu, amount);
+        tableOrder.setMinSize(400,550);
+        tableOrder.setColumnResizePolicy(tableOrder.CONSTRAINED_RESIZE_POLICY);
         tableLayout.getChildren().add(tableOrder);
-//        tableOrder.setColumnResizePolicy(new Callback<TableView.ResizeFeatures, Boolean>() {
-//            @Override
-//            public Boolean call(TableView.ResizeFeatures p) {
-//                return true;
-//            }
-//        });
+
     }
 
     public void addOrder(Order order) {
