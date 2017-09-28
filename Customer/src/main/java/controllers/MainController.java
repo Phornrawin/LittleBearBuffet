@@ -66,6 +66,7 @@ public class MainController implements CoreController {
         boolean isSuccess = dbManager.checkBill(pk, amount);
         if (isSuccess){
             customerManager.clearOrder();
+            restaurantManager.clearCategories();
         }
         return isSuccess;
     }
@@ -108,5 +109,9 @@ public class MainController implements CoreController {
 
     public double getTotalPrice() {
         return customerManager.getTotalPrice();
+    }
+
+    public Package getCurrentPackage() {
+        return customerManager.getPackageObj();
     }
 }

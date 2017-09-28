@@ -24,6 +24,12 @@ public interface CoreController {
 
     public List<Package> getPackages();
 
+    public List<Order> getOrders();
+
+    public double getTotalPrice();
+
+    public Package getCurrentPackage();
+
     public int getAmount();
 
     public void setTable(int table);
@@ -35,8 +41,4 @@ public interface CoreController {
     public void setRestaurantManager(RestaurantManager restaurantManager);
 
     public List<Category> getCategories();
-
-    public List<Order> getOrders();
-
-    public double getTotalPrice();
 }

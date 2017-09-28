@@ -159,7 +159,7 @@ public class ClientManager implements DatabaseManager {
     }
 
     public boolean checkBill(Package pk, int amount) {
-        return false;
+        return true;
     }
 
     public boolean cancleOrder(Order order) {

@@ -11,4 +11,5 @@ public interface RestaurantManager {
     void setPackages(List<Package> packages);
     void setCategories(List<Category> categories);
     void addItemsToCategory(List<Item> items);
+    void clearCategories();
 }

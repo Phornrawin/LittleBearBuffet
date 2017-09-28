@@ -34,4 +34,10 @@ public class RestaurantStorage implements RestaurantManager {
                     category.addItem(item);
         }
     }
+
+    public void clearCategories() {
+        for (Category category : categories){
+            category.getItems().clear();
+        }
+    }
 }
