@@ -12,6 +12,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
 import models.Order;
 
+import java.util.ArrayList;
+
 
 public class MenuView extends AnchorPane implements RootView{
     @FXML private MenuBarGrilledView menuBarGrilled;
@@ -19,6 +21,7 @@ public class MenuView extends AnchorPane implements RootView{
     @FXML private MenuBarDessertView menuBarDessertView;
     @FXML private MenuBarBeverageView menuBarBeverageView;
     @FXML private AnchorPane tableLayout;
+    private ArrayList<MenuVbox> vboxes;
     private ObservableList<MenuVbox> menuList;
     private TableView<MenuVbox> tableOrder;
     private CoreController controller;
@@ -32,6 +35,7 @@ public class MenuView extends AnchorPane implements RootView{
 
     public void setController(CoreController controller) {
         this.controller = controller;
+        vboxes = new ArrayList<MenuVbox>();
         menuBarGrilled.setMenuBarGrilled(this.menuBarGrilled);
         menuBarGrilled.setMenuView(this);
         menuBarGrilled.setController(controller);
@@ -49,7 +53,7 @@ public class MenuView extends AnchorPane implements RootView{
         nameMenu.setCellValueFactory(new PropertyValueFactory<MenuVbox, String>("Menu"));
         amount.setCellValueFactory(new PropertyValueFactory<MenuVbox, Integer>("Amount"));
 
-        menuList = FXCollections.observableArrayList();
+        menuList = FXCollections.observableArrayList(vboxes);
         tableOrder.setItems(menuList);
         tableOrder.getColumns().addAll(nameMenu, amount);
 
@@ -60,6 +64,13 @@ public class MenuView extends AnchorPane implements RootView{
     }
 
 
+    public ArrayList<MenuVbox> getVboxes() {
+        return vboxes;
+    }
+
+    public void setVboxes(ArrayList<MenuVbox> vboxes) {
+        this.vboxes = vboxes;
+    }
 
     public TableView getTableOrder() {
         return tableOrder;
