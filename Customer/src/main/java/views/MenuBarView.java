@@ -1,5 +1,7 @@
 package views;
 
+import javafx.collections.ObservableList;
+import javafx.scene.Node;
 import javafx.scene.layout.FlowPane;
 import models.Item;
 import models.Order;
@@ -28,6 +30,9 @@ public class MenuBarView extends FlowPane {
             ItemView itemView = new ItemView(item);
             itemView.setListener(onClickItemListener);
             getChildren().addAll(itemView);
+//            Runnable r = new LoadItemViewTask(getChildren(), onClickItemListener, item);
+//            Thread thread = new Thread(r);
+//            thread.start();
         }
     }
 

@@ -7,9 +7,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="fix merge">
+    <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Customer/src/main/java/views/LoadItemViewTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer/src/main/java/views/PaymentView.java" afterPath="$PROJECT_DIR$/Customer/src/main/java/views/PaymentView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer/src/main/java/views/MenuBarView.java" afterPath="$PROJECT_DIR$/Customer/src/main/java/views/MenuBarView.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,8 +36,8 @@
       <file leaf-file-name="MenuView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MenuView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3604">
-              <caret line="88" column="38" lean-forward="false" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+            <state relative-caret-position="350">
+              <caret line="88" column="38" lean-forward="true" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -54,34 +55,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuBarView.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MenuBarView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MenuBarView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="742">
-              <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="160">
+              <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
               <folding>
-                <element signature="e#523#524#0" expanded="true" />
-                <element signature="e#555#556#0" expanded="true" />
+                <element signature="e#591#592#0" expanded="true" />
+                <element signature="e#623#624#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OnClickAddOrderListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/OnClickAddOrderListener.java">
+      <file leaf-file-name="LoadItemViewTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/LoadItemViewTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="513">
+              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaymentView.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PaymentView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/PaymentView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1421">
-              <caret line="48" column="47" lean-forward="false" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
+            <state relative-caret-position="357">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
                 <element signature="e#1277#1278#0" expanded="true" />
                 <element signature="e#1331#1332#0" expanded="true" />
@@ -139,19 +142,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/ClientManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13197">
-              <caret line="270" column="128" lean-forward="false" selection-start-line="270" selection-start-column="128" selection-end-line="270" selection-end-column="128" />
-              <folding>
-                <marker date="1506610221353" expanded="false" signature="6221:6230" ph="&lt;~&gt;" />
-                <marker date="1506610221353" expanded="false" signature="8912:8918" ph="&lt;~&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -199,7 +189,6 @@
         <option value="$PROJECT_DIR$/Customer/src/main/java/views/MenuVbox.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/views/OnClickAddOrder.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/views/ItemView.java" />
-        <option value="$PROJECT_DIR$/Customer/src/main/java/views/MenuBarView.java" />
         <option value="$PROJECT_DIR$/API/src/main/java/models/Order.java" />
         <option value="$PROJECT_DIR$/Database/src/main/java/controllers/MainController.java" />
         <option value="$PROJECT_DIR$/API/src/main/java/protocols/ProtocolParser.java" />
@@ -220,6 +209,8 @@
         <option value="$PROJECT_DIR$/Customer/src/main/resources/MainView.fxml" />
         <option value="$PROJECT_DIR$/Customer/src/main/resources/MenuView.fxml" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/views/PaymentView.java" />
+        <option value="$PROJECT_DIR$/Customer/src/main/java/views/LoadItemViewTask.java" />
+        <option value="$PROJECT_DIR$/Customer/src/main/java/views/MenuBarView.java" />
       </list>
     </option>
   </component>
@@ -936,7 +927,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506613629878</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Complete Backlog #10">
+      <created>1506614099538</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1506614099538</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -959,18 +957,18 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49430525" sideWeight="0.34425348" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32915717" sideWeight="0.60687435" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38154897" sideWeight="0.60687435" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49430525" sideWeight="0.6557465" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19871107" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5125285" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.49570355" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997722" sideWeight="0.49570355" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1046,8 +1044,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implements models, modify API diagram" />
-    <MESSAGE value="implements protocols, modify API diagram" />
     <MESSAGE value="implements database module: receive add order msg in controller, create add order sequence diagram" />
     <MESSAGE value="create class" />
     <MESSAGE value="add url link for ImageView in MainView" />
@@ -1071,7 +1067,9 @@
     <MESSAGE value="implement PaymentView class and showPaymentView in StageController" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/artifacts/Customer/Customer.jar&#10;#&#9;out/artifacts/Customer/Customer.jnlp&#10;#&#9;out/artifacts/Database/Database.jar&#10;#&#9;out/artifacts/Database/Database.jnlp" />
     <MESSAGE value="fix merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix merge" />
+    <MESSAGE value="Complete Backlog #10" />
+    <MESSAGE value="try to multi thread for load itemView" />
+    <option name="LAST_COMMIT_MESSAGE" value="try to multi thread for load itemView" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1084,14 +1082,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Database/src/main/java/DatabaseApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MainViewCustomer.java" />
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/SocketManager.java" />
     <entry file="file://$PROJECT_DIR$/buffetDB.db">
       <provider selected="true" editor-type-id="text-editor">
@@ -1170,17 +1160,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MenuVbox.java" />
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MenuBarGrilledView.java" />
-    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MenuBarView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding>
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/src/main/java/models/Order.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1303,14 +1282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MenuView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3604">
-          <caret line="88" column="38" lean-forward="false" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/models/RestaurantStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -1377,8 +1348,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/PaymentView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1421">
-          <caret line="48" column="47" lean-forward="false" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
+        <state relative-caret-position="357">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="e#1277#1278#0" expanded="true" />
             <element signature="e#1331#1332#0" expanded="true" />
@@ -1405,6 +1376,43 @@
         <state relative-caret-position="525">
           <caret line="38" column="101" lean-forward="false" selection-start-line="38" selection-start-column="101" selection-end-line="38" selection-end-column="101" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="383" column="22" lean-forward="false" selection-start-line="383" selection-start-column="22" selection-end-line="383" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MenuView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="88" column="38" lean-forward="true" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/LoadItemViewTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MenuBarView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+          <folding>
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
