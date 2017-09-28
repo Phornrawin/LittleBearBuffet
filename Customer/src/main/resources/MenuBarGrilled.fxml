@@ -2,7 +2,7 @@
 
 <?import views.MenuBarGrilledView?>
 <?import javafx.scene.control.Button?>
-<MenuBarGrilledView id="menuBarGrilled" xmlns:fx="http://javafx.com/fxml" translateY="40" translateX="20" fx:controller="views.MenuBarGrilledView" >
+<MenuBarGrilledView prefHeight="664.0" prefWidth="750.0" id="menuBarGrilled" xmlns:fx="http://javafx.com/fxml" translateY="40" translateX="20" fx:controller="views.MenuBarGrilledView" >
     <children>
     </children>
 </MenuBarGrilledView>

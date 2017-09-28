@@ -48,7 +48,7 @@ public class UrlStorage {
         imageGrilledUrl.add("Baby-Corn");
         imageGrilledUrl.add("Bacon");
         imageGrilledUrl.add("Bamboo-Pulp");
-        imageGrilledUrl.add("Beef slide");
+        imageGrilledUrl.add("Beef-slide");
         imageGrilledUrl.add("Black-buna-shimeji");
         imageGrilledUrl.add("Cabbage");
         imageGrilledUrl.add("Carrot");
@@ -64,10 +64,10 @@ public class UrlStorage {
         imageGrilledUrl.add("Japanese-Vermicelli");
         imageGrilledUrl.add("Jellyfish");
         imageGrilledUrl.add("Kamakobo");
-        imageGrilledUrl.add("Lean beef");
+        imageGrilledUrl.add("Lean-beef");
         imageGrilledUrl.add("Mahi-Mahi-Fish");
         imageGrilledUrl.add("Narutomaki");
-        imageGrilledUrl.add("Pork slide");
+        imageGrilledUrl.add("Pork-slide");
         imageGrilledUrl.add("Pork-Liver");
         imageGrilledUrl.add("Pumpkin");
         imageGrilledUrl.add("Raw-Ham");
