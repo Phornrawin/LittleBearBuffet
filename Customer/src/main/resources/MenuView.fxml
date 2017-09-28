@@ -44,5 +44,10 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
+      <Label layoutX="24.0" layoutY="17.0" text="Little Bear Buffet" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
