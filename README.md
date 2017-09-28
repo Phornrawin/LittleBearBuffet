@@ -1,4 +1,9 @@
 # LittleBearBuffet
 
-How to run
-- before run any artifect must run Database.jar
+## Artifacts
+- Database.jar
+  - executable jar file for running database application
+- Customer.jar
+  - executable jar file for running customer application
+## How to run
+- before run any artifact must run Database.jar
