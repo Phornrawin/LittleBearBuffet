@@ -7,21 +7,23 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import models.Order;
+import models.Package;
 
-import java.awt.*;
-import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.util.List;
 
 public class MainView implements RootView {
     @FXML private TextField textViewAmountCustomer;
     @FXML private ImageView imageViewPandaSet, imageViewKoalaSet, imageViewGrizzlySet, imageViewPolaSet;
     @FXML private Pane menuLayout;
     private CoreController controller;
+    private List<Package> packages;
 
     @FXML
     public void initialize(){
@@ -29,23 +31,25 @@ public class MainView implements RootView {
     }
 
     @FXML
-    public void imageViewPandaSetClicked(javafx.scene.input.MouseEvent event){
+    public void imageViewPandaSetClicked(MouseEvent event){
         System.out.println("in panda set listener");
+        // TODO get amount and sent to controller
+        controller.selectPackage(packages.get(0), 1);
         buildMenuView();
     }
 
     @FXML
-    public void imageViewKoalaSetClicked(javafx.scene.input.MouseEvent event){
+    public void imageViewKoalaSetClicked(MouseEvent event){
 
     }
 
     @FXML
-    public void imageViewGrizzlySetClicked(javafx.scene.input.MouseEvent event){
+    public void imageViewGrizzlySetClicked(MouseEvent event){
 
     }
 
     @FXML
-    public void imageViewPolarSetClicked(javafx.scene.input.MouseEvent event){
+    public void imageViewPolarSetClicked(MouseEvent event){
 
     }
 
@@ -73,6 +77,7 @@ public class MainView implements RootView {
     }
     public void setController(CoreController controller) {
         this.controller = controller;
+        this.packages = controller.getPackages();
     }
 
     public void addOrder(Order order) {

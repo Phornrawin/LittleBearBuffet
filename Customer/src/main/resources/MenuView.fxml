@@ -10,10 +10,14 @@
 <?import javafx.scene.control.ScrollPane?>
 <AnchorPane fx:id="menuLayout" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MenuView">
     <fx:define>
-        <fx:include fx:id="menuBarGrilled"      source="MenuBarGrilled.fxml" />
-        <fx:include fx:id="menuBarDelicatessen" source="MenuBarDelicatessen.fxml" />
-        <fx:include fx:id="menuBarDessert"      source="MenuBarDessert.fxml" />
-        <fx:include fx:id="menuBarBeverage"     source="MenuBarBeverage.fxml" />
+        <!--<fx:include fx:id="menuBarGrilled"      source="MenuBarGrilled.fxml" />-->
+        <!--<fx:include fx:id="menuBarDelicatessen" source="MenuBarDelicatessen.fxml" />-->
+        <!--<fx:include fx:id="menuBarDessert"      source="MenuBarDessert.fxml" />-->
+        <!--<fx:include fx:id="menuBarBeverage"     source="MenuBarBeverage.fxml" />-->
+        <fx:include fx:id="menuBarGrilled"      source="MenuBar.fxml" />
+        <fx:include fx:id="menuBarDelicatessen" source="MenuBar.fxml" />
+        <fx:include fx:id="menuBarDessert"      source="MenuBar.fxml" />
+        <fx:include fx:id="menuBarBeverage"     source="MenuBar.fxml" />
     </fx:define>
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc337" height="57.0" stroke="#fffbfb" strokeType="INSIDE" strokeWidth="0.0" width="1280.0" />

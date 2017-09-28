@@ -39,14 +39,9 @@ public class MenuVbox extends VBox implements RootView{
         });
     }
 
-
     public ImageView getMenuImage() {
-
         return menuImage;
     }
-
-
-
 
     public void setController(CoreController controller) {
 

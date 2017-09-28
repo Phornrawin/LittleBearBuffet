@@ -10,20 +10,22 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
+import models.Category;
+import models.Item;
 import models.Order;
 
 import java.util.ArrayList;
 
 
 public class MenuView extends AnchorPane implements RootView{
-    @FXML private MenuBarGrilledView menuBarGrilled;
-    @FXML private MenuBarDelicatessenView menuBarDelicatessenView;
-    @FXML private MenuBarDessertView menuBarDessertView;
-    @FXML private MenuBarBeverageView menuBarBeverageView;
+    @FXML private MenuBarView menuBarGrilled;
+    @FXML private MenuBarView menuBarDelicatessen;
+    @FXML private MenuBarView menuBarDessert;
+    @FXML private MenuBarView menuBarBeverage;
     @FXML private AnchorPane tableLayout;
     private ArrayList<MenuVbox> vboxes;
-    private ObservableList<MenuVbox> menuList;
-    private TableView<MenuVbox> tableOrder;
+    private ObservableList<Order> orderList;
+    private TableView<Order> tableOrder;
     private CoreController controller;
 
 
@@ -35,26 +37,62 @@ public class MenuView extends AnchorPane implements RootView{
 
     public void setController(CoreController controller) {
         this.controller = controller;
-        vboxes = new ArrayList<MenuVbox>();
-        menuBarGrilled.setMenuBarGrilled(this.menuBarGrilled);
-        menuBarGrilled.setMenuView(this);
-        menuBarGrilled.setController(controller);
-        menuBarGrilled.createMenuBar();
+//        vboxes = new ArrayList<MenuVbox>();
+//        menuBarGrilled.setMenuBarGrilled(this.menuBarGrilled);
+//        menuBarGrilled.setMenuView(this);
+//        menuBarGrilled.setController(controller);
+//        menuBarGrilled.createMenuBar();
+        initMenuBar();
         buildTableView();
+    }
 
+    private void initMenuBar(){
+        ArrayList<Item> grilledItems = new ArrayList<Item>();
+        ArrayList<Item> delicatessenItems = new ArrayList<Item>();
+        ArrayList<Item> dessertItems = new ArrayList<Item>();
+        ArrayList<Item> beverageItems = new ArrayList<Item>();
+        System.out.println("controller = " + controller);
+        System.out.println("controller.getCategories() = " + controller.getCategories());
+        for(Category category : controller.getCategories()){
+            System.out.println("category.getItems() = " + category.getItems());
+            if("Meat".equals(category.getName()))
+                grilledItems.addAll(category.getItems());
+            else if("Vegetable".equals(category.getName()))
+                grilledItems.addAll(category.getItems());
+            else if("Dessert".equals(category.getName()))
+                dessertItems.addAll(category.getItems());
+            else if ("Delicatessen".equals(category.getName()))
+                delicatessenItems.addAll(category.getItems());
+            else if ("Beverage".equals(category.getName()))
+                beverageItems.addAll(category.getItems());
+        }
 
+        System.out.println("grilledItems = " + grilledItems);
+        System.out.println("dessertItems = " + dessertItems);
+
+        menuBarGrilled.setItems(grilledItems);
+        menuBarDessert.setItems(dessertItems);
+        menuBarDelicatessen.setItems(delicatessenItems);
+        menuBarBeverage.setItems(beverageItems);
+
+        menuBarGrilled.createMenus();
+        menuBarDessert.createMenus();
+        menuBarDelicatessen.createMenus();
+        menuBarBeverage.createMenus();
     }
 
     public void buildTableView(){
-        tableOrder = new TableView<MenuVbox>();
+        tableOrder = new TableView<Order>();
         tableOrder.setEditable(false);
-        TableColumn<MenuVbox, String> nameMenu = new TableColumn<MenuVbox, String>("Menu");
-        TableColumn<MenuVbox, Integer> amount = new TableColumn<MenuVbox, Integer>("Amount");
-        nameMenu.setCellValueFactory(new PropertyValueFactory<MenuVbox, String>("Menu"));
-        amount.setCellValueFactory(new PropertyValueFactory<MenuVbox, Integer>("Amount"));
+        TableColumn<Order, String> nameMenu = new TableColumn<Order, String>("Menu");
+        TableColumn<Order, Integer> amount = new TableColumn<Order, Integer>("Amount");
+        nameMenu.setCellValueFactory(new PropertyValueFactory<Order, String>("name"));
+        amount.setCellValueFactory(new PropertyValueFactory<Order, Integer>("amount"));
 
-        menuList = FXCollections.observableArrayList(vboxes);
-        tableOrder.setItems(menuList);
+//        menuList = FXCollections.observableArrayList(vboxes);
+        orderList = FXCollections.observableList(controller.getOrders());
+        tableOrder.setItems(orderList);
+
         tableOrder.getColumns().addAll(nameMenu, amount);
 
         tableOrder.setMinSize(400,550);
@@ -80,13 +118,13 @@ public class MenuView extends AnchorPane implements RootView{
         this.tableOrder = tableOrder;
     }
 
-    public ObservableList<MenuVbox> getMenuList() {
-        return menuList;
-    }
-
-    public void setMenuList(ObservableList<MenuVbox> menuList) {
-        this.menuList = menuList;
-    }
+//    public ObservableList<MenuVbox> getMenuList() {
+//        return menuList;
+//    }
+//
+//    public void setMenuList(ObservableList<MenuVbox> menuList) {
+//        this.menuList = menuList;
+//    }
 
     public void addOrder(Order order) {
 

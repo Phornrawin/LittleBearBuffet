@@ -24,6 +24,8 @@ public interface CoreController {
 
     public List<Package> getPackages();
 
+    public int getAmount();
+
     public void setTable(int table);
 
     public void setDatabaseManager(DatabaseManager dbManager);

@@ -1,5 +1,6 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,7 +8,7 @@ import java.util.List;
  */
 public class RestaurantStorage implements RestaurantManager {
     private List<Package> packages;
-    private List<Category> categories;
+    private List<Category> categories = new ArrayList<Category>();
 
     public List<Package> getPackages() {
         return packages;

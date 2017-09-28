@@ -22,6 +22,13 @@ public class MainController implements CoreController {
             packages = dbManager.loadPackages();
         }
         restaurantManager.setPackages(packages);
+
+        List<Category> categories = null;
+        while (categories == null){
+            System.out.println("loading categories ...");
+            categories = dbManager.loadCategories();
+        }
+        restaurantManager.setCategories(categories);
     }
 
     public boolean addOrder(Order order) {
@@ -66,6 +73,10 @@ public class MainController implements CoreController {
 
     public List<Package> getPackages() {
         return restaurantManager.getPackages();
+    }
+
+    public int getAmount() {
+        return customerManager.getAmount();
     }
 
     public void setTable(int table) {
