@@ -5,11 +5,14 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
 import models.Category;
@@ -17,6 +20,7 @@ import models.Item;
 import models.Order;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MenuView extends AnchorPane implements RootView{
@@ -25,10 +29,12 @@ public class MenuView extends AnchorPane implements RootView{
     @FXML private MenuBarView menuBarDessert;
     @FXML private MenuBarView menuBarBeverage;
     @FXML private AnchorPane tableLayout;
-    private ArrayList<MenuVbox> vboxes;
+    @FXML private Button btnConfirm;
     private ObservableList<Order> orderList;
     private TableView<Order> tableOrder;
     private CoreController controller;
+    private List<Order> bufferOrders = new ArrayList<Order>();
+    private StageController stageController;
 
 
     @FXML
@@ -39,11 +45,6 @@ public class MenuView extends AnchorPane implements RootView{
 
     public void setController(CoreController controller) {
         this.controller = controller;
-//        vboxes = new ArrayList<MenuVbox>();
-//        menuBarGrilled.setMenuBarGrilled(this.menuBarGrilled);
-//        menuBarGrilled.setMenuView(this);
-//        menuBarGrilled.setController(controller);
-//        menuBarGrilled.createMenuBar();
         initMenuBar();
         buildTableView();
     }
@@ -104,7 +105,7 @@ public class MenuView extends AnchorPane implements RootView{
         amount.setCellValueFactory(new PropertyValueFactory<Order, Integer>("amount"));
 
 //        menuList = FXCollections.observableArrayList(vboxes);
-        orderList = FXCollections.observableList(controller.getOrders());
+        orderList = FXCollections.observableList(bufferOrders);
         tableOrder.setItems(orderList);
 
         tableOrder.getColumns().addAll(nameMenu, amount);
@@ -113,16 +114,29 @@ public class MenuView extends AnchorPane implements RootView{
         tableOrder.setColumnResizePolicy(tableOrder.CONSTRAINED_RESIZE_POLICY);
         tableLayout.getChildren().add(tableOrder);
 
-    }
+        btnConfirm.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent event) {
+                System.out.println("onClick confirm");
+                for(Order order : bufferOrders){
+                    // TODO handle isSuccess
+                    boolean isSuccess = controller.addOrder(order);
+                    if (!isSuccess)
+                        System.err.println("addOrder fail " + order.getItem().getName());
+                }
+
+                bufferOrders.clear();
+                tableOrder.refresh();
+            }
+        });
 
 
-    public ArrayList<MenuVbox> getVboxes() {
-        return vboxes;
+    }
+    @FXML
+    public void onClickLabelPayment(){
+        System.out.println("in payment window");
+
     }
 
-    public void setVboxes(ArrayList<MenuVbox> vboxes) {
-        this.vboxes = vboxes;
-    }
 
     public TableView getTableOrder() {
         return tableOrder;
@@ -132,22 +146,29 @@ public class MenuView extends AnchorPane implements RootView{
         this.tableOrder = tableOrder;
     }
 
-//    public ObservableList<MenuVbox> getMenuList() {
-//        return menuList;
-//    }
-//
-//    public void setMenuList(ObservableList<MenuVbox> menuList) {
-//        this.menuList = menuList;
-//    }
 
     public void addOrder(Order order) {
-        boolean isSuccess = controller.addOrder(order);
-        if (isSuccess){
-            tableOrder.refresh();
+        int i = 0;
+        boolean isAdd = false;
+        while (i<bufferOrders.size()) {
+            if (bufferOrders.get(i).getItem().getId() == order.getItem().getId()) {
+                bufferOrders.get(i).increaseAmount(order.getAmount());
+                isAdd = true;
+            }
+            i++;
         }
+
+        if (!isAdd)
+            bufferOrders.add(order);
+
+        tableOrder.refresh();
     }
 
     public void checkBill() {
 
+    }
+
+    public void setStageController(StageController stageController) {
+        this.stageController = stageController;
     }
 }

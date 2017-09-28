@@ -33,7 +33,6 @@ public class MainController implements  CoreController {
 
                 BufferedReader reader = new BufferedReader(new InputStreamReader(inFromClient));
 //                Map<String, String> map = parser.parseToMap(inFromClient);
-                System.out.println("calling parse to map");
                 Map<String, String> map = parser.parseToMap(reader);
 //                Map<String, String> map = new HashMap<String, String>();
                 System.out.println("map = " + map);

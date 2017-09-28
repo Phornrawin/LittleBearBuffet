@@ -102,6 +102,15 @@ public class ProtocolParser {
         msg += endMessage();
         return msg;
     }
+    public String parseToString(String requestType, String sender, int id, String idType){
+        String msg = "";
+        msg += formatMessageLine(MessageProtocol.Header.METHOD, MessageProtocol.Method.LOAD);
+        msg += formatMessageLine(MessageProtocol.Header.SENDER, sender);
+        msg += formatMessageLine(MessageProtocol.Header.TYPE, requestType);
+        msg += formatMessageLine(idType, id + "");
+        msg += endMessage();
+        return msg;
+    }
 
     public Item parseToItem(Map<String, String> map){
         int id = Integer.parseInt(map.get(MessageProtocol.Header.ID));

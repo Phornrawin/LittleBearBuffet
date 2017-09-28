@@ -29,5 +29,7 @@ public class Order {
         return table;
     }
 
+    public void increaseAmount(int amt){ this.amount += amt; }
+
 
 }

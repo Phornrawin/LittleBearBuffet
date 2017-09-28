@@ -268,7 +268,8 @@ public class ClientManager implements DatabaseManager {
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             InputStream inFormServer = clientSocket.getInputStream();
 
-            String msg = parser.parseToString(MessageProtocol.Type.ITEM_ID, SENDER, packageId);
+            String msg = parser.parseToString(MessageProtocol.Type.ITEM_ID, SENDER, packageId, MessageProtocol.Header.PACKAGE_ID);
+            System.out.println(msg);
             outToServer.writeBytes(msg);
             BufferedReader reader = new BufferedReader(new InputStreamReader(inFormServer));
             Map<String, String> map = parser.parseToMap(reader);

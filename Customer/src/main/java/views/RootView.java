@@ -13,4 +13,6 @@ public interface RootView {
     public void addOrder(Order order);
 
     public void checkBill();
+
+    public void setStageController(StageController stageController);
 }

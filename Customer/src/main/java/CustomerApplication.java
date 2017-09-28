@@ -7,11 +7,13 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import models.*;
+import views.MainStageController;
 import views.RootView;
+import views.StageController;
 
 import java.io.IOException;
 
-public class CustomerApplication extends Application {
+public class CustomerApplication extends Application{
 
     private CustomerStorage customerManager;
     private RestaurantStorage restaurantManager;
@@ -19,6 +21,7 @@ public class CustomerApplication extends Application {
     private CoreController coreController;
     private Stage primaryStage;
     private RootView rootView;
+    private StageController stageController;
 
     public static void main(String[] args) {
 //        DatabaseManager db = new ClientManager();
@@ -42,7 +45,15 @@ public class CustomerApplication extends Application {
 
         this.coreController.start();
         this.primaryStage = primaryStage;
-        initRoot();
+
+        stageController = new MainStageController();
+        stageController.setStage(primaryStage);
+        stageController.setController(coreController);
+        stageController.showMainView();
+
+        primaryStage.show();
+        primaryStage.setTitle("Little Bear Buffet");
+//        initRoot();
     }
 
     private void initRoot() {
@@ -62,4 +73,6 @@ public class CustomerApplication extends Application {
             e.printStackTrace();
         }
     }
+
+
 }
