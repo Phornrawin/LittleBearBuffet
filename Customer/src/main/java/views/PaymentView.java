@@ -47,6 +47,5 @@ public class PaymentView implements RootView {
 
     public void setStageController(StageController stageController) {
         this.stageController = stageController;
-
     }
 }
