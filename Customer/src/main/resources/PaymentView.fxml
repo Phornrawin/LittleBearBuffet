@@ -9,8 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.PaymentView">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.PaymentView">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc337" height="57.0" stroke="#fffbfb" strokeType="INSIDE" strokeWidth="0.0" width="1280.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc337" height="88.0" layoutX="273.0" layoutY="79.0" stroke="#fffbfb" strokeType="INSIDE" strokeWidth="0.0" width="735.0" />
@@ -54,22 +53,22 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label text="Label" GridPane.columnIndex="2">
+            <Label fx:id="labelDate" text="Label" GridPane.columnIndex="2">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label fx:id="labelTable" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Label fx:id="labelPackage" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Label fx:id="labelAmount" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="24.0" />
                </font>
@@ -79,15 +78,15 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Label fx:id="labelPayment" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
          </children>
       </GridPane>
-      <Button layoutX="538.0" layoutY="637.0" mnemonicParsing="false" text="Back" />
-      <Button layoutX="682.0" layoutY="637.0" mnemonicParsing="false" text="Back to Main" />
+      <Button fx:id="btnBack" layoutX="538.0" layoutY="637.0" mnemonicParsing="false" onAction="#onClickBtnBack" text="Back" />
+      <Button fx:id="btnBackMain" layoutX="682.0" layoutY="637.0" mnemonicParsing="false" text="Back to Main" />
       <Label layoutX="18.0" layoutY="18.0" text="Little Bear Buffet" textFill="WHITE">
          <font>
             <Font name="System Bold" size="36.0" />

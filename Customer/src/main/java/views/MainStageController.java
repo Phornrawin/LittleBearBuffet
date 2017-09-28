@@ -17,6 +17,25 @@ public class MainStageController implements StageController {
         this.primaryStage = primaryStage;
     }
 
+    public void showPaymentView(){
+        System.out.println("showPaymentView");
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MenuView.class.getResource("/PaymentView.fxml"));
+            AnchorPane paymantLayout = loader.load();
+            PaymentView paymentView = loader.getController();
+            paymentView.setController(controller);
+            paymentView.setStageController(this);
+
+            // Show the scene containing the root layout.
+            Scene scene = new Scene(paymantLayout);
+            primaryStage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public void showMenuView() {
         System.out.println("showMenuView");
         try {
