@@ -1,6 +1,8 @@
 package views;
 
 import controllers.CoreController;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -79,6 +81,11 @@ public class MenuView extends AnchorPane implements RootView{
         menuBarDessert.createMenus();
         menuBarDelicatessen.createMenus();
         menuBarBeverage.createMenus();
+
+        menuBarGrilled.setRoot(this);
+        menuBarDessert.setRoot(this);
+        menuBarDelicatessen.setRoot(this);
+        menuBarBeverage.setRoot(this);
     }
 
     public void buildTableView(){
@@ -86,7 +93,14 @@ public class MenuView extends AnchorPane implements RootView{
         tableOrder.setEditable(false);
         TableColumn<Order, String> nameMenu = new TableColumn<Order, String>("Menu");
         TableColumn<Order, Integer> amount = new TableColumn<Order, Integer>("Amount");
-        nameMenu.setCellValueFactory(new PropertyValueFactory<Order, String>("name"));
+        nameMenu.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Order, String>, ObservableValue<String>>() {
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<Order, String> param) {
+                SimpleStringProperty property = new SimpleStringProperty();
+
+                property.setValue(param.getValue().getItem().getName());
+                return property;
+            }
+        });
         amount.setCellValueFactory(new PropertyValueFactory<Order, Integer>("amount"));
 
 //        menuList = FXCollections.observableArrayList(vboxes);
@@ -127,7 +141,10 @@ public class MenuView extends AnchorPane implements RootView{
 //    }
 
     public void addOrder(Order order) {
-
+        boolean isSuccess = controller.addOrder(order);
+        if (isSuccess){
+            tableOrder.refresh();
+        }
     }
 
     public void checkBill() {

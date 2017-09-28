@@ -1,6 +1,7 @@
 package views;
 
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -23,7 +24,9 @@ public class ItemView extends VBox{
             menuName = new Label(item.getName());
             this.menuImage.setFitWidth(150);
             this.menuImage.setFitHeight(150);
-            getChildren().addAll(menuImage, menuName);
+            this.getChildren().addAll(menuImage, menuName);
+            this.setPadding(new Insets(10));
+            setPrefWidth(150);
         } catch (Exception e) {
             System.out.println("createUrl() = " + createUrl());
         }

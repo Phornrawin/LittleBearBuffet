@@ -20,6 +20,9 @@ public class MenuBarView extends FlowPane {
         this.items = items;
     }
 
+    public void setRoot(RootView root){
+        this.root = root;
+    }
     public void createMenus(){
         for(Item item : items){
             ItemView itemView = new ItemView(item);
