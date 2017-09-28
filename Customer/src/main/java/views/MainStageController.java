@@ -22,13 +22,13 @@ public class MainStageController implements StageController {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MenuView.class.getResource("/PaymentView.fxml"));
-            AnchorPane paymantLayout = loader.load();
+            AnchorPane paymentLayout = loader.load();
             PaymentView paymentView = loader.getController();
             paymentView.setController(controller);
             paymentView.setStageController(this);
 
             // Show the scene containing the root layout.
-            Scene scene = new Scene(paymantLayout);
+            Scene scene = new Scene(paymentLayout);
             primaryStage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();

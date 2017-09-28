@@ -5,6 +5,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -134,7 +135,6 @@ public class MenuView extends AnchorPane implements RootView{
     public void onClickLabelPayment(){
         System.out.println("in payment window");
         stageController.showPaymentView();
-
     }
 
 

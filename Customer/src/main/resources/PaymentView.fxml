@@ -86,7 +86,7 @@
          </children>
       </GridPane>
       <Button fx:id="btnBack" layoutX="538.0" layoutY="637.0" mnemonicParsing="false" onAction="#onClickBtnBack" text="Back" />
-      <Button fx:id="btnBackMain" layoutX="682.0" layoutY="637.0" mnemonicParsing="false" text="Back to Main" />
+      <Button fx:id="btnBackMain" layoutX="682.0" layoutY="637.0" mnemonicParsing="false" text="Back to Main" onAction="#onClickBtnBackToMain"/>
       <Label layoutX="18.0" layoutY="18.0" text="Little Bear Buffet" textFill="WHITE">
          <font>
             <Font name="System Bold" size="36.0" />

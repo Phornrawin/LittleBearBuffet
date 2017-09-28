@@ -28,7 +28,8 @@ public class PaymentView implements RootView {
 
     @FXML
     private void onClickBtnBackToMain(){
-
+        this.controller.checkBill();
+        this.stageController.showMainView();
     }
 
     public void setController(CoreController controller) {
