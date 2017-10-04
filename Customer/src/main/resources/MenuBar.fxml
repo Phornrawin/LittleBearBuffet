@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import views.MenuBarView?>
-<MenuBarView prefHeight="664.0" prefWidth="750.0" id="menuBarGrilled" xmlns:fx="http://javafx.com/fxml" translateY="40" translateX="20" fx:controller="views.MenuBarView" >
+<MenuBarView prefHeight="664.0" prefWidth="760.0" id="menuBarGrilled" xmlns:fx="http://javafx.com/fxml" translateY="40" translateX="20" fx:controller="views.MenuBarView" >
     <children>
     </children>
 </MenuBarView>

@@ -26,6 +26,8 @@ public class ItemView extends VBox{
             this.menuImage.setFitHeight(150);
             this.getChildren().addAll(menuImage, menuName);
             this.setPadding(new Insets(10));
+//            this.maxHeight(Double.NEGATIVE_INFINITY);
+//            this.maxWidth(Double.NEGATIVE_INFINITY);
             setPrefWidth(150);
         } catch (Exception e) {
             System.out.println("createUrl() = " + createUrl());

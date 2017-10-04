@@ -1,24 +1,17 @@
 package views;
 
 import controllers.CoreController;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.util.Callback;
+import javafx.scene.layout.Pane;
 import models.Category;
 import models.Item;
 import models.Order;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,10 +21,11 @@ public class MenuView extends AnchorPane implements RootView{
     @FXML private MenuBarView menuBarDelicatessen;
     @FXML private MenuBarView menuBarDessert;
     @FXML private MenuBarView menuBarBeverage;
-    @FXML private AnchorPane tableLayout;
-    @FXML private Button btnConfirm;
-    private ObservableList<Order> orderList;
-    private TableView<Order> tableOrder;
+    @FXML private OrderBarView orderBar;
+//    @FXML private AnchorPane tableLayout;
+//    @FXML private Button btnConfirm;
+//    private ObservableList<Order> orderList;
+//    private TableView<Order> tableOrder;
     private CoreController controller;
     private List<Order> bufferOrders = new ArrayList<Order>();
     private StageController stageController;
@@ -46,7 +40,7 @@ public class MenuView extends AnchorPane implements RootView{
     public void setController(CoreController controller) {
         this.controller = controller;
         initMenuBar();
-        buildTableView();
+        initOrderBar();
     }
 
     private void initMenuBar(){
@@ -87,48 +81,48 @@ public class MenuView extends AnchorPane implements RootView{
         menuBarDessert.setRoot(this);
         menuBarDelicatessen.setRoot(this);
         menuBarBeverage.setRoot(this);
+
     }
-
-    public void buildTableView(){
-        tableOrder = new TableView<Order>();
-        tableOrder.setEditable(false);
-        TableColumn<Order, String> nameMenu = new TableColumn<Order, String>("Menu");
-        TableColumn<Order, Integer> amount = new TableColumn<Order, Integer>("Amount");
-        nameMenu.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Order, String>, ObservableValue<String>>() {
-            public ObservableValue<String> call(TableColumn.CellDataFeatures<Order, String> param) {
-                SimpleStringProperty property = new SimpleStringProperty();
-
-                property.setValue(param.getValue().getItem().getName());
-                return property;
-            }
-        });
-        amount.setCellValueFactory(new PropertyValueFactory<Order, Integer>("amount"));
-
-//        menuList = FXCollections.observableArrayList(vboxes);
-        orderList = FXCollections.observableList(bufferOrders);
-        tableOrder.setItems(orderList);
-
-        tableOrder.getColumns().addAll(nameMenu, amount);
-
-        tableOrder.setMinSize(400,550);
-        tableOrder.setColumnResizePolicy(tableOrder.CONSTRAINED_RESIZE_POLICY);
-        tableLayout.getChildren().add(tableOrder);
-
-        btnConfirm.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent event) {
-                System.out.println("onClick confirm");
+    public void initOrderBar(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/OrderBar.fxml"));
+            Pane mainLayout = loader.load();
+            orderBar = loader.getController();
+            System.out.println("loader");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        orderBar.setRoot(this);
+        System.out.println(orderBar);
+        orderBar.setData(bufferOrders);
+        orderBar.setOnConfirmListener(new OrderBarView.OnConfirmListener() {
+            @Override
+            public void perform() {
                 for(Order order : bufferOrders){
-                    // TODO handle isSuccess
                     boolean isSuccess = controller.addOrder(order);
                     if (!isSuccess)
                         System.err.println("addOrder fail " + order.getItem().getName());
                 }
 
                 bufferOrders.clear();
-                tableOrder.refresh();
             }
         });
-
+//        orderBar.createtTable(bufferOrders);
+//        orderBar.setOnClickConfirm(new EventHandler<MouseEvent>() {
+//            public void handle(MouseEvent event) {
+//                System.out.println("onClick confirm");
+//                for(Order order : bufferOrders){
+//                    // TODO handle isSuccess
+//                    boolean isSuccess = controller.addOrder(order);
+//                    if (!isSuccess)
+//                        System.err.println("addOrder fail " + order.getItem().getName());
+//                }
+//
+//                bufferOrders.clear();
+//                tableOrder.refresh();
+//            }
+//        });
 
     }
     @FXML
@@ -138,13 +132,13 @@ public class MenuView extends AnchorPane implements RootView{
     }
 
 
-    public TableView getTableOrder() {
-        return tableOrder;
-    }
-
-    public void setTableOrder(TableView tableOrder) {
-        this.tableOrder = tableOrder;
-    }
+//    public TableView getTableOrder() {
+//        return tableOrder;
+//    }
+//
+//    public void setTableOrder(TableView tableOrder) {
+//        this.tableOrder = tableOrder;
+//    }
 
 
     public void addOrder(Order order) {
@@ -161,7 +155,9 @@ public class MenuView extends AnchorPane implements RootView{
         if (!isAdd)
             bufferOrders.add(order);
 
-        tableOrder.refresh();
+        System.out.println("addOrder");
+        System.out.println("orderBar = " + orderBar);
+        orderBar.refresh();
     }
 
     public void checkBill() {
