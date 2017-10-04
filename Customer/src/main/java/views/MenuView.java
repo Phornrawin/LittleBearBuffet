@@ -4,6 +4,7 @@ import controllers.CoreController;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Tab;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -21,8 +22,9 @@ public class MenuView extends AnchorPane implements RootView{
     @FXML private MenuBarView menuBarDelicatessen;
     @FXML private MenuBarView menuBarDessert;
     @FXML private MenuBarView menuBarBeverage;
-    @FXML private OrderBarView orderBar;
-//    @FXML private AnchorPane tableLayout;
+    @FXML private Tab orderResultTab;
+    private OrderBarView orderBar;
+    //    @FXML private AnchorPane tableLayout;
 //    @FXML private Button btnConfirm;
 //    private ObservableList<Order> orderList;
 //    private TableView<Order> tableOrder;
@@ -87,59 +89,33 @@ public class MenuView extends AnchorPane implements RootView{
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/OrderBar.fxml"));
-            Pane mainLayout = loader.load();
+            Pane orderBarLayout = loader.load();
+            orderResultTab.setContent(orderBarLayout);
+
             orderBar = loader.getController();
-            System.out.println("loader");
+            orderBar.setRoot(this);
+            orderBar.setData(bufferOrders);
+            orderBar.setOnConfirmListener(new OrderBarView.OnConfirmListener() {
+                @Override
+                public void perform() {
+                    for(Order order : bufferOrders){
+                        boolean isSuccess = controller.addOrder(order);
+                        if (!isSuccess)
+                            System.err.println("addOrder fail " + order.getItem().getName());
+                    }
+
+                    bufferOrders.clear();
+                }
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }
-        orderBar.setRoot(this);
-        System.out.println(orderBar);
-        orderBar.setData(bufferOrders);
-        orderBar.setOnConfirmListener(new OrderBarView.OnConfirmListener() {
-            @Override
-            public void perform() {
-                for(Order order : bufferOrders){
-                    boolean isSuccess = controller.addOrder(order);
-                    if (!isSuccess)
-                        System.err.println("addOrder fail " + order.getItem().getName());
-                }
-
-                bufferOrders.clear();
-            }
-        });
-//        orderBar.createtTable(bufferOrders);
-//        orderBar.setOnClickConfirm(new EventHandler<MouseEvent>() {
-//            public void handle(MouseEvent event) {
-//                System.out.println("onClick confirm");
-//                for(Order order : bufferOrders){
-//                    // TODO handle isSuccess
-//                    boolean isSuccess = controller.addOrder(order);
-//                    if (!isSuccess)
-//                        System.err.println("addOrder fail " + order.getItem().getName());
-//                }
-//
-//                bufferOrders.clear();
-//                tableOrder.refresh();
-//            }
-//        });
-
     }
     @FXML
     public void onClickLabelPayment(){
         System.out.println("in payment window");
         stageController.showPaymentView();
     }
-
-
-//    public TableView getTableOrder() {
-//        return tableOrder;
-//    }
-//
-//    public void setTableOrder(TableView tableOrder) {
-//        this.tableOrder = tableOrder;
-//    }
-
 
     public void addOrder(Order order) {
         int i = 0;
@@ -154,9 +130,6 @@ public class MenuView extends AnchorPane implements RootView{
 
         if (!isAdd)
             bufferOrders.add(order);
-
-        System.out.println("addOrder");
-        System.out.println("orderBar = " + orderBar);
         orderBar.refresh();
     }
 

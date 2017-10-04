@@ -33,8 +33,6 @@ public class OrderBarView extends FlowPane implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("initialize by implements");
-        System.out.println("this = " + this);
         tableOrder = new TableView<Order>();
         tableOrder.setEditable(false);
         TableColumn<Order, String> nameMenu = new TableColumn<Order, String>("Menu");
@@ -66,66 +64,6 @@ public class OrderBarView extends FlowPane implements Initializable{
 
         if (orderList != null)
             tableOrder.setItems(orderList);
-    }
-
-    public void init(){
-        tableOrder = new TableView<Order>();
-        tableOrder.setEditable(false);
-        TableColumn<Order, String> nameMenu = new TableColumn<Order, String>("Menu");
-        TableColumn<Order, Integer> amount = new TableColumn<Order, Integer>("Amount");
-        nameMenu.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Order, String>, ObservableValue<String>>() {
-            public ObservableValue<String> call(TableColumn.CellDataFeatures<Order, String> param) {
-                SimpleStringProperty property = new SimpleStringProperty();
-
-                property.setValue(param.getValue().getItem().getName());
-                return property;
-            }
-        });
-        amount.setCellValueFactory(new PropertyValueFactory<Order, Integer>("amount"));
-
-        tableOrder.getColumns().addAll(nameMenu, amount);
-
-        tableOrder.setMinSize(400,550);
-        tableOrder.setColumnResizePolicy(tableOrder.CONSTRAINED_RESIZE_POLICY);
-        tableLayout.getChildren().add(tableOrder);
-
-        btnConfirm.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                if (confirmListener != null)
-                    confirmListener.perform();
-                tableOrder.refresh();
-            }
-        });
-
-        if (orderList != null)
-            tableOrder.setItems(orderList);
-    }
-    public void createTable(List<Order> bufferOrders){
-//        tableOrder = new TableView<Order>();
-//        tableOrder.setEditable(false);
-//        TableColumn<Order, String> nameMenu = new TableColumn<Order, String>("Menu");
-//        TableColumn<Order, Integer> amount = new TableColumn<Order, Integer>("Amount");
-//        nameMenu.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Order, String>, ObservableValue<String>>() {
-//            public ObservableValue<String> call(TableColumn.CellDataFeatures<Order, String> param) {
-//                SimpleStringProperty property = new SimpleStringProperty();
-//
-//                property.setValue(param.getValue().getItem().getName());
-//                return property;
-//            }
-//        });
-//        amount.setCellValueFactory(new PropertyValueFactory<Order, Integer>("amount"));
-
-
-//        menuList = FXCollections.observableArrayList(vboxes);
-//        orderList = FXCollections.observableList(bufferOrders);
-//        tableOrder.setItems(orderList);
-
-//        tableOrder.getColumns().addAll(nameMenu, amount);
-//
-//        tableOrder.setMinSize(400,550);
-//        tableOrder.setColumnResizePolicy(tableOrder.CONSTRAINED_RESIZE_POLICY);
-//        tableLayout.getChildren().add(tableOrder);
     }
 
     public void setData(List<Order> data){
@@ -141,13 +79,9 @@ public class OrderBarView extends FlowPane implements Initializable{
 
     public void setRoot(RootView root) {
         this.root = root;
-        System.out.println("set root");
-        System.out.println(this);
     }
 
     public void refresh(){
-        System.out.println("refresh");
-        System.out.println("this = " + this);
         tableOrder.refresh();
     }
 
