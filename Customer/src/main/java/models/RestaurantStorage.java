@@ -73,7 +73,7 @@ public class RestaurantStorage implements RestaurantManager {
 
     @Override
     public void addItem(Item item) {
-        
+
     }
 
     @Override
