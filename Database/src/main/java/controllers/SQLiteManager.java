@@ -46,7 +46,7 @@ public class SQLiteManager implements DatabaseManager{
 //                System.out.println("resultSet. = " + resultSet.);
                 if(resultSet.next()){
                     int id = resultSet.getInt("id");
-                    Order newOrder = new Order(id, amt, order.getItem(), table);
+                    Order newOrder = new Order(id + "", amt, order.getItem(), table);
 
                     return newOrder;
                 }
