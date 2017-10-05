@@ -62,7 +62,7 @@ class ProtocolParserTest {
     @Test
     void parseToString2() {
         Item corn = new Item(2,"Baby-Corn",5);
-        Order order = new Order(1,3,corn,5);
+        Order order = new Order("1",3,corn,5);
         String orderString = protocol.parseToString(order,"customer-1","add");
         assertEquals(orderString,"method:add\n" +
                 "sender:customer-1\n" +
@@ -158,7 +158,7 @@ class ProtocolParserTest {
         cornMap.put("item-id","2");
         cornMap.put("category-id","5");
         Order corn = protocol.parseToOrder(cornMap);
-        assertEquals(corn.getId(),2);
+        assertEquals(corn.getId(),"2");
         assertEquals(corn.getAmount(),2);
         assertEquals(corn.getTable(),9);
 

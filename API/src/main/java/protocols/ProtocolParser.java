@@ -126,7 +126,7 @@ public class ProtocolParser {
         return new Category(id, name);
     }
     public Order parseToOrder(Map<String, String> map){
-        int id = Integer.parseInt(map.get(MessageProtocol.Header.ID));
+        String id = map.get(MessageProtocol.Header.ID);
         int amt = Integer.parseInt(map.get(MessageProtocol.Header.AMOUNT));
         int table = Integer.parseInt(map.get(MessageProtocol.Header.TABLE));
         int itemId = Integer.parseInt(map.get(MessageProtocol.Header.ITEM_ID));
