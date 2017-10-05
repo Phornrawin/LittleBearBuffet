@@ -18,4 +18,7 @@ public interface RestaurantManager {
     void addPackage(Package packageObj);
     void changePacakage(Package packageObj);
     void removePackage(Package packageObj);
+    void addItem(Item item);
+    void changeItem(Item item);
+    void removeItem(Item item);
 }
