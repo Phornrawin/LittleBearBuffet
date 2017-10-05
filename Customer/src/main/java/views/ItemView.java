@@ -8,9 +8,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import models.Item;
+import models.ModelObserver;
 import models.Order;
 
-public class ItemView extends VBox{
+public class ItemView extends VBox implements ModelObserver<Item> {
     private Item item;
     private ImageView menuImage;
     private Label menuName;
@@ -18,6 +19,7 @@ public class ItemView extends VBox{
     public ItemView(Item item){
         try {
             this.item = item;
+            item.regisObserver(this);
             menuImage = new ImageView();
 //            System.out.println("createUrl() = " + createUrl());
             menuImage.setImage(new Image(createUrl()));
@@ -37,7 +39,7 @@ public class ItemView extends VBox{
     public void setListener(final OnClickAddOrderListener listener){
         addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
-                Order order = new Order(0, 1, item, 0);
+                Order order = new Order("0", 1, item, 0);
                 listener.onClick(order);
             }
         });
@@ -48,4 +50,8 @@ public class ItemView extends VBox{
     }
 
 
+    @Override
+    public void onModelChange(Item model) {
+
+    }
 }

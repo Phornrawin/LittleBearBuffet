@@ -1,9 +1,10 @@
 package models;
 
-public class Item {
+public class Item implements ModelObserable<Item> {
     private int id;
     private String name;
     private int categoryId;
+
 
     public Item(int id, String name, int categoryId) {
         this.id = id;
@@ -26,5 +27,17 @@ public class Item {
     @Override
     public String toString() {
         return "Item : " + id + "-" + name + "[" + categoryId + "]";
+    }
+
+    public boolean isAvailable(){
+        return true;
+    }
+
+    public void regisObserver(ModelObserver<Item> observer) {
+
+    }
+
+    public void removeObserver(ModelObserver<Item> observer) {
+
     }
 }

@@ -1,5 +1,6 @@
 import controllers.ClientManager;
 import controllers.CoreController;
+import controllers.FirebaseManager;
 import controllers.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

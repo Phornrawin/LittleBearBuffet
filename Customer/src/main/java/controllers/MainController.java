@@ -32,9 +32,9 @@ public class MainController implements CoreController {
     }
 
     public boolean addOrder(Order order) {
-        if(order.getTable() != customerManager.getTable())
+        if(order.getTable() != customerManager.getTable()) {
             order = new Order(order.getId(), order.getAmount(), order.getItem(), customerManager.getTable());
-
+        }
         Order newOrder = dbManager.addOrder(order);
 
         if (newOrder != null) {

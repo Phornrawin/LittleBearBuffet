@@ -41,7 +41,7 @@ public class MainStageController implements StageController {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainView.class.getResource("/MenuView.fxml"));
-            AnchorPane menuLayout = (AnchorPane) loader.load();
+            Pane menuLayout = loader.load();
             MenuView menuView = loader.getController();
             menuView.setController(controller);
             menuView.setStageController(this);
@@ -66,8 +66,6 @@ public class MainStageController implements StageController {
 
             Scene sc = new Scene(mainLayout);
             primaryStage.setScene(sc);
-//            primaryStage.show();
-//            primaryStage.setTitle("Little Bear Buffet");
 
         } catch (IOException e) {
             e.printStackTrace();

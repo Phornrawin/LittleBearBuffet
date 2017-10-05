@@ -1,6 +1,5 @@
 package views;
 
-import controllers.CoreController;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
