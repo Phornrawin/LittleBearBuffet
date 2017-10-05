@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -10,7 +11,7 @@ public class CustomerStorage implements CustomerManager{
 
     private int table;
     private int amount;
-    private List<Order> orders = new ArrayList<Order>();
+    private List<Order> orders = new ArrayList<>();
     private Package packageObj;
 
     public int getTable() {
@@ -43,6 +44,11 @@ public class CustomerStorage implements CustomerManager{
 
     public void addOrder(Order order) {
         orders.add(order);
+    }
+
+    @Override
+    public void changeOrder(Order order) {
+
     }
 
     public void clearOrder() {

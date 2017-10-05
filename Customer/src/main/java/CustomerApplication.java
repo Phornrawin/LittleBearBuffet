@@ -40,6 +40,9 @@ public class CustomerApplication extends Application{
         customerManager.setTable(1);
         this.coreController = new MainController();
 
+        FirebaseManager firebaseManager = new FirebaseManager();
+        firebaseManager.setTable(1);
+
         coreController.setDatabaseManager(dbManager);
         coreController.setCustomerManager(customerManager);
         coreController.setRestaurantManager(restaurantManager);

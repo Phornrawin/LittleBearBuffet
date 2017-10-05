@@ -14,6 +14,7 @@ public interface CustomerManager {
     void setAmount(int amt);
     void setPackageObj(Package packageObj);
     void addOrder(Order order);
+    void changeOrder(Order order);
     void clearOrder();
     double getTotalPrice();
 }

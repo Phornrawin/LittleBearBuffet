@@ -40,4 +40,34 @@ public class RestaurantStorage implements RestaurantManager {
             category.getItems().clear();
         }
     }
+
+    @Override
+    public void addCategory(Category category) {
+
+    }
+
+    @Override
+    public void changeCategory(Category category) {
+
+    }
+
+    @Override
+    public void removeCategory(Category category) {
+
+    }
+
+    @Override
+    public void addPackage(Package packageObj) {
+
+    }
+
+    @Override
+    public void changePacakage(Package packageObj) {
+
+    }
+
+    @Override
+    public void removePackage(Package packageObj) {
+
+    }
 }

@@ -8,7 +8,8 @@ import models.Package;
 import java.util.List;
 
 public interface FirebaseObserver {
-    void onItemAdd(Item item, List<Integer> packageAvailable);
+    int getCurrentPackageId();
+    void onItemAdd(Item item);
     void onItemChange(Item item);
     void onItemDelete(Item item);
     void onPackageAdd(Package packageObj);

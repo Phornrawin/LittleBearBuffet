@@ -17,6 +17,7 @@ import java.util.Map;
 
 public class FirebaseManager implements DatabaseManager, FirebaseObserable {
     private String url = "";
+    private int table;
     private List<Package> packagesBuffer;
     private List<Item> itemsBuffer;
     private List<Category> categoriesBuffer;
@@ -24,6 +25,10 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
 
     public FirebaseManager() {
         url = "https://littlebearbuffet.firebaseio.com/";
+    }
+
+    public void setTable(int table){
+        this.table = table;
     }
 
     public void start(){

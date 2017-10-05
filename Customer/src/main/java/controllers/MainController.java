@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by PC301 on 25/9/2560.
  */
-public class MainController implements CoreController {
+public class MainController implements CoreController, FirebaseObserver{
 
     private DatabaseManager dbManager;
     private RestaurantManager restaurantManager;
@@ -113,5 +113,70 @@ public class MainController implements CoreController {
 
     public Package getCurrentPackage() {
         return customerManager.getPackageObj();
+    }
+
+    @Override
+    public int getCurrentPackageId() {
+        return customerManager.getPackageObj().getId();
+    }
+
+    @Override
+    public void onItemAdd(Item item) {
+
+    }
+
+    @Override
+    public void onItemChange(Item item) {
+
+    }
+
+    @Override
+    public void onItemDelete(Item item) {
+
+    }
+
+    @Override
+    public void onPackageAdd(Package packageObj) {
+
+    }
+
+    @Override
+    public void onPackageChange(Package packageObj) {
+
+    }
+
+    @Override
+    public void onPackageDelete(Package packageObj) {
+
+    }
+
+    @Override
+    public void onCategoryAdd(Category category) {
+
+    }
+
+    @Override
+    public void onCategoryChange(Category category) {
+
+    }
+
+    @Override
+    public void onCategoryDelete(Category category) {
+
+    }
+
+    @Override
+    public void onOrderAdd(Order order) {
+
+    }
+
+    @Override
+    public void onOrderChange(Order order) {
+
+    }
+
+    @Override
+    public void onOrderDelete(Order order) {
+
     }
 }
