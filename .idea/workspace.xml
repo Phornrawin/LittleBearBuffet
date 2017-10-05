@@ -10,7 +10,7 @@
     <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer/target/classes/CustomerApplication.class" afterPath="$PROJECT_DIR$/Customer/target/classes/CustomerApplication.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer/src/main/java/models/RestaurantManager.java" afterPath="$PROJECT_DIR$/Customer/src/main/java/models/RestaurantManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer/src/main/java/models/RestaurantStorage.java" afterPath="$PROJECT_DIR$/Customer/src/main/java/models/RestaurantStorage.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -129,17 +129,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestaurantStorage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RestaurantStorage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Customer/src/main/java/models/RestaurantStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-406">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="545">
+              <caret line="75" column="8" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestaurantManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RestaurantManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Customer/src/main/java/models/RestaurantManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="602">
@@ -221,10 +221,10 @@
         <option value="$PROJECT_DIR$/Customer/src/main/java/controllers/FirebaseManager.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/models/CustomerManager.java" />
-        <option value="$PROJECT_DIR$/Customer/src/main/java/models/RestaurantStorage.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/models/CustomerStorage.java" />
         <option value="$PROJECT_DIR$/Database/src/main/java/controllers/SQLiteManager.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/models/RestaurantManager.java" />
+        <option value="$PROJECT_DIR$/Customer/src/main/java/models/RestaurantStorage.java" />
       </list>
     </option>
   </component>
@@ -1138,7 +1138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507219328721</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="implement structure interface">
+      <created>1507219500501</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1507219500501</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1280,7 +1287,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implement SocketManager" />
     <MESSAGE value="implement content for MenuView and MenuBarGrilled" />
     <MESSAGE value="implement UrlStorage class and change buffetDB file" />
     <MESSAGE value="commit check" />
@@ -1305,7 +1311,8 @@
     <MESSAGE value="create firebase manager" />
     <MESSAGE value="implement interface structure" />
     <MESSAGE value="fix bug for push" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug for push" />
+    <MESSAGE value="implement structure interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement structure interface" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1628,14 +1635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/models/RestaurantStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-406">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/models/CustomerManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -1704,6 +1703,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="602">
           <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/models/RestaurantStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="75" column="8" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
           <folding />
         </state>
       </provider>

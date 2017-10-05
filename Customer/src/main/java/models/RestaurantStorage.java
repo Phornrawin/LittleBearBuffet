@@ -70,4 +70,19 @@ public class RestaurantStorage implements RestaurantManager {
     public void removePackage(Package packageObj) {
 
     }
+
+    @Override
+    public void addItem(Item item) {
+        
+    }
+
+    @Override
+    public void changeItem(Item item) {
+
+    }
+
+    @Override
+    public void removeItem(Item item) {
+
+    }
 }
