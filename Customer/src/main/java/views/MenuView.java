@@ -23,7 +23,9 @@ public class MenuView extends AnchorPane implements RootView{
     @FXML private MenuBarView menuBarDessert;
     @FXML private MenuBarView menuBarBeverage;
     @FXML private Tab orderResultTab;
+    @FXML private Tab orderedTab;
     private OrderBarView orderBar;
+    private OrderedBarView orderedBar;
     //    @FXML private AnchorPane tableLayout;
 //    @FXML private Button btnConfirm;
 //    private ObservableList<Order> orderList;
@@ -43,6 +45,7 @@ public class MenuView extends AnchorPane implements RootView{
         this.controller = controller;
         initMenuBar();
         initOrderBar();
+        initOrderedBar();
     }
 
     private void initMenuBar(){
@@ -104,12 +107,32 @@ public class MenuView extends AnchorPane implements RootView{
                             System.err.println("addOrder fail " + order.getItem().getName());
                     }
 
+                    orderedBar.refresh();
                     bufferOrders.clear();
                 }
             });
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void initOrderedBar(){
+
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/OrderedBar.fxml"));
+            Pane tableOrdered = loader.load();
+            orderedTab.setContent(tableOrdered);
+
+            orderedBar = loader.getController();
+            orderedBar.setData(controller.getOrders());
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
     @FXML
     public void onClickLabelPayment(){

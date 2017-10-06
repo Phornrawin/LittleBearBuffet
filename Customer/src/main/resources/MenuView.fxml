@@ -53,14 +53,8 @@
         </Label>
         <TabPane layoutX="828.0" layoutY="56.0" prefHeight="664.0" prefWidth="452.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>
-                <Tab text="Order Result" fx:id="orderResultTab">
-
-                </Tab>
-                <Tab text="Untitled Tab 2">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
-                    </content>
-                </Tab>
+                <Tab text="Order Result" fx:id="orderResultTab"/>
+                <Tab text="Ordered" fx:id="orderedTab"/>
             </tabs>
         </TabPane>
     </children>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import views.OrderedBarView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<OrderedBarView xmlns="http://javafx.com/javafx"
+                xmlns:fx="http://javafx.com/fxml"
+                fx:controller="views.OrderedBarView"
+                prefWidth="441" prefHeight="161">
+    <children>
+        <AnchorPane fx:id="tableOrdered" layoutX="15.0" layoutY="49.0" prefHeight="557.0" prefWidth="419.0" />
+    </children>
+
+</OrderedBarView>
