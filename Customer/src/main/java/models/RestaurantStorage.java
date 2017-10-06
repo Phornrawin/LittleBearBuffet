@@ -14,7 +14,7 @@ public class RestaurantStorage implements RestaurantManager {
         return packages;
     }
 
-    public List<Category> categories() {
+    public List<Category> getCategories() {
         return categories;
     }
 
@@ -43,7 +43,7 @@ public class RestaurantStorage implements RestaurantManager {
 
     @Override
     public void addCategory(Category category) {
-
+        categories.add(category);
     }
 
     @Override

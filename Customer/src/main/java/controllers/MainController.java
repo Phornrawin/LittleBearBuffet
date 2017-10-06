@@ -100,7 +100,7 @@ public class MainController implements CoreController, FirebaseObserver{
     }
 
     public List<Category> getCategories() {
-        return restaurantManager.categories();
+        return restaurantManager.getCategories();
     }
 
     public List<Order> getOrders() {
@@ -122,61 +122,61 @@ public class MainController implements CoreController, FirebaseObserver{
 
     @Override
     public void onItemAdd(Item item) {
-
+        restaurantManager.addItem(item);
     }
 
     @Override
     public void onItemChange(Item item) {
-
+        restaurantManager.changeItem(item);
     }
 
     @Override
     public void onItemDelete(Item item) {
-
+        restaurantManager.removeItem(item);
     }
 
     @Override
     public void onPackageAdd(Package packageObj) {
-
+        restaurantManager.addPackage(packageObj);
     }
 
     @Override
     public void onPackageChange(Package packageObj) {
-
+        restaurantManager.changePacakage(packageObj);
     }
 
     @Override
     public void onPackageDelete(Package packageObj) {
-
+        restaurantManager.removePackage(packageObj);
     }
 
     @Override
     public void onCategoryAdd(Category category) {
-
+        restaurantManager.addCategory(category);
     }
 
     @Override
     public void onCategoryChange(Category category) {
-
+        restaurantManager.changeCategory(category);
     }
 
     @Override
     public void onCategoryDelete(Category category) {
-
+        restaurantManager.removeCategory(category);
     }
 
     @Override
     public void onOrderAdd(Order order) {
-
+        customerManager.addOrder(order);
     }
 
     @Override
     public void onOrderChange(Order order) {
-
+        customerManager.changeOrder(order);
     }
 
     @Override
     public void onOrderDelete(Order order) {
-
+        customerManager.deleteOrder(order);
     }
 }
