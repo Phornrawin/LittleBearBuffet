@@ -5,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -22,6 +23,8 @@ public class MenuView extends AnchorPane implements RootView{
     @FXML private MenuBarView menuBarDelicatessen;
     @FXML private MenuBarView menuBarDessert;
     @FXML private MenuBarView menuBarBeverage;
+    @FXML private TabPane tabPaneMenu;
+    @FXML private TabPane tabOrderBar;
     @FXML private Tab orderResultTab;
     @FXML private Tab orderedTab;
     private OrderBarView orderBar;
@@ -49,6 +52,7 @@ public class MenuView extends AnchorPane implements RootView{
     }
 
     private void initMenuBar(){
+        tabPaneMenu.getStylesheets().add(this.getClass().getResource("/style.css").toExternalForm());
         ArrayList<Item> grilledItems = new ArrayList<Item>();
         ArrayList<Item> delicatessenItems = new ArrayList<Item>();
         ArrayList<Item> dessertItems = new ArrayList<Item>();
@@ -95,6 +99,7 @@ public class MenuView extends AnchorPane implements RootView{
             Pane orderBarLayout = loader.load();
             orderResultTab.setContent(orderBarLayout);
 
+            tabOrderBar.getStylesheets().add(this.getClass().getResource("/style.css").toExternalForm());
             orderBar = loader.getController();
             orderBar.setRoot(this);
             orderBar.setData(bufferOrders);
