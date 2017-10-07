@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -25,13 +26,14 @@ public class OrderedBarView extends FlowPane implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+//        this.setPrefSize(Double.MAX_VALUE, Double.MAX_VALUE);
         tableOrder = new TableView<Order>();
         tableOrder.setEditable(false);
         TableColumn<Order, String> nameMenu = new TableColumn<Order, String>("Menu");
         TableColumn<Order, Integer> amount = new TableColumn<Order, Integer>("Amount");
-        TableColumn<Order, String> state = new TableColumn<>("State");
-//        TableColumn< >
-//
+        TableColumn<Order, String> state = new TableColumn<>("Status");
+        TableColumn<Order, String> btnDelete = new TableColumn<>("");
+
         nameMenu.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Order, String>, ObservableValue<String>>() {
             public ObservableValue<String> call(TableColumn.CellDataFeatures<Order, String> param) {
                 SimpleStringProperty property = new SimpleStringProperty();
@@ -41,12 +43,12 @@ public class OrderedBarView extends FlowPane implements Initializable{
             }
         });
         amount.setCellValueFactory(new PropertyValueFactory<Order, Integer>("amount"));
-        tableOrder.getColumns().addAll(nameMenu, amount, state);
+        tableOrder.getColumns().addAll(nameMenu, amount, state, btnDelete);
 
-        tableOrder.setMinSize(400,550);
+        tableOrder.setMinSize(475 ,600);
+//        tableOrder.setPrefSize(Double.MAX_VALUE, Double.MAX_VALUE);
         tableOrder.setColumnResizePolicy(tableOrder.CONSTRAINED_RESIZE_POLICY);
         tableOrdered.getChildren().add(tableOrder);
-
 
         if (orderList != null)
             tableOrder.setItems(orderList);

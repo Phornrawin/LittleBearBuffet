@@ -7,6 +7,8 @@ import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -14,13 +16,14 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.StackPane;
 import javafx.util.Callback;
 import models.Order;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class OrderBarView extends FlowPane implements Initializable{
+public class OrderBarView extends StackPane implements Initializable{
     @FXML private AnchorPane tableLayout;
     @FXML private Button btnConfirm;
     private RootView root;
@@ -32,6 +35,7 @@ public class OrderBarView extends FlowPane implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        this.setPadding(new Insets(20));
         tableOrder = new TableView<Order>();
         tableOrder.setEditable(false);
         TableColumn<Order, String> nameMenu = new TableColumn<Order, String>("Menu");
@@ -48,10 +52,11 @@ public class OrderBarView extends FlowPane implements Initializable{
 
         tableOrder.getColumns().addAll(nameMenu, amount);
 
-        tableOrder.setMinSize(400,550);
+        tableOrder.setMinSize(475 ,600);
         tableOrder.setColumnResizePolicy(tableOrder.CONSTRAINED_RESIZE_POLICY);
         tableLayout.getChildren().add(tableOrder);
 
+        this.setAlignment(btnConfirm, Pos.BOTTOM_CENTER);
         btnConfirm.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {

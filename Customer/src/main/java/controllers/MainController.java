@@ -21,6 +21,8 @@ public class MainController implements CoreController, FirebaseObserver{
             System.out.println("loading packages ...");
             packages = dbManager.loadPackages();
         }
+        System.out.println("start");
+        System.out.println("packages = " + packages);
         restaurantManager.setPackages(packages);
 
         List<Category> categories = null;
