@@ -15,17 +15,15 @@ import java.lang.reflect.Array;
 import java.util.*;
 
 public class FirebaseManager implements DatabaseManager, FirebaseObserable {
-    private String url = "";
+    private String url = "https://littlebearbuffet.firebaseio.com/";
     private int table;
     private List<Package> packagesBuffer;
     private List<Item> itemsBuffer;
     private List<Category> categoriesBuffer;
+    private List<Order> orderBuffer;
     private List<FirebaseObserver> observers;
     private Map<Integer, List<String>> packageItems;
-
-    public FirebaseManager() {
-        url = "https://littlebearbuffet.firebaseio.com/";
-    }
+    private Map<Integer,Item> itemMap;
 
     public void setTable(int table){
         this.table = table;
@@ -35,8 +33,10 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
         packagesBuffer = new ArrayList<>();
         itemsBuffer = new ArrayList<>();
         categoriesBuffer = new ArrayList<>();
+        orderBuffer = new ArrayList<>();
         observers = new ArrayList<>();
         packageItems = new HashMap<>();
+        itemMap = new HashMap<>();
         try {
             FileInputStream serviceAccount = new FileInputStream("serviceAccountKey.json");
 
@@ -55,13 +55,80 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
 
     private void fetchData(){
         fetchPackages();
+        fetchCategories();
+        initOrderListener();
     }
+
+    private void initOrderListener() {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("order");
+        ref.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                String id = dataSnapshot.getKey();
+                int amt = Integer.parseInt(dataSnapshot.child("amt").getValue().toString());
+                int table = Integer.parseInt(dataSnapshot.child("table").getValue().toString());
+                Item item = itemMap.get(Integer.parseInt(dataSnapshot.child("item").getValue().toString()));
+                Order order = new Order(id, amt, item, table);
+                orderBuffer.add(order);
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
     private void fetchCategories(){
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("category");
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot data : dataSnapshot.getChildren()){
+                    int id = Integer.parseInt(data.getKey());
+                    String name = data.child("name").getValue().toString();
+                    Category category = new Category(id, name);
+                    categoriesBuffer.add(category);
+                }
+                fetchItem();
+            }
 
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+    private void fetchItem(){
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("item");
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot data : dataSnapshot.getChildren()){
+                    int id = Integer.parseInt(data.getKey());
+                    String name = data.child("name").getValue().toString();
+                    int balance = Integer.parseInt(data.child("balance").getValue().toString());
+                    int cateId = Integer.parseInt(data.child("cate_id").getValue().toString());
+
+                    Item item = new Item(id, name, cateId, balance);
+                    itemsBuffer.add(item);
+                    itemMap.put(id, item);
+                }
             }
 
             @Override
@@ -93,108 +160,20 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
             }
         });
     }
-    private void initCategoryListener() {
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("category");
-        ref.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                System.out.println(dataSnapshot);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-    }
-
-    private void initPackageListener() {
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("/package");
-        ref.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-//                System.out.println(dataSnapshot);
-                for(DataSnapshot data : dataSnapshot.getChildren())
-                    System.out.println(data);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-//        ref.addChildEventListener(new ChildEventListener() {
-//            @Override
-//            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-//                int id = Integer.parseInt(dataSnapshot.getKey());
-//                String name = dataSnapshot.child("name").getValue().toString();
-//                double price = Double.parseDouble(dataSnapshot.child("price").getValue().toString());
-//                Package packageObj = new Package(id, name, price);
-//                String[] items = dataSnapshot.child("items").toString().split(",");
-//
-//                packagesBuffer.add(packageObj);
-//                notifyObservers(observer -> observer.onPackageAdd(packageObj));
-//            }
-//
-//            @Override
-//            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-//                int id = Integer.parseInt(dataSnapshot.getKey());
-//                String name = dataSnapshot.child("name").getValue().toString();
-//                double price = Double.parseDouble(dataSnapshot.child("price").getValue().toString());
-//                Package packageObj = new Package(id, name, price);
-//
-//                int i = 0;
-//                while(i<packagesBuffer.size()){
-//                    if(id == packagesBuffer.get(i).getId()){
-//                        packagesBuffer.set(i, packageObj);
-//                        break;
-//                    }
-//                    i++;
-//                }
-//
-//                notifyObservers(observer -> observer.onPackageChange(packageObj));
-//
-//            }
-//
-//            @Override
-//            public void onChildRemoved(DataSnapshot dataSnapshot) {
-//                int id = Integer.parseInt(dataSnapshot.getKey());
-//                String name = dataSnapshot.child("name").getValue().toString();
-//                double price = Double.parseDouble(dataSnapshot.child("price").getValue().toString());
-//                Package packageObj = new Package(id, name, price);
-//
-//                int i = 0;
-//                while(i<packagesBuffer.size()){
-//                    if (id == packagesBuffer.get(i).getId()){
-//                        packagesBuffer.remove(i);
-//                        break;
-//                    }
-//                }
-//
-//                notifyObservers(observer -> observer.onPackageDelete(packageObj));
-//
-//            }
-//
-//            @Override
-//            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
-    }
 
     @Override
     public List<Category> loadCategories() {
-        return null;
+        return categoriesBuffer;
     }
 
     @Override
     public Order addOrder(Order order) {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("order");
+        Map<String, Integer> map = new HashMap<>();
+        map.put("amt", order.getAmount());
+        map.put("item", order.getItem().getId());
+        map.put("table", order.getTable());
+        ref.push().setValue(map);
         return null;
     }
 
@@ -205,17 +184,17 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
 
     @Override
     public void setUrl(String url) {
-
+        this.url = url;
     }
 
     @Override
     public List<Package> loadPackages() {
-        return null;
+        return packagesBuffer;
     }
 
     @Override
     public List<Item> loadItems(Package pk) {
-        return null;
+        return itemsBuffer;
     }
 
     @Override
