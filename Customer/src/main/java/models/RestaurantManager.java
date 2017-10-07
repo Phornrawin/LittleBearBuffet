@@ -7,7 +7,7 @@ import java.util.List;
  */
 public interface RestaurantManager {
     List<Package> getPackages();
-    List<Category> categories();
+    List<Category> getCategories();
     void setPackages(List<Package> packages);
     void setCategories(List<Category> categories);
     void addItemsToCategory(List<Item> items);

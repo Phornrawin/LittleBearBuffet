@@ -47,8 +47,17 @@ public class CustomerStorage implements CustomerManager{
     }
 
     @Override
-    public void changeOrder(Order order) {
+    public void deleteOrder(Order order) {
+        for (Order o: orders)
+            if (o.getId().equals(order.getId()))
+                orders.remove(o);
+    }
 
+    @Override
+    public void changeOrder(Order order) {
+        for (int i=0; i<orders.size(); i++)
+            if (orders.get(i).getId().equals(order.getId()))
+                orders.set(i, order);
     }
 
     public void clearOrder() {
