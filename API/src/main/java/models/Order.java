@@ -37,6 +37,10 @@ public class Order implements ModelObserable<Order> {
         return table;
     }
 
+    public String getStatus(){
+        return status;
+    }
+
     public void increaseAmount(int amt){
         this.amount += amt;
         notifyObservers();

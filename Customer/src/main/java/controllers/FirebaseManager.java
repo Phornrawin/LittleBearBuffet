@@ -76,6 +76,7 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
                 String id = dataSnapshot.getKey();
 
+
             }
 
             @Override
@@ -170,10 +171,11 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
     @Override
     public Order addOrder(Order order) {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("order");
-        Map<String, Integer> map = new HashMap<>();
-        map.put("amt", order.getAmount());
-        map.put("item", order.getItem().getId());
-        map.put("table", order.getTable());
+        Map<String, String> map = new HashMap<>();
+        map.put("amt", order.getAmount() + "");
+        map.put("item", order.getItem().getId() + "");
+        map.put("table", order.getTable() + "");
+        map.put("status", order.getStatus());
         ref.push().setValue(map);
         return null;
     }
