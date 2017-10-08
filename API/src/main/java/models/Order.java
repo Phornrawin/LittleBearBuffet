@@ -38,7 +38,7 @@ public class Order implements ModelObserable<Order> {
     }
 
     public void increaseAmount(int amt){
-        this.amount += amt; 
+        this.amount += amt;
         notifyObservers();
     }
 

@@ -74,6 +74,7 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                String id = dataSnapshot.getKey();
 
             }
 

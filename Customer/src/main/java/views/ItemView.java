@@ -15,13 +15,24 @@ public class ItemView extends VBox implements ModelObserver<Item> {
     private Item item;
     private ImageView menuImage;
     private Label menuName;
+    private boolean previousStatus;
 
     public ItemView(Item item){
+        this.item = item;
+        item.regisObserver(this);
+        build();
+        previousStatus = item.isAvailable();
+    }
+
+    private void build() {
+        if (item.isAvailable())
+            buildAvailable();
+        else
+            buildUnavailable();
+    }
+    private void buildAvailable(){
         try {
-            this.item = item;
-            item.regisObserver(this);
             menuImage = new ImageView();
-//            System.out.println("createUrl() = " + createUrl());
             menuImage.setImage(new Image(createUrl()));
             menuName = new Label(item.getName());
             this.menuImage.setFitWidth(150);
@@ -34,6 +45,9 @@ public class ItemView extends VBox implements ModelObserver<Item> {
         } catch (Exception e) {
             System.out.println("createUrl() = " + createUrl());
         }
+    }
+    private void buildUnavailable(){
+
     }
 
     public void setListener(final OnClickAddOrderListener listener){
@@ -49,9 +63,11 @@ public class ItemView extends VBox implements ModelObserver<Item> {
         return "/images/" + item.getName() + ".jpg";
     }
 
-
     @Override
     public void onModelChange(Item model) {
-
+        if (previousStatus != model.isAvailable()) {
+            build();
+            previousStatus = model.isAvailable();
+        }
     }
 }
