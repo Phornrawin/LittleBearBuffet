@@ -3,6 +3,7 @@ package views;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;
+import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -21,7 +22,6 @@ public class ItemView extends VBox implements ModelObserver<Item> {
         this.item = item;
         item.regisObserver(this);
         previousStatus = item.isAvailable();
-
         build();
     }
 
@@ -49,6 +49,14 @@ public class ItemView extends VBox implements ModelObserver<Item> {
         }
     }
     private void buildUnavailable(){
+        try {
+            menuImage.setImage(new Image(createUrl()));
+            ColorAdjust colorAdjust = new ColorAdjust();
+            colorAdjust.setBrightness(-0.5);
+            menuImage.setEffect(colorAdjust);
+        } catch (Exception e) {
+            System.out.println("createUrl() = " + createUrl());
+        }
 
     }
 

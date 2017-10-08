@@ -304,7 +304,7 @@ public class ClientManager implements DatabaseManager {
 
             if(MessageProtocol.Type.ITEM.equals(map.get(MessageProtocol.Header.TYPE))){
                 Item item = parser.parseToItem(map);
-                item.setBalance(1000);
+                item.setBalance(10);
                 return item;
             }
         } catch (IOException e) {
