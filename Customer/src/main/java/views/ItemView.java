@@ -20,11 +20,22 @@ public class ItemView extends VBox implements ModelObserver<Item> {
     public ItemView(Item item){
         this.item = item;
         item.regisObserver(this);
-        build();
         previousStatus = item.isAvailable();
+
+        build();
     }
 
     private void build() {
+        menuImage = new ImageView();
+        menuName = new Label(item.getName());
+        this.menuImage.setFitWidth(150);
+        this.menuImage.setFitHeight(150);
+        this.getChildren().addAll(menuImage, menuName);
+        this.setPadding(new Insets(10));
+//        this.maxHeight(Double.NEGATIVE_INFINITY);
+//        this.maxWidth(Double.NEGATIVE_INFINITY);
+        setPrefWidth(150);
+
         if (item.isAvailable())
             buildAvailable();
         else
@@ -32,16 +43,7 @@ public class ItemView extends VBox implements ModelObserver<Item> {
     }
     private void buildAvailable(){
         try {
-            menuImage = new ImageView();
             menuImage.setImage(new Image(createUrl()));
-            menuName = new Label(item.getName());
-            this.menuImage.setFitWidth(150);
-            this.menuImage.setFitHeight(150);
-            this.getChildren().addAll(menuImage, menuName);
-            this.setPadding(new Insets(10));
-//            this.maxHeight(Double.NEGATIVE_INFINITY);
-//            this.maxWidth(Double.NEGATIVE_INFINITY);
-            setPrefWidth(150);
         } catch (Exception e) {
             System.out.println("createUrl() = " + createUrl());
         }
@@ -50,11 +52,13 @@ public class ItemView extends VBox implements ModelObserver<Item> {
 
     }
 
-    public void setListener(final OnClickAddOrderListener listener){
+    public void setListener(OnClickAddOrderListener listener){
         addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
-                Order order = new Order("0", 1, item, 0);
-                listener.onClick(order);
+                if (item.isAvailable()){
+                    Order order = new Order("0", 1, item, 0);
+                    listener.onClick(order);
+                }
             }
         });
     }
@@ -66,8 +70,11 @@ public class ItemView extends VBox implements ModelObserver<Item> {
     @Override
     public void onModelChange(Item model) {
         if (previousStatus != model.isAvailable()) {
-            build();
             previousStatus = model.isAvailable();
+            if (item.isAvailable())
+                buildAvailable();
+            else
+                buildUnavailable();
         }
     }
 }
