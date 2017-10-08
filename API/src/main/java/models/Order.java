@@ -1,12 +1,16 @@
 package models;
 
-public class Order {
+import java.util.HashSet;
+import java.util.Set;
+
+public class Order implements ModelObserable<Order> {
     private final String COOKING = "cooking";
     private String id;
     private int amount;
     private Item item;
     private int table;
     private String status;
+    private Set<ModelObserver<Order>> observers;
 
     public Order(String id, int amount, Item item, int table) {
         this.id = id;
@@ -14,6 +18,7 @@ public class Order {
         this.item = item;
         this.table = table;
         status = COOKING;
+        observers = new HashSet<ModelObserver<Order>>();
     }
 
     public String getId() {
@@ -32,10 +37,26 @@ public class Order {
         return table;
     }
 
-    public void increaseAmount(int amt){ this.amount += amt; }
+    public void increaseAmount(int amt){
+        this.amount += amt; 
+        notifyObservers();
+    }
 
     public void setStatus(String status){
         this.status = status;
+        notifyObservers();
     }
 
+    public void regisObserver(ModelObserver<Order> observer) {
+        observers.add(observer);
+    }
+
+    public void removeObserver(ModelObserver<Order> observer) {
+        observers.remove(observer);
+    }
+
+    private void notifyObservers(){
+        for(ModelObserver<Order> observer : observers)
+            observer.onModelChange(this);
+    }
 }
