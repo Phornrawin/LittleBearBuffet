@@ -303,7 +303,9 @@ public class ClientManager implements DatabaseManager {
             Map<String, String> map = parser.parseToMap(reader);
 
             if(MessageProtocol.Type.ITEM.equals(map.get(MessageProtocol.Header.TYPE))){
-                return parser.parseToItem(map);
+                Item item = parser.parseToItem(map);
+                item.setBalance(1000);
+                return item;
             }
         } catch (IOException e) {
             e.printStackTrace();
