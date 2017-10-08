@@ -24,6 +24,7 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
     private List<FirebaseObserver> observers;
     private Map<Integer, List<String>> packageItems;
     private Map<Integer,Item> itemMap;
+    private Map<String, Order> orderMap;
 
     public void setTable(int table){
         this.table = table;
@@ -37,6 +38,7 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
         observers = new ArrayList<>();
         packageItems = new HashMap<>();
         itemMap = new HashMap<>();
+        orderMap = new HashMap<>();
         try {
             FileInputStream serviceAccount = new FileInputStream("serviceAccountKey.json");
 
@@ -69,14 +71,16 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
                 int table = Integer.parseInt(dataSnapshot.child("table").getValue().toString());
                 Item item = itemMap.get(Integer.parseInt(dataSnapshot.child("item").getValue().toString()));
                 Order order = new Order(id, amt, item, table);
+                order.setStatus(dataSnapshot.child("status").getValue().toString());
                 orderBuffer.add(order);
+                orderMap.put(id, order);
             }
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
                 String id = dataSnapshot.getKey();
-
-
+                String status = dataSnapshot.child("status").getValue().toString();
+                orderMap.get(id).setStatus(status);
             }
 
             @Override
