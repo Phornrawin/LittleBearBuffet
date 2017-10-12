@@ -42,6 +42,14 @@ public class Item implements ModelObserable<Item> {
         return balance;
     }
 
+    public void increaseBalance(int amt){
+        balance += amt;
+        notifyObsrvers();
+    }
+    public void decreaseBalance(int amt){
+        balance -= amt;
+        notifyObsrvers();
+    }
     @Override
     public String toString() {
         return "Item : " + id + "-" + name + "[" + categoryId + "]";

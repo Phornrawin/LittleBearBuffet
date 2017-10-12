@@ -42,8 +42,9 @@ public class CustomerApplication extends Application{
 
         FirebaseManager firebaseManager = new FirebaseManager();
         firebaseManager.setTable(1);
+        firebaseManager.start();
 
-        coreController.setDatabaseManager(dbManager);
+        coreController.setDatabaseManager(firebaseManager);
         coreController.setCustomerManager(customerManager);
         coreController.setRestaurantManager(restaurantManager);
 

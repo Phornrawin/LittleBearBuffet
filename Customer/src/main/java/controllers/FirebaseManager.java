@@ -57,6 +57,7 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
 
     private void fetchData(){
         fetchPackages();
+        fetchItem();
         fetchCategories();
         initOrderListener();
     }
@@ -102,6 +103,7 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
 
     private void fetchCategories(){
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("category");
+        System.out.println("category ref = " + ref);
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -111,7 +113,8 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
                     Category category = new Category(id, name);
                     categoriesBuffer.add(category);
                 }
-                fetchItem();
+                System.out.println("FirebaseManager: client receive category");
+//                fetchItem();
             }
 
             @Override
@@ -122,19 +125,23 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
     }
     private void fetchItem(){
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("item");
+        System.out.println("item ref = " + ref);
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                System.out.println("FirebaseManager: client receive item");
+
                 for(DataSnapshot data : dataSnapshot.getChildren()){
                     int id = Integer.parseInt(data.getKey());
                     String name = data.child("name").getValue().toString();
                     int balance = Integer.parseInt(data.child("balance").getValue().toString());
-                    int cateId = Integer.parseInt(data.child("cate_id").getValue().toString());
+                    int cateId = Integer.parseInt(data.child("cate").getValue().toString());
 
                     Item item = new Item(id, name, cateId, balance);
                     itemsBuffer.add(item);
                     itemMap.put(id, item);
                 }
+                System.out.println("FirebaseManager: client receive item");
             }
 
             @Override
@@ -158,6 +165,7 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
                     String[] items = data.child("items").getValue().toString().split(",");
                     packageItems.put(id, Arrays.asList(items));
                 }
+                System.out.println("FirebaseManager, client receive package");
             }
 
             @Override
@@ -201,7 +209,14 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
 
     @Override
     public List<Item> loadItems(Package pk) {
-        return itemsBuffer;
+        List<String> ids = packageItems.get(pk.getId());
+        List<Item> items = new ArrayList<>();
+        for(Item item : itemsBuffer)
+            if (ids.contains(item.getId() + ""))
+                items.add(item);
+        System.out.println("itemsBuffer = " + itemsBuffer);
+        System.out.println("items = " + items);
+        return items;
     }
 
     @Override
