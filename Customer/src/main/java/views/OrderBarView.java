@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -62,12 +63,19 @@ public class OrderBarView extends StackPane implements Initializable{
             public void handle(MouseEvent event) {
                 if (confirmListener != null)
                     confirmListener.perform();
+                showTopicInformation();
                 tableOrder.refresh();
             }
         });
 
         if (orderList != null)
             tableOrder.setItems(orderList);
+    }
+
+    public void showTopicInformation(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText("You have successfully ordered the order.");
+        alert.showAndWait();
     }
 
     public void setData(List<Order> data){

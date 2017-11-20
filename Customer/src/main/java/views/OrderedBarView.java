@@ -42,6 +42,15 @@ public class OrderedBarView extends FlowPane implements Initializable{
                 return property;
             }
         });
+        state.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Order, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<Order, String> param) {
+                SimpleStringProperty property = new SimpleStringProperty();
+
+                property.setValue(param.getValue().getStatus());
+                return property;
+            }
+        });
         amount.setCellValueFactory(new PropertyValueFactory<Order, Integer>("amount"));
         tableOrder.getColumns().addAll(nameMenu, amount, state, btnDelete);
 
