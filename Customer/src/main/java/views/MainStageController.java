@@ -75,4 +75,8 @@ public class MainStageController implements StageController {
     public void setController(CoreController controller) {
         this.controller = controller;
     }
+
+    public void showStage(){
+        primaryStage.show();
+    }
 }

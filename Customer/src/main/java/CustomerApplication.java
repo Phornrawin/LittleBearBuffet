@@ -1,8 +1,8 @@
-import controllers.ClientManager;
-import controllers.CoreController;
-import controllers.FirebaseManager;
-import controllers.MainController;
+import controllers.*;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.concurrent.ScheduledService;
+import javafx.concurrent.Task;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -42,6 +42,7 @@ public class CustomerApplication extends Application{
 
         FirebaseManager firebaseManager = new FirebaseManager();
         firebaseManager.setTable(1);
+        firebaseManager.addOnLoadCompleteListener(() -> Platform.runLater(() -> CustomerApplication.this.primaryStage.show()));
         firebaseManager.start();
 
         coreController.setDatabaseManager(firebaseManager);
@@ -55,28 +56,8 @@ public class CustomerApplication extends Application{
         stageController.setStage(primaryStage);
         stageController.setController(coreController);
         stageController.showMainView();
-
-        primaryStage.show();
+        
         primaryStage.setTitle("Little Bear Buffet");
-//        initRoot();
-    }
-
-    private void initRoot() {
-        System.out.println("init root");
-        try{
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/MainView.fxml"));
-            Pane mainLayout = loader.load();
-            rootView = loader.getController();
-            rootView.setController(coreController);
-
-            Scene sc = new Scene(mainLayout);
-            primaryStage.setScene(sc);
-            primaryStage.show();
-            primaryStage.setTitle("Little Bear Buffet");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
 

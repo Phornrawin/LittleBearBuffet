@@ -21,16 +21,18 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
     private List<Item> itemsBuffer;
     private List<Category> categoriesBuffer;
     private List<Order> orderBuffer;
-    private List<FirebaseObserver> observers;
     private Map<Integer, List<String>> packageItems;
     private Map<Integer,Item> itemMap;
     private Map<String, Order> orderMap;
 
-    public void setTable(int table){
-        this.table = table;
-    }
+    private List<FirebaseObserver> observers;
+    private List<OnLoadCompleteListener> loadCompleteListeners;
 
-    public void start(){
+    private boolean isPackagesAvailable = false;
+    private boolean isCategoriesAvailable = false;
+    private boolean isItemsAvailable = false;
+
+    public FirebaseManager() {
         packagesBuffer = new ArrayList<>();
         itemsBuffer = new ArrayList<>();
         categoriesBuffer = new ArrayList<>();
@@ -39,6 +41,14 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
         packageItems = new HashMap<>();
         itemMap = new HashMap<>();
         orderMap = new HashMap<>();
+        loadCompleteListeners = new ArrayList<>();
+    }
+
+    public void setTable(int table){
+        this.table = table;
+    }
+
+    public void start(){
         try {
             FileInputStream serviceAccount = new FileInputStream("serviceAccountKey.json");
 
@@ -114,6 +124,8 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
                     categoriesBuffer.add(category);
                 }
                 System.out.println("FirebaseManager: client receive category");
+                isCategoriesAvailable = true;
+                checkLoadStatus();
 //                fetchItem();
             }
 
@@ -142,6 +154,8 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
                     itemMap.put(id, item);
                 }
                 System.out.println("FirebaseManager: client receive item");
+                isItemsAvailable = true;
+                checkLoadStatus();
             }
 
             @Override
@@ -166,6 +180,8 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
                     packageItems.put(id, Arrays.asList(items));
                 }
                 System.out.println("FirebaseManager, client receive package");
+                isPackagesAvailable = true;
+                checkLoadStatus();
             }
 
             @Override
@@ -222,7 +238,6 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
     @Override
     public void regisObserver(FirebaseObserver observer) {
         observers.add(observer);
-
     }
 
     @Override
@@ -238,5 +253,20 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
 
     private interface NotifyObserverCallback {
         void notifyObserver(FirebaseObserver observer);
+    }
+
+    private void checkLoadStatus(){
+        if (isPackagesAvailable && isItemsAvailable && isCategoriesAvailable) {
+            System.out.println("Load Complete " + loadCompleteListeners.size());
+            for (OnLoadCompleteListener listener : loadCompleteListeners)
+                listener.onLoadComplete();
+        }
+    }
+
+    public void addOnLoadCompleteListener(OnLoadCompleteListener listener){
+        loadCompleteListeners.add(listener);
+    }
+    public void removeOnLoadCompleteListener(OnLoadCompleteListener listener){
+        loadCompleteListeners.remove(listener);
     }
 }
