@@ -49,14 +49,11 @@ public class MainController implements CoreController, FirebaseObserver{
     }
 
     public void selectPackage(Package pk, int amount) {
+        dbManager.selectPackage(pk, amount);
         customerManager.setPackageObj(pk);
         customerManager.setAmount(amount);
 
-        List<Item> items = null;
-        while (items == null) {
-            System.out.println("loading item list ...");
-            items = dbManager.loadItems(pk);
-        }
+        List<Item> items = dbManager.loadItems(pk);
         System.out.println("load item complete");
 
         restaurantManager.addItemsToCategory(items);

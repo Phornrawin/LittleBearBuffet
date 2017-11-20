@@ -12,15 +12,17 @@ import java.util.List;
  */
 public interface DatabaseManager {
 
-    public List<Category> loadCategories();
+    List<Category> loadCategories();
 
-    public Order addOrder(Order order);
+    Order addOrder(Order order);
 
-    public boolean checkBill(Package pk, int amount);
+    boolean checkBill(Package pk, int amount);
 
-    public void setUrl(String url);
+    void setUrl(String url);
 
-    public List<Package> loadPackages();
+    List<Package> loadPackages();
 
-    public List<Item> loadItems(Package pk);
+    List<Item> loadItems(Package pk);
+
+    void selectPackage(Package pk, int amt);
 }

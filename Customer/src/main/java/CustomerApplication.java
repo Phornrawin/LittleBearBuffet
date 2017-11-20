@@ -56,7 +56,6 @@ public class CustomerApplication extends Application{
         stageController.setStage(primaryStage);
         stageController.setController(coreController);
         stageController.showMainView();
-        
         primaryStage.setTitle("Little Bear Buffet");
     }
 

@@ -4,9 +4,7 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.auth.FirebaseCredentials;
 import com.google.firebase.database.*;
-import models.Category;
-import models.Item;
-import models.Order;
+import models.*;
 import models.Package;
 
 import java.io.FileInputStream;
@@ -31,6 +29,8 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
     private boolean isPackagesAvailable = false;
     private boolean isCategoriesAvailable = false;
     private boolean isItemsAvailable = false;
+
+    private Payment currentPayment = null;
 
     public FirebaseManager() {
         packagesBuffer = new ArrayList<>();
@@ -243,6 +243,17 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
     @Override
     public void removeObserver(FirebaseObserver observer) {
         observers.remove(observer);
+    }
+
+    public void selectPackage(Package pk, int amt){
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("payment");
+        DatabaseReference pushRef = ref.push();
+        String key = pushRef.getKey();
+        Payment payment = new Payment(amt, pk, false);
+        payment.setId(key);
+        pushRef.setValue(payment);
+        this.currentPayment = payment;
+        System.out.println("payment = " + payment);
     }
 
     private void notifyObservers(NotifyObserverCallback callback){

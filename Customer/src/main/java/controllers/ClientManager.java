@@ -261,6 +261,11 @@ public class ClientManager implements DatabaseManager {
         return null;
     }
 
+    @Override
+    public void selectPackage(Package pk, int amt) {
+
+    }
+
     private List<Integer> loadItemIds(int packageId){
         Socket clientSocket = null;
         try {
