@@ -8,15 +8,15 @@ public class Order implements ModelObserable<Order> {
     private String id;
     private int amount;
     private Item item;
-    private int table;
+    private Payment payment;
     private String status;
     private Set<ModelObserver<Order>> observers;
 
-    public Order(String id, int amount, Item item, int table) {
+    public Order(String id, int amount, Item item, Payment payment) {
         this.id = id;
         this.amount = amount;
         this.item = item;
-        this.table = table;
+        this.payment = payment;
         status = COOKING;
         observers = new HashSet<ModelObserver<Order>>();
     }
@@ -33,8 +33,8 @@ public class Order implements ModelObserable<Order> {
         return item;
     }
 
-    public int getTable() {
-        return table;
+    public Payment getPayment() {
+        return payment;
     }
 
     public String getStatus(){

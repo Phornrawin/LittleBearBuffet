@@ -80,8 +80,10 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
                 String id = dataSnapshot.getKey();
                 int amt = Integer.parseInt(dataSnapshot.child("amt").getValue().toString());
                 int table = Integer.parseInt(dataSnapshot.child("table").getValue().toString());
-                Item item = itemMap.get(Integer.parseInt(dataSnapshot.child("item").getValue().toString()));
-                Order order = new Order(id, amt, item, table);
+//                Item item = itemMap.get(Integer.parseInt(dataSnapshot.child("item").getValue().toString()));
+                Item item = dataSnapshot.child("item").getValue(Item.class);
+                Payment payment = dataSnapshot.child("payment").getValue(Payment.class);
+                Order order = new Order(id, amt, item, payment);
                 order.setStatus(dataSnapshot.child("status").getValue().toString());
                 orderBuffer.add(order);
                 orderMap.put(id, order);
@@ -199,12 +201,12 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
     @Override
     public Order addOrder(Order order) {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("order");
-        Map<String, String> map = new HashMap<>();
-        map.put("amt", order.getAmount() + "");
-        map.put("item", order.getItem().getId() + "");
-        map.put("table", order.getTable() + "");
-        map.put("status", order.getStatus());
-        ref.push().setValue(map);
+//        Map<String, String> map = new HashMap<>();
+//        map.put("amt", order.getAmount() + "");
+//        map.put("item", order.getItem().getId() + "");
+//        map.put("table", order.getTable() + "");
+//        map.put("status", order.getStatus());
+        ref.push().setValue(order);
         return null;
     }
 
@@ -249,7 +251,7 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("payment");
         DatabaseReference pushRef = ref.push();
         String key = pushRef.getKey();
-        Payment payment = new Payment(amt, pk, false);
+        Payment payment = new Payment(amt, pk, false, table);
         payment.setId(key);
         pushRef.setValue(payment);
         this.currentPayment = payment;

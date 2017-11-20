@@ -18,14 +18,12 @@ public class CustomerApplication extends Application{
 
     private CustomerStorage customerManager;
     private RestaurantStorage restaurantManager;
-    private ClientManager dbManager;
     private CoreController coreController;
     private Stage primaryStage;
     private RootView rootView;
     private StageController stageController;
 
     public static void main(String[] args) {
-//        DatabaseManager db = new ClientManager();
 //        List<Category> categories = db.loadCategories();
 //
 //        System.out.println("categories = " + categories);
@@ -36,7 +34,6 @@ public class CustomerApplication extends Application{
     public void start(Stage primaryStage) {
         this.customerManager = new CustomerStorage();
         this.restaurantManager = new RestaurantStorage();
-        this.dbManager = new ClientManager();
         customerManager.setTable(1);
         this.coreController = new MainController();
 

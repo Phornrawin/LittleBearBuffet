@@ -2,14 +2,20 @@ package models;
 
 public class Payment {
     private String id;
+    private int table;
     private int amt;
     private Package aPackage;
     private boolean isPaid;
 
-    public Payment(int amt, Package aPackage, boolean isPaid) {
+    public Payment(int amt, Package aPackage, boolean isPaid, int table) {
         this.amt = amt;
         this.aPackage = aPackage;
         this.isPaid = isPaid;
+        this.table = table;
+    }
+
+    public int getTable() {
+        return table;
     }
 
     public String getId() {
