@@ -53,7 +53,7 @@ public class OrderBarView extends StackPane implements Initializable{
 
         tableOrder.getColumns().addAll(nameMenu, amount);
 
-        tableOrder.setMinSize(475 ,600);
+        tableOrder.setMinSize(475 ,550);
         tableOrder.setColumnResizePolicy(tableOrder.CONSTRAINED_RESIZE_POLICY);
         tableLayout.getChildren().add(tableOrder);
 
