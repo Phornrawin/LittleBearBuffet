@@ -27,6 +27,6 @@ public interface RealTimeDatabaseManager {
     List<Order> getOrders(Payment payment);
 
     void addOrder(Order order, OnResult<Order> callback);
-    Payment selectPackage(Package pk, int table, OnResult<Payment> callback);
+    Payment selectPackage(Package pk, int table, int amt, OnResult<Payment> callback);
     void checkBill(Payment payment, OnResult<Payment> callback);
 }

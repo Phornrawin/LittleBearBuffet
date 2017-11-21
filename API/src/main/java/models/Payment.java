@@ -14,6 +14,14 @@ public class Payment {
         this.table = table;
     }
 
+    public Payment(String id, int table, int amt, Package aPackage, boolean isPaid) {
+        this.id = id;
+        this.table = table;
+        this.amt = amt;
+        this.aPackage = aPackage;
+        this.isPaid = isPaid;
+    }
+
     public int getTable() {
         return table;
     }
