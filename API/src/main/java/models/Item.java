@@ -1,8 +1,10 @@
 package models;
 
+import com.google.firebase.database.Exclude;
+import com.google.firebase.database.IgnoreExtraProperties;
+
 import java.util.HashSet;
 import java.util.Set;
-
 public class Item implements ModelObserable<Item> {
     private int id;
     private String name;
@@ -20,6 +22,18 @@ public class Item implements ModelObserable<Item> {
     }
     public Item(int id, String name, int categoryId) {
         this(id, name, categoryId, 0);
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public int getId() {
@@ -55,6 +69,7 @@ public class Item implements ModelObserable<Item> {
         return "Item : " + id + "-" + name + "[" + categoryId + "]";
     }
 
+    @Exclude
     public boolean isAvailable(){
         return balance > 0;
     }

@@ -41,4 +41,17 @@ public class Payment {
     public void setPaid(boolean paid) {
         isPaid = paid;
     }
+
+    @Override
+    public String toString() {
+        return "Payment{" +
+                "id='" + id + '\'' +
+                ", table=" + table +
+                ", amt=" + amt +
+                ", aPackage=" + aPackage +
+                ", isPaid=" + isPaid +
+                '}';
+    }
+
+
 }

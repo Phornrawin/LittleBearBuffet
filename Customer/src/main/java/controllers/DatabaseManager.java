@@ -14,7 +14,7 @@ public interface DatabaseManager {
 
     List<Category> loadCategories();
 
-    Order addOrder(Order order);
+    void addOrder(Order order);
 
     boolean checkBill(Package pk, int amount);
 

@@ -34,17 +34,17 @@ public class MainController implements CoreController, FirebaseObserver{
     }
 
     public boolean addOrder(Order order) {
-        if(order.getTable() != customerManager.getTable()) {
-            order = new Order(order.getId(), order.getAmount(), order.getItem(), customerManager.getTable());
-        }
-        Order newOrder = dbManager.addOrder(order);
+//        if(order.getTable() != customerManager.getTable()) {
+//            order = new Order(order.getId(), order.getAmount(), order.getItem(), customerManager.getTable());
+//        }
+        dbManager.addOrder(order);
 
-        if (newOrder != null) {
-            System.out.println("add order complete");
-            customerManager.addOrder(order);
-            return true;
-        }
-        System.out.println("add order fail");
+//        if (newOrder != null) {
+//            System.out.println("add order complete");
+//            customerMana22ger.addOrder(order);
+//            return true;
+//        }
+//        System.out.println("add order fail");
         return false;
     }
 
@@ -167,6 +167,7 @@ public class MainController implements CoreController, FirebaseObserver{
     @Override
     public void onOrderAdd(Order order) {
         customerManager.addOrder(order);
+        System.err.println("onOrder Add");
     }
 
     @Override

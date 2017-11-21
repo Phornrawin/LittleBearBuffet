@@ -77,16 +77,50 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
         ref.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                System.out.println("onOrderAdd " + getClass().getName() + ".java:" + 80);
                 String id = dataSnapshot.getKey();
-                int amt = Integer.parseInt(dataSnapshot.child("amt").getValue().toString());
-                int table = Integer.parseInt(dataSnapshot.child("table").getValue().toString());
-//                Item item = itemMap.get(Integer.parseInt(dataSnapshot.child("item").getValue().toString()));
-                Item item = dataSnapshot.child("item").getValue(Item.class);
-                Payment payment = dataSnapshot.child("payment").getValue(Payment.class);
+                int amt = Integer.parseInt(dataSnapshot.child("amount").getValue().toString());
+
+
+                int iID = Integer.parseInt(dataSnapshot.child("item").child("id").getValue().toString());
+                Item item = itemMap.get(iID);
+
+//                // parse to item
+//                DataSnapshot itemRef = dataSnapshot.child("item");
+//                int iID = Integer.parseInt(dataSnapshot.child("item").child("id").getValue().toString());
+//                int iBalance = Integer.parseInt(itemRef.child("balance").getValue().toString());
+//                int iCate = Integer.parseInt(itemRef.child("categoryId").getValue().toString());
+//                String iName = itemRef.child("name").getValue().toString();
+//                Item item = new Item(iID, iName, iCate, iBalance);
+
+                // parse to payment
+                DataSnapshot paymentRef = dataSnapshot.child("payment");
+                boolean paid = Boolean.parseBoolean(paymentRef.child("paid").getValue().toString());
+                int payAmt = Integer.parseInt(paymentRef.child("amt").getValue().toString());
+                int table = Integer.parseInt(paymentRef.child("table").getValue().toString());
+                String payId = paymentRef.child("id").getValue().toString();
+                Package aPackage = packagesBuffer.get(Integer.parseInt(paymentRef.child("aPackage").child("id").getValue().toString()));
+                Payment payment = new Payment(amt, aPackage, paid, table);
+                payment.setId(payId);
+
+                // parse to package
+//                DataSnapshot packageRef = paymentRef.child("aPackage");
+//                double price = Double.parseDouble(packageRef.child("price").getValue().toString());
+//                int pacId = Integer.parseInt(packageRef.child("id").getValue().toString());
+//                String pacName = packageRef.child("name").getValue().toString();
+//                Package aPackage = new Package()
                 Order order = new Order(id, amt, item, payment);
                 order.setStatus(dataSnapshot.child("status").getValue().toString());
-                orderBuffer.add(order);
-                orderMap.put(id, order);
+
+                System.out.println("order.getPayment() = " + order.getPayment());
+                System.out.println("currentPayment = " + currentPayment);
+
+                if (currentPayment != null && order.getPayment() != null && currentPayment.getId().equalsIgnoreCase(order.getPayment().getId())){
+                    System.out.println("in table order come");
+                    orderBuffer.add(order);
+                    orderMap.put(id, order);
+                    notifyObservers(observer -> observer.onOrderAdd(order));
+                }
             }
 
             @Override
@@ -153,7 +187,7 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
 
                     Item item = new Item(id, name, cateId, balance);
                     itemsBuffer.add(item);
-                    itemMap.put(id, item);
+                    itemMap.put(item.getId(), item);
                 }
                 System.out.println("FirebaseManager: client receive item");
                 isItemsAvailable = true;
@@ -199,15 +233,15 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
     }
 
     @Override
-    public Order addOrder(Order order) {
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("order");
+    public void addOrder(Order order) {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("order").push();
 //        Map<String, String> map = new HashMap<>();
 //        map.put("amt", order.getAmount() + "");
 //        map.put("item", order.getItem().getId() + "");
 //        map.put("table", order.getTable() + "");
 //        map.put("status", order.getStatus());
-        ref.push().setValue(order);
-        return null;
+        order = new Order(ref.getKey(), order.getAmount(), order.getItem(), currentPayment);
+        ref.setValue(order);
     }
 
     @Override
@@ -282,4 +316,7 @@ public class FirebaseManager implements DatabaseManager, FirebaseObserable {
     public void removeOnLoadCompleteListener(OnLoadCompleteListener listener){
         loadCompleteListeners.remove(listener);
     }
+
+
+
 }
