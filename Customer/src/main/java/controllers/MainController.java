@@ -2,8 +2,11 @@ package controllers;
 
 import models.*;
 import models.Package;
+import views.RootView;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by PC301 on 25/9/2560.
@@ -13,6 +16,8 @@ public class MainController implements CoreController, FirebaseObserver{
     private DatabaseManager dbManager;
     private RestaurantManager restaurantManager;
     private CustomerManager customerManager;
+    private Set<RootView> rootViews = new HashSet<>();
+
 
 
     public void start() {
@@ -100,6 +105,11 @@ public class MainController implements CoreController, FirebaseObserver{
 
     public List<Category> getCategories() {
         return restaurantManager.getCategories();
+    }
+
+    @Override
+    public void addRootView() {
+
     }
 
     public List<Order> getOrders() {
