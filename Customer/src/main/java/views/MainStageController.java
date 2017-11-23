@@ -20,6 +20,7 @@ public class MainStageController implements StageController {
     public void showPaymentView(){
         System.out.println("showPaymentView");
         try {
+            System.gc();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MenuView.class.getResource("/PaymentView.fxml"));
             AnchorPane paymentLayout = loader.load();
@@ -29,7 +30,10 @@ public class MainStageController implements StageController {
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(paymentLayout);
-            primaryStage.setScene(scene);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+//            primaryStage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -39,6 +43,7 @@ public class MainStageController implements StageController {
     public void showMenuView() {
         System.out.println("showMenuView");
         try {
+            System.gc();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainView.class.getResource("/MenuView.fxml"));
             Pane menuLayout = loader.load();
@@ -57,6 +62,7 @@ public class MainStageController implements StageController {
 
     public void showMainView() {
         try{
+            System.gc();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/MainView.fxml"));
             Pane mainLayout = loader.load();

@@ -34,13 +34,11 @@ public class CustomerApplication extends Application{
     public void start(Stage primaryStage) {
         this.customerManager = new CustomerStorage();
         this.restaurantManager = new RestaurantStorage();
-        customerManager.setTable(1);
         this.coreController = new MainController();
-
-        FirebaseManager firebaseManager = new FirebaseManager();
-        firebaseManager.setTable(1);
-        firebaseManager.addOnLoadCompleteListener(() -> Platform.runLater(() -> CustomerApplication.this.primaryStage.show()));
-//        firebaseManager.start();
+        if (getParameters().getRaw().size() > 0)
+            customerManager.setTable(Integer.parseInt(getParameters().getRaw().get(0)));
+        else
+            customerManager.setTable(1);
 
         FirebaseManagerAPI firebaseManagerAPI = new FirebaseManagerAPI();
         firebaseManagerAPI.addLoadCompleteListener(() -> Platform.runLater(() -> CustomerApplication.this.primaryStage.show()));
