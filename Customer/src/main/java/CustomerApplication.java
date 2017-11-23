@@ -40,9 +40,13 @@ public class CustomerApplication extends Application{
         FirebaseManager firebaseManager = new FirebaseManager();
         firebaseManager.setTable(1);
         firebaseManager.addOnLoadCompleteListener(() -> Platform.runLater(() -> CustomerApplication.this.primaryStage.show()));
-        firebaseManager.start();
+//        firebaseManager.start();
 
-        coreController.setDatabaseManager(firebaseManager);
+        FirebaseManagerAPI firebaseManagerAPI = new FirebaseManagerAPI();
+        firebaseManagerAPI.addLoadCompleteListener(() -> Platform.runLater(() -> CustomerApplication.this.primaryStage.show()));
+        firebaseManagerAPI.start();
+
+        coreController.setDatabaseManager(firebaseManagerAPI);
         coreController.setCustomerManager(customerManager);
         coreController.setRestaurantManager(restaurantManager);
 

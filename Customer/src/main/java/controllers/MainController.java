@@ -1,9 +1,13 @@
 package controllers;
 
+import callbacks.OnResult;
+import com.sun.org.apache.xpath.internal.operations.Or;
+import listeners.OrderListener;
 import models.*;
 import models.Package;
 import views.RootView;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -11,9 +15,9 @@ import java.util.Set;
 /**
  * Created by PC301 on 25/9/2560.
  */
-public class MainController implements CoreController, FirebaseObserver{
+public class MainController implements CoreController, OrderListener{
 
-    private DatabaseManager dbManager;
+    private RealTimeDatabaseManager dbManager;
     private RestaurantManager restaurantManager;
     private CustomerManager customerManager;
     private Set<RootView> rootViews = new HashSet<>();
@@ -21,58 +25,75 @@ public class MainController implements CoreController, FirebaseObserver{
 
 
     public void start() {
-        List<Package> packages = null;
-        while(packages == null){
-            System.out.println("loading packages ...");
-            packages = dbManager.loadPackages();
-        }
+        List<Package> packages = dbManager.getPackages();
         System.out.println("start");
         System.out.println("packages = " + packages);
         restaurantManager.setPackages(packages);
 
-        List<Category> categories = null;
-        while (categories == null){
-            System.out.println("loading categories ...");
-            categories = dbManager.loadCategories();
-        }
+        List<Category> categories = dbManager.getCategories();
         restaurantManager.setCategories(categories);
     }
 
     public boolean addOrder(Order order) {
-//        if(order.getTable() != customerManager.getTable()) {
-//            order = new Order(order.getId(), order.getAmount(), order.getItem(), customerManager.getTable());
-//        }
-        dbManager.addOrder(order);
+        dbManager.addOrder(order, new OnResult<Order>() {
+            @Override
+            public void onComplete(Order obj) {
 
-//        if (newOrder != null) {
-//            System.out.println("add order complete");
-//            customerMana22ger.addOrder(order);
-//            return true;
-//        }
-//        System.out.println("add order fail");
+            }
+
+            @Override
+            public void onFailure(Order obj) {
+                // TODO back to home scene when add payment error
+            }
+        });
         return false;
     }
 
-    public void selectPackage(Package pk, int amount) {
-        dbManager.selectPackage(pk, amount);
-        customerManager.setPackageObj(pk);
-        customerManager.setAmount(amount);
+    @Override
+    public void addOrder(Order order, OnResult<Order> callback) {
+        dbManager.addOrder(order, callback);
+    }
 
-        List<Item> items = dbManager.loadItems(pk);
+    @Override
+    public void addOrders(List<Order> orders, OnResult<List<Order>> callback) {
+        OrderAppender appender = new OrderAppender(orders, callback);
+        appender.perform();
+    }
+
+
+
+    public void selectPackage(Package pk, int amount) {
+        Payment payment = dbManager.selectPackage(pk, getTable(), amount, new OnResult<Payment>() {
+            @Override
+            public void onComplete(Payment obj) {
+
+            }
+
+            @Override
+            public void onFailure(Payment obj) {
+
+            }
+        });
+        customerManager.setPayment(payment);
+        List<Item> items = dbManager.getItems(pk);
         System.out.println("load item complete");
 
         restaurantManager.addItemsToCategory(items);
     }
 
     public boolean checkBill() {
-        Package pk = customerManager.getPackageObj();
-        int amount = customerManager.getAmount();
-        boolean isSuccess = dbManager.checkBill(pk, amount);
-        if (isSuccess){
-            customerManager.clearOrder();
-            restaurantManager.clearCategories();
-        }
-        return isSuccess;
+        dbManager.checkBill(customerManager.getPayment(), new OnResult<Payment>() {
+            @Override
+            public void onComplete(Payment obj) {
+
+            }
+
+            @Override
+            public void onFailure(Payment obj) {
+
+            }
+        });
+        return true;
     }
 
     public int getTable() {
@@ -91,8 +112,9 @@ public class MainController implements CoreController, FirebaseObserver{
         customerManager.setTable(table);
     }
 
-    public void setDatabaseManager(DatabaseManager dbManager) {
+    public void setDatabaseManager(RealTimeDatabaseManager dbManager) {
         this.dbManager = dbManager;
+        dbManager.addOrderListener(this);
     }
 
     public void setCustomerManager(CustomerManager customerManager) {
@@ -123,53 +145,6 @@ public class MainController implements CoreController, FirebaseObserver{
     public Package getCurrentPackage() {
         return customerManager.getPackageObj();
     }
-
-    @Override
-    public int getCurrentPackageId() {
-        return customerManager.getPackageObj().getId();
-    }
-
-    @Override
-    public void onItemAdd(Item item) {
-        restaurantManager.addItem(item);
-    }
-
-    @Override
-    public void onItemChange(Item item) {
-        restaurantManager.changeItem(item);
-    }
-
-    @Override
-    public void onItemDelete(Item item) {
-        restaurantManager.removeItem(item);
-    }
-
-    @Override
-    public void onPackageAdd(Package packageObj) {
-        restaurantManager.addPackage(packageObj);
-    }
-
-    @Override
-    public void onPackageChange(Package packageObj) {
-        restaurantManager.changePacakage(packageObj);
-    }
-
-    @Override
-    public void onPackageDelete(Package packageObj) {
-        restaurantManager.removePackage(packageObj);
-    }
-
-    @Override
-    public void onCategoryAdd(Category category) {
-        restaurantManager.addCategory(category);
-    }
-
-    @Override
-    public void onCategoryChange(Category category) {
-        restaurantManager.changeCategory(category);
-    }
-
-    @Override
     public void onCategoryDelete(Category category) {
         restaurantManager.removeCategory(category);
     }
@@ -186,7 +161,50 @@ public class MainController implements CoreController, FirebaseObserver{
     }
 
     @Override
-    public void onOrderDelete(Order order) {
-        customerManager.deleteOrder(order);
+    public void onOrderRemove(Order order) {
+
+    }
+
+
+    private class OrderAppender{
+        private List<Order> orders;
+        private OnResult<List<Order>> callback;
+        private List<Order> complete = new ArrayList<>();
+        private List<Order> failure = new ArrayList<>();
+        private int count;
+        public OrderAppender(List<Order> orders, OnResult<List<Order>> callback) {
+            this.orders = orders;
+            this.callback = callback;
+            count = orders.size();
+        }
+
+        public void perform(){
+            for (Order order: orders){
+                order.setPayment(customerManager.getPayment());
+                dbManager.addOrder(order, new OnResult<Order>() {
+                    @Override
+                    public void onComplete(Order obj) {
+                        complete.add(obj);
+                        customerManager.addOrder(obj);
+                        checkSum();
+                    }
+
+                    @Override
+                    public void onFailure(Order obj) {
+                        failure.add(obj);
+                        checkSum();
+                    }
+                });
+            }
+        }
+
+        private void checkSum(){
+            if (failure.size() + complete.size() == count){
+                if (complete.size() > 0)
+                    callback.onComplete(complete);
+                if (failure.size() > 0)
+                    callback.onFailure(failure);
+            }
+        }
     }
 }

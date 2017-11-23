@@ -114,6 +114,7 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
                 ordersBuffer.add(order);
                 orderMap.put(id, order);
                 // TODO notify order add
+                notifyOrderListener();
             }
 
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
@@ -210,7 +211,8 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
     }
 
     private void checkLoadStatus() {
-
+        if (isCategoryLoaded && isItemLoaded && isPackageLoaded)
+            notifyLoadComplete();
     }
 
     public void addLoadCompleteListener(LoadCompleteListener listener) {
@@ -258,7 +260,14 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
     }
 
     public void addOrder(Order order, OnResult<Order> callback) {
-
+        System.out.println("addOrder in db " + order);
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("order").push();
+        ref.setValue(order)
+                .addOnCompleteListener((task -> callback.onComplete(order)))
+                .addOnFailureListener(e -> {
+                    e.printStackTrace();
+                    callback.onFailure(order);
+                });
     }
 
     public Payment selectPackage(Package pk, int table, int amt, final OnResult<Payment> callback) {
@@ -271,7 +280,7 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
                     e.printStackTrace();
                     callback.onFailure(payment);
                 });
-        return null;
+        return payment;
     }
 
     public void checkBill(Payment payment, OnResult<Payment> callback) {
@@ -281,7 +290,8 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
 
 
     private void notifyLoadComplete(){
-
+        for (LoadCompleteListener listener : loadCompleteListeners)
+            listener.onComplete();
     }
     private void notifyOrderListener(){
 

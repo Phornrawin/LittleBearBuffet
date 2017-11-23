@@ -1,5 +1,6 @@
 package controllers;
 
+import callbacks.OnResult;
 import models.*;
 import models.Package;
 //import models.CustomerManager;
@@ -14,6 +15,8 @@ public interface CoreController {
 
     void start();
     boolean addOrder(Order order);
+    void addOrder(Order order, OnResult<Order> callback);
+    void addOrders(List<Order> orders, OnResult<List<Order>> callback);
     void selectPackage(Package pk, int amount);
     boolean checkBill();
     int getTable();
@@ -23,7 +26,7 @@ public interface CoreController {
     Package getCurrentPackage();
     int getAmount();
     void setTable(int table);
-    void setDatabaseManager(DatabaseManager dbManager);
+    void setDatabaseManager(RealTimeDatabaseManager dbManager);
     void setCustomerManager(CustomerManager customerManager);
     void setRestaurantManager(RestaurantManager restaurantManager);
     List<Category> getCategories();

@@ -1,9 +1,12 @@
 package views;
 
+import callbacks.OnResult;
 import controllers.CoreController;
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.input.MouseEvent;
@@ -103,17 +106,48 @@ public class MenuView extends AnchorPane implements RootView{
             orderBar = loader.getController();
             orderBar.setRoot(this);
             orderBar.setData(bufferOrders);
+//            orderBar.setOnConfirmListener(new OrderBarView.OnConfirmListener() {
+//                @Override
+//                public void perform() {
+//                    for(Order order : bufferOrders){
+//                        boolean isSuccess = controller.addOrder(order);
+//                        if (!isSuccess)
+//                            System.err.println("addOrder fail " + order.getItem().getName());
+//                    }
+//
+//                    orderedBar.refresh();
+//                    bufferOrders.clear();
+//                }
+//            });
             orderBar.setOnConfirmListener(new OrderBarView.OnConfirmListener() {
                 @Override
                 public void perform() {
-                    for(Order order : bufferOrders){
-                        boolean isSuccess = controller.addOrder(order);
-                        if (!isSuccess)
-                            System.err.println("addOrder fail " + order.getItem().getName());
-                    }
+                    controller.addOrders(bufferOrders, new OnResult<List<Order>>() {
+                        @Override
+                        public void onComplete(List<Order> obj) {
+                            Platform.runLater(()->{
+                                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                                alert.setHeaderText("You have successfully ordered the order.");
+                                System.out.println("complete order list " + obj);
+                                orderedBar.refresh();
+                                tabOrderBar.getSelectionModel().select(1);
+                                alert.showAndWait();
+                            });
+                        }
 
-                    orderedBar.refresh();
+                        @Override
+                        public void onFailure(List<Order> obj) {
+                            Platform.runLater(()->{
+                                Alert alert = new Alert(Alert.AlertType.WARNING);
+                                alert.setHeaderText("You have failure some ordered the order.");
+                                System.out.println("failure order list " + obj);
+                                alert.showAndWait();
+                            });
+
+                        }
+                    });
                     bufferOrders.clear();
+                    orderBar.refresh();
                 }
             });
         } catch (IOException e) {
@@ -167,5 +201,10 @@ public class MenuView extends AnchorPane implements RootView{
 
     public void setStageController(StageController stageController) {
         this.stageController = stageController;
+    }
+
+    @Override
+    public void onOrderAdd(Order order) {
+
     }
 }

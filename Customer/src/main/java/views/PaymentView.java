@@ -48,4 +48,9 @@ public class PaymentView implements RootView {
     public void setStageController(StageController stageController) {
         this.stageController = stageController;
     }
+
+    @Override
+    public void onOrderAdd(Order order) {
+
+    }
 }

@@ -63,7 +63,7 @@ public class OrderBarView extends StackPane implements Initializable{
             public void handle(MouseEvent event) {
                 if (confirmListener != null)
                     confirmListener.perform();
-                showTopicInformation();
+//                showTopicInformation();
                 tableOrder.refresh();
             }
         });

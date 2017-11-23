@@ -63,4 +63,21 @@ public class Order implements ModelObserable<Order> {
         for(ModelObserver<Order> observer : observers)
             observer.onModelChange(this);
     }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "COOKING='" + COOKING + '\'' +
+                ", id='" + id + '\'' +
+                ", amount=" + amount +
+                ", item=" + item +
+                ", payment=" + payment +
+                ", status='" + status + '\'' +
+                ", observers=" + observers +
+                '}';
+    }
 }
