@@ -80,7 +80,6 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
                 Payment payment = dataSnapshot.getValue(Payment.class);
                 System.out.println("new payment " + payment);
                 notifyPaymentListener((listener -> {
-                    System.out.println("notify " + listener);
                     listener.onPaymentAdd(payment);
                 }));
             }
@@ -315,7 +314,7 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
         final Payment payment = new Payment(id, table, amt, pk, false);
         Instant instant = Instant.from(LocalDateTime.now().atZone(ZoneId.systemDefault()));
         payment.setStartTime(Date.from(instant));
-        payment.setPayTime(Date.from(instant));
+//        payment.setPayTime(Date.from(instant));
         ref.setValue(payment)
                 .addOnCompleteListener((task)->callback.onComplete(payment))
                 .addOnFailureListener((e)->{
@@ -326,7 +325,23 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
     }
 
     public void checkBill(Payment payment, OnResult<Payment> callback) {
-
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("payment").child(payment.getId());
+        ref.child("paid").setValue("true")
+                        .addOnFailureListener(e->{
+                            e.printStackTrace();
+                            callback.onFailure(payment);
+                        })
+                        .addOnCompleteListener(task->{
+                            Date now = Date.from(Instant.from(LocalDateTime.now().atZone(ZoneId.systemDefault())));
+                            ref.child("payTime").setValue(now)
+                                                .addOnCompleteListener(task2->{
+                                                    callback.onComplete(payment);
+                                                })
+                                                .addOnFailureListener(e->{
+                                                    e.printStackTrace();
+                                                    callback.onFailure(payment);
+                                                });
+                        });
     }
 
 
