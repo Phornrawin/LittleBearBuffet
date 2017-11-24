@@ -7,10 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cashier/src/main/java/CashierApplication.java" afterPath="$PROJECT_DIR$/Cashier/src/main/java/CashierApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/API.iml" afterPath="$PROJECT_DIR$/API/API.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cashier/Cashier.iml" afterPath="$PROJECT_DIR$/Cashier/Cashier.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java" afterPath="$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cashier/src/main/resources/CashierMainView.fxml" afterPath="$PROJECT_DIR$/Cashier/src/main/resources/CashierMainView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LittleBearBuffet.iml" afterPath="$PROJECT_DIR$/LittleBearBuffet.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -87,8 +89,12 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
-              <caret line="11" column="84" lean-forward="false" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
-              <folding />
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <marker date="1511504644700" expanded="true" signature="5908:6020" ph="..." />
+                <marker date="1511504644700" expanded="true" signature="5924:6005" ph="..." />
+                <marker date="1511504644700" expanded="true" signature="5940:5990" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,14 +124,14 @@
       <file leaf-file-name="CashierMainView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            <state relative-caret-position="231">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#823#824#0" expanded="true" />
-                <element signature="e#863#864#0" expanded="true" />
-                <element signature="e#1039#1040#0" expanded="true" />
-                <element signature="e#1083#1084#0" expanded="true" />
+                <element signature="e#822#823#0" expanded="true" />
+                <element signature="e#862#863#0" expanded="true" />
+                <element signature="e#1038#1039#0" expanded="true" />
+                <element signature="e#1082#1083#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -476,11 +482,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/compiler.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/API.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Cashier/Cashier.iml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/Cashier/src/main/resources/CashierMainView.fxml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
@@ -902,13 +903,6 @@
       <option name="presentableId" value="Default" />
       <updated>1506170873937</updated>
     </task>
-    <task id="LOCAL-00004" summary="implements database module: receive add order msg in controller, create add order sequence diagram">
-      <created>1506257018029</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1506257018029</updated>
-    </task>
     <task id="LOCAL-00005" summary="implements database module: receive add order msg in controller, create add order sequence diagram">
       <created>1506324066413</created>
       <option name="number" value="00005" />
@@ -1245,7 +1239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511499781500</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Cashier: implement CashierMainView">
+      <created>1511504067605</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1511504067605</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1281,7 +1282,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49430525" sideWeight="0.34425348" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3127907" sideWeight="0.60687435" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.027906977" sideWeight="0.6557465" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.027906977" sideWeight="0.6557465" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1386,7 +1387,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Complete Backlog #10" />
     <MESSAGE value="try to multi thread for load itemView" />
     <MESSAGE value="design for sprint #2" />
     <MESSAGE value="create firebase interface" />
@@ -1411,7 +1411,8 @@
     <MESSAGE value="Refactoring project architecture to asynchronous" />
     <MESSAGE value="Cashier: create Module" />
     <MESSAGE value="Cashier: implement CashierApplication" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cashier: implement CashierApplication" />
+    <MESSAGE value="Cashier: implement CashierMainView" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cashier: implement CashierMainView" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1740,21 +1741,25 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="11" column="84" lean-forward="false" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
-          <folding />
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <marker date="1511504644700" expanded="true" signature="5908:6020" ph="..." />
+            <marker date="1511504644700" expanded="true" signature="5924:6005" ph="..." />
+            <marker date="1511504644700" expanded="true" signature="5940:5990" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        <state relative-caret-position="231">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#1039#1040#0" expanded="true" />
-            <element signature="e#1083#1084#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+            <element signature="e#1082#1083#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1813,7 +1818,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>BuffetCashier</last-edited>
+          <last-edited>API</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

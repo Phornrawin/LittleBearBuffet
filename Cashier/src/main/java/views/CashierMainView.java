@@ -16,7 +16,7 @@ public class CashierMainView implements Initializable, CashierView {
     @FXML private ComboBox cb_table;
     @FXML private Label lb_peopleAmt, lb_totalPrice, lb_eachPrice;
     @FXML private Button btn_delete, btn_dot, btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9;
-    private List<Payment> payments; 
+    private List<Payment> payments;
     private PaymentController controller;
 
     public void initialize(URL location, ResourceBundle resources) {
