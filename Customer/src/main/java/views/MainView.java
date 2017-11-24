@@ -107,5 +107,10 @@ public class MainView implements RootView {
         this.stageController = stageController;
     }
 
+    @Override
+    public void onOrderAdd(Order order) {
+
+    }
+
 
 }

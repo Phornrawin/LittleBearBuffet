@@ -3,6 +3,7 @@ package views;
 import controllers.CoreController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 import models.Order;
 
 import java.time.LocalDate;
@@ -23,13 +24,18 @@ public class PaymentView implements RootView {
 
     @FXML
     private void onClickBtnBack(){
-        this.stageController.showMenuView();
+//        this.stageController.showMenuView();
+        Stage stage = (Stage) labelAmount.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
     private void onClickBtnBackToMain(){
         this.controller.checkBill();
         this.stageController.showMainView();
+        Stage stage = (Stage) labelAmount.getScene().getWindow();
+        stage.close();
+        System.gc();
     }
 
     public void setController(CoreController controller) {
@@ -47,5 +53,10 @@ public class PaymentView implements RootView {
 
     public void setStageController(StageController stageController) {
         this.stageController = stageController;
+    }
+
+    @Override
+    public void onOrderAdd(Order order) {
+
     }
 }

@@ -27,8 +27,10 @@ public class MenuBarView extends FlowPane {
     }
     public void createMenus(){
         for(Item item : items){
-            ItemView itemView = new ItemView(item);
-            itemView.setListener(onClickItemListener);
+            ItemView itemView = ItemViewPool.getInstance().getItemView(item, onClickItemListener);
+            if (itemView.getParent() != null)
+                ((FlowPane) itemView.getParent()).getChildren().remove(itemView);
+//            itemView.setListener(onClickItemListener);
             getChildren().addAll(itemView);
 //            Runnable r = new LoadItemViewTask(getChildren(), onClickItemListener, item);
 //            Thread thread = new Thread(r);

@@ -1,8 +1,8 @@
-import controllers.ClientManager;
-import controllers.CoreController;
-import controllers.FirebaseManager;
-import controllers.MainController;
+import controllers.*;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.concurrent.ScheduledService;
+import javafx.concurrent.Task;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -18,14 +18,12 @@ public class CustomerApplication extends Application{
 
     private CustomerStorage customerManager;
     private RestaurantStorage restaurantManager;
-    private ClientManager dbManager;
     private CoreController coreController;
     private Stage primaryStage;
     private RootView rootView;
     private StageController stageController;
 
     public static void main(String[] args) {
-//        DatabaseManager db = new ClientManager();
 //        List<Category> categories = db.loadCategories();
 //
 //        System.out.println("categories = " + categories);
@@ -36,15 +34,17 @@ public class CustomerApplication extends Application{
     public void start(Stage primaryStage) {
         this.customerManager = new CustomerStorage();
         this.restaurantManager = new RestaurantStorage();
-        this.dbManager = new ClientManager();
-        customerManager.setTable(1);
         this.coreController = new MainController();
+        if (getParameters().getRaw().size() > 0)
+            customerManager.setTable(Integer.parseInt(getParameters().getRaw().get(0)));
+        else
+            customerManager.setTable(1);
 
-        FirebaseManager firebaseManager = new FirebaseManager();
-        firebaseManager.setTable(1);
-        firebaseManager.start();
+        FirebaseManagerAPI firebaseManagerAPI = new FirebaseManagerAPI();
+        firebaseManagerAPI.addLoadCompleteListener(() -> Platform.runLater(() -> CustomerApplication.this.primaryStage.show()));
+        firebaseManagerAPI.start();
 
-        coreController.setDatabaseManager(firebaseManager);
+        coreController.setDatabaseManager(firebaseManagerAPI);
         coreController.setCustomerManager(customerManager);
         coreController.setRestaurantManager(restaurantManager);
 
@@ -55,28 +55,7 @@ public class CustomerApplication extends Application{
         stageController.setStage(primaryStage);
         stageController.setController(coreController);
         stageController.showMainView();
-
-        primaryStage.show();
         primaryStage.setTitle("Little Bear Buffet");
-//        initRoot();
-    }
-
-    private void initRoot() {
-        System.out.println("init root");
-        try{
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/MainView.fxml"));
-            Pane mainLayout = loader.load();
-            rootView = loader.getController();
-            rootView.setController(coreController);
-
-            Scene sc = new Scene(mainLayout);
-            primaryStage.setScene(sc);
-            primaryStage.show();
-            primaryStage.setTitle("Little Bear Buffet");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
 

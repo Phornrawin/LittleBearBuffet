@@ -63,7 +63,7 @@ public class ItemView extends VBox implements ModelObserver<Item> {
     public void setListener(OnClickAddOrderListener listener){
         addEventHandler(MouseEvent.MOUSE_CLICKED, (event)->{
             if (item.isAvailable()){
-                Order order = new Order("0", 1, item, 0);
+                Order order = new Order("0", 1, item, null);
                 item.decreaseBalance(1);
                 System.out.println("item.getBalance() = " + item.getBalance());
                 listener.onClick(order);

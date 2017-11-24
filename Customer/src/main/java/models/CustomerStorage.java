@@ -10,9 +10,8 @@ import java.util.List;
 public class CustomerStorage implements CustomerManager{
 
     private int table;
-    private int amount;
     private List<Order> orders = new ArrayList<>();
-    private Package packageObj;
+    private Payment payment;
 
     public int getTable() {
         return table;
@@ -22,25 +21,21 @@ public class CustomerStorage implements CustomerManager{
         return orders;
     }
 
+    @Override
     public Package getPackageObj() {
-        return packageObj;
+        return payment.getaPackage();
     }
 
+
     public int getAmount() {
-        return amount;
+        return payment.getAmt();
     }
 
     public void setTable(int table) {
         this.table = table;
     }
 
-    public void setAmount(int amt) {
-        this.amount = amt;
-    }
 
-    public void setPackageObj(Package packageObj) {
-        this.packageObj = packageObj;
-    }
 
     public void addOrder(Order order) {
         orders.add(order);
@@ -65,6 +60,16 @@ public class CustomerStorage implements CustomerManager{
     }
 
     public double getTotalPrice() {
-        return amount * packageObj.getPrice();
+        return payment.getAmt() * payment.getaPackage().getPrice();
+    }
+
+    @Override
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+
+    @Override
+    public Payment getPayment() {
+        return payment;
     }
 }

@@ -9,4 +9,5 @@ public interface StageController {
     void showPaymentView();
     void showMenuView();
     void showMainView();
+    void showStage();
 }

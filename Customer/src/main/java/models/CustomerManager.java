@@ -11,11 +11,11 @@ public interface CustomerManager {
     Package getPackageObj();
     int getAmount();
     void setTable(int table);
-    void setAmount(int amt);
-    void setPackageObj(Package packageObj);
     void addOrder(Order order);
     void deleteOrder(Order order);
     void changeOrder(Order order);
     void clearOrder();
     double getTotalPrice();
+    void setPayment(Payment payment);
+    Payment getPayment();
 }

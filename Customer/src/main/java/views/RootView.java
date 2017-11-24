@@ -8,11 +8,9 @@ import models.Order;
  */
 public interface RootView {
 
-    public void setController(CoreController controller);
-
-    public void addOrder(Order order);
-
-    public void checkBill();
-
-    public void setStageController(StageController stageController);
+    void setController(CoreController controller);
+    void addOrder(Order order);
+    void checkBill();
+    void setStageController(StageController stageController);
+    void onOrderAdd(Order order);
 }
