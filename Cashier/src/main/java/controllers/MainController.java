@@ -26,7 +26,7 @@ public class MainController implements PaymentController, PaymentListener{
     }
 
     public List<Payment> getPayments() {
-        return null;
+        return payments;
     }
 
     public void setView(CashierView view) {
@@ -43,6 +43,7 @@ public class MainController implements PaymentController, PaymentListener{
     public void onPaymentAdd(Payment payment) {
         payments.add(payment);
         cashierView.setAvailable(payments);
+        System.out.println("payment add " + payment);
     }
 
     public void onPaymentChange(Payment payment) {
