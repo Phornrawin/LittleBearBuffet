@@ -1,3 +1,4 @@
+import controllers.FirebaseManagerAPI;
 import controllers.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +17,11 @@ public class CashierApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        FirebaseManagerAPI firebaseManager = new FirebaseManagerAPI();
         MainController controller = new MainController();
+        controller.setDbManager(firebaseManager);
+        firebaseManager.start();
+
         System.out.println("show CashierView");
         try {
             FXMLLoader loader = new FXMLLoader();
