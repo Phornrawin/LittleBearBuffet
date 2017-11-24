@@ -19,12 +19,12 @@ public class CashierApplication extends Application {
         MainController controller = new MainController();
         System.out.println("show CashierView");
         try {
-            System.gc();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/CashierMainView.fxml"));
             Pane mainLayout = loader.load();
             CashierMainView cashierMainView = loader.getController();
             cashierMainView.setController(controller);
+            cashierMainView.setAvailable(controller.getPayments());
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(mainLayout);
