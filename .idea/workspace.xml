@@ -6,13 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="">
+    <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="Cashier:">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Customer/Customer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Customer/Customer.jnlp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Customer/Customer.jar" afterPath="$PROJECT_DIR$/out/artifacts/Customer/Customer.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/src/main/java/controllers/FirebaseManagerAPI.java" afterPath="$PROJECT_DIR$/API/src/main/java/controllers/FirebaseManagerAPI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cashier/src/main/java/controllers/MainController.java" afterPath="$PROJECT_DIR$/Cashier/src/main/java/controllers/MainController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java" afterPath="$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Customer/Customer.jnlp" afterPath="$PROJECT_DIR$/out/artifacts/Customer/Customer.jnlp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,65 +35,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="FirebaseManagerAPI.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/API/src/main/java/controllers/FirebaseManagerAPI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="342" column="51" lean-forward="true" selection-start-line="342" selection-start-column="51" selection-end-line="342" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/src/main/java/models/Category.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoadCompleteListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/src/main/java/listeners/LoadCompleteListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="64" column="55" lean-forward="false" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/controllers/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CashierView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/views/CashierView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+            <state relative-caret-position="417">
+              <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#805#806#0" expanded="true" />
+                <element signature="e#836#837#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,18 +51,87 @@
       <file leaf-file-name="CashierApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/CashierApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+            <state relative-caret-position="420">
+              <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java">
+      <file leaf-file-name="CashierMainView.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cashier/src/main/resources/CashierMainView.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1590">
-              <caret line="44" column="35" lean-forward="false" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+            <state relative-caret-position="129">
+              <caret line="123" column="15" lean-forward="false" selection-start-line="123" selection-start-column="15" selection-end-line="123" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/StageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CashierView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/views/CashierView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CashierMainView.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="155" column="45" lean-forward="false" selection-start-line="155" selection-start-column="45" selection-end-line="155" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#6102#6103#0" expanded="true" />
+                <element signature="e#6141#6142#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MainView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="92" column="28" lean-forward="true" selection-start-line="88" selection-start-column="8" selection-end-line="92" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Payment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/main/java/models/Payment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainStageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MainStageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -123,20 +140,8 @@
       <file leaf-file-name="PaymentController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/controllers/PaymentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
+            <state relative-caret-position="210">
               <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CashierMainView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -209,6 +214,7 @@
         <option value="$PROJECT_DIR$/Customer/src/main/java/controllers/CoreController.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/views/OrderBarView.java" />
         <option value="$PROJECT_DIR$/API/src/main/java/models/Order.java" />
+        <option value="$PROJECT_DIR$/API/src/main/java/controllers/FirebaseManagerAPI.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/controllers/MainController.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/views/MenuView.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/FakeMain.java" />
@@ -221,11 +227,10 @@
         <option value="$PROJECT_DIR$/Cashier/src/main/java/views/CashierView.java" />
         <option value="$PROJECT_DIR$/Cashier/src/main/java/controllers/PaymentController.java" />
         <option value="$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainview.java" />
-        <option value="$PROJECT_DIR$/Cashier/src/main/resources/CashierMainView.fxml" />
         <option value="$PROJECT_DIR$/Cashier/src/main/java/CashierApplication.java" />
         <option value="$PROJECT_DIR$/Cashier/src/main/java/controllers/MainController.java" />
+        <option value="$PROJECT_DIR$/Cashier/src/main/resources/CashierMainView.fxml" />
         <option value="$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java" />
-        <option value="$PROJECT_DIR$/API/src/main/java/controllers/FirebaseManagerAPI.java" />
       </list>
     </option>
   </component>
@@ -243,10 +248,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="625" />
-    <option name="y" value="58" />
-    <option name="width" value="1098" />
-    <option name="height" value="876" />
+    <option name="x" value="781" />
+    <option name="y" value="32" />
+    <option name="width" value="976" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -289,9 +294,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -332,7 +334,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="callbacks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
@@ -341,7 +343,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="listeners" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
@@ -399,6 +401,29 @@
             <path>
               <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
               <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Cashier" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Cashier" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Cashier" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
               <item name="Customer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -425,25 +450,68 @@
             <path>
               <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
               <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
               <item name="Customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Diagram" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -486,7 +554,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CustomerApplication">
+  <component name="RunManager" selected="Application.CashierApplication">
     <configuration name="CashierApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="CashierApplication" />
@@ -798,13 +866,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1506170873937</updated>
-    </task>
-    <task id="LOCAL-00006" summary="create class">
-      <created>1506324331865</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1506324331865</updated>
     </task>
     <task id="LOCAL-00007" summary="add url link for ImageView in MainView">
       <created>1506326318265</created>
@@ -1142,7 +1203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511505146788</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Cashier: set ComboBox in CashierMainViee">
+      <created>1511506013391</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1511506013391</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1166,7 +1234,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1177,13 +1245,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49430525" sideWeight="0.34425348" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43621868" sideWeight="0.60687435" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27107063" sideWeight="0.6557465" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28255814" sideWeight="0.60687435" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27220955" sideWeight="0.6557465" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2508056" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5125285" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19978517" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26100966" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1196,6 +1263,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5125285" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38268793" sideWeight="0.49570355" order="1" side_tool="false" content_ui="tabs" />
@@ -1264,7 +1332,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="design for sprint #2" />
     <MESSAGE value="create firebase interface" />
     <MESSAGE value="create firebase manager" />
     <MESSAGE value="implement interface structure" />
@@ -1289,7 +1356,8 @@
     <MESSAGE value="Cashier: implement CashierApplication" />
     <MESSAGE value="Cashier: implement CashierMainView" />
     <MESSAGE value="Cashier: set payments to view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cashier: set payments to view" />
+    <MESSAGE value="Cashier: set ComboBox in CashierMainViee" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cashier: set ComboBox in CashierMainViee" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1334,6 +1402,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/src/main/java/listeners/OrderListener.java" />
+    <entry file="file://$PROJECT_DIR$/API/src/main/java/listeners/LoadCompleteListener.java" />
     <entry file="file://$PROJECT_DIR$/API/src/main/java/listeners/PaymentListener.java" />
     <entry file="file://$PROJECT_DIR$/API/src/main/java/callbacks/OnAddOrder.java" />
     <entry file="file://$PROJECT_DIR$/API/src/main/java/models/Item.java">
@@ -1384,6 +1453,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1396,7 +1466,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/src/main/java/models/Payment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="84">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
@@ -1404,9 +1474,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/src/main/java/controllers/RealTimeDatabaseManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
+        <state relative-caret-position="851">
           <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1419,12 +1488,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/models/CustomerStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
+        <state relative-caret-position="356">
           <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding>
-            <element signature="e#392#393#0" expanded="false" />
-            <element signature="e#421#422#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1437,20 +1502,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/DatabaseManager.java" />
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/FirebaseManager.java" />
+    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="64" column="55" lean-forward="false" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/FirebaseObserver.java" />
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/FakeMain.java" />
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/CustomerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="44" column="35" lean-forward="false" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MainView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+        <state relative-caret-position="799">
+          <caret line="47" column="59" lean-forward="false" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -1507,10 +1571,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/main/java/controllers/FirebaseManagerAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1155">
+          <caret line="41" column="38" lean-forward="false" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Cashier/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-138">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1525,6 +1597,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1532,13 +1605,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MainStageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
+        <state relative-caret-position="252">
           <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/views/CashierView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1551,11 +1636,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/controllers/PaymentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
+        <state relative-caret-position="210">
           <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/CashierApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1564,78 +1657,47 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2606">
-          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        <state relative-caret-position="129">
+          <caret line="123" column="15" lean-forward="false" selection-start-line="123" selection-start-column="15" selection-end-line="123" selection-end-column="15" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/CashierApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/main/java/models/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/main/java/listeners/LoadCompleteListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/controllers/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="64" column="55" lean-forward="false" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/views/CashierView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/controllers/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        <state relative-caret-position="417">
+          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#836#837#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cashier/Cashier.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/main/java/controllers/FirebaseManagerAPI.java">
+    <entry file="file://$PROJECT_DIR$/Customer/src/main/java/views/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="342" column="51" lean-forward="true" selection-start-line="342" selection-start-column="51" selection-end-line="342" selection-end-column="51" />
+        <state relative-caret-position="256">
+          <caret line="92" column="28" lean-forward="true" selection-start-line="88" selection-start-column="8" selection-end-line="92" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="155" column="45" lean-forward="false" selection-start-line="155" selection-start-column="45" selection-end-line="155" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6102#6103#0" expanded="true" />
+            <element signature="e#6141#6142#0" expanded="true" />
           </folding>
         </state>
       </provider>
