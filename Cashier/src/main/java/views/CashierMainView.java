@@ -27,9 +27,8 @@ public class CashierMainView implements Initializable, CashierView {
     }
 
     public void setAvailable(List<Payment> payments) {
-        System.out.println("set available");
         this.payments = payments;
-        System.out.println("payments = " + payments);
+        System.out.println("payments.size = " + payments.size());
         initComboBoxTable();
     }
 

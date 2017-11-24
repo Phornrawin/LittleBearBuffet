@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Customer.jar" size="23603924" download="eager" />
+    <jar href="Customer.jar" size="23607051" download="eager" />
     <jar href="api-common-1.1.0.jar" size="43965" download="eager" />
     <jar href="auto-value-1.2.jar" size="1392477" download="eager" />
     <jar href="commons-codec-1.3.jar" size="46725" download="eager" />
