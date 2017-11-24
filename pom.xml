@@ -11,6 +11,7 @@
     <modules>
         <module>Customer</module>
         <module>API</module>
+        <module>Cashier</module>
     </modules>
 
     <dependencies>
