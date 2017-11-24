@@ -41,9 +41,11 @@ public class MainController implements PaymentController, PaymentListener{
     }
 
     public void onPaymentAdd(Payment payment) {
-        payments.add(payment);
-        cashierView.setAvailable(payments);
         System.out.println("payment add " + payment);
+        payments.add(payment);
+        if (cashierView != null)
+            cashierView.setAvailable(payments);
+        System.out.println(cashierView + " add complete");
     }
 
     public void onPaymentChange(Payment payment) {

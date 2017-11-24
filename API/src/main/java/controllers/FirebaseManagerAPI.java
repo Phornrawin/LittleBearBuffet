@@ -78,7 +78,9 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Payment payment = dataSnapshot.getValue(Payment.class);
+                System.out.println("new payment " + payment);
                 notifyPaymentListener((listener -> {
+                    System.out.println("notify " + listener);
                     listener.onPaymentAdd(payment);
                 }));
             }

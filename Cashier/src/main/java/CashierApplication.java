@@ -30,6 +30,7 @@ public class CashierApplication extends Application {
             CashierMainView cashierMainView = loader.getController();
             cashierMainView.setController(controller);
             cashierMainView.setAvailable(controller.getPayments());
+            controller.setView(cashierMainView);
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(mainLayout);

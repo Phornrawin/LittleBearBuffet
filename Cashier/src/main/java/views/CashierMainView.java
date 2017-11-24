@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import models.Payment;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -16,7 +17,7 @@ public class CashierMainView implements Initializable, CashierView {
     @FXML private ComboBox cb_table;
     @FXML private Label lb_peopleAmt, lb_totalPrice, lb_eachPrice;
     @FXML private Button btn_delete, btn_dot, btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9;
-    private List<Payment> payments;
+    private List<Payment> payments = new ArrayList<>();
     private PaymentController controller;
 
     public void initialize(URL location, ResourceBundle resources) {
@@ -24,6 +25,7 @@ public class CashierMainView implements Initializable, CashierView {
     }
 
     public void setAvailable(List<Payment> payments) {
+        System.out.println("set available");
         this.payments = payments;
     }
 
