@@ -82,17 +82,6 @@ public class MainController implements CoreController, OrderListener{
     }
 
     public boolean checkBill() {
-        dbManager.checkBill(customerManager.getPayment(), new OnResult<Payment>() {
-            @Override
-            public void onComplete(Payment obj) {
-
-            }
-
-            @Override
-            public void onFailure(Payment obj) {
-
-            }
-        });
         return true;
     }
 

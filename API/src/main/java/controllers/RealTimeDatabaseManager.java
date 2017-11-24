@@ -7,9 +7,12 @@ import listeners.PaymentListener;
 import models.*;
 import models.Package;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 public interface RealTimeDatabaseManager {
+    SimpleDateFormat timeFormatter = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss", Locale.ENGLISH);
     void start();
 
     // Listener method
@@ -17,7 +20,7 @@ public interface RealTimeDatabaseManager {
     void removeLoadCompleteListener(LoadCompleteListener listener);
     void addOrderListener(OrderListener listener);
     void removeOrderListener(OrderListener listener);
-    void addPaymentListener(PaymentListener listener);
+    List<Payment> addPaymentListener(PaymentListener listener);
     void removePaymentListener(PaymentListener listener);
 
     // get data method

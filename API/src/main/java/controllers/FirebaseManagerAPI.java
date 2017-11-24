@@ -16,6 +16,10 @@ import models.Package;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.*;
 
 public class FirebaseManagerAPI implements RealTimeDatabaseManager{
@@ -33,6 +37,7 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
     private List<Package> packages = new ArrayList<Package>();
     private List<List<String>> packageItem = new ArrayList<List<String>>();
     private List<Category> categories = new ArrayList<Category>();
+    private List<Payment> payments = new ArrayList<>();
 
     private boolean isStarted = false;
     private boolean isPackageLoaded = false;
@@ -68,6 +73,36 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
     }
 
     private void initPaymentListener() {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("payment");
+        ref.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                Payment payment = dataSnapshot.getValue(Payment.class);
+                notifyPaymentListener((listener -> {
+                    listener.onPaymentAdd(payment);
+                }));
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
     }
 
@@ -231,8 +266,9 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
         orderListeners.remove(listener);
     }
 
-    public void addPaymentListener(PaymentListener listener) {
+    public List<Payment> addPaymentListener(PaymentListener listener) {
         paymentListeners.add(listener);
+        return payments;
     }
 
     public void removePaymentListener(PaymentListener listener) {
@@ -270,10 +306,14 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
                 });
     }
 
+    @Override
     public Payment selectPackage(Package pk, int table, int amt, final OnResult<Payment> callback) {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("payment").push();
         String id = ref.getKey();
         final Payment payment = new Payment(id, table, amt, pk, false);
+        Instant instant = Instant.from(LocalDateTime.now().atZone(ZoneId.systemDefault()));
+        payment.setStartTime(Date.from(instant));
+        payment.setPayTime(Date.from(instant));
         ref.setValue(payment)
                 .addOnCompleteListener((task)->callback.onComplete(payment))
                 .addOnFailureListener((e)->{
@@ -296,8 +336,14 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
     private void notifyOrderListener(){
 
     }
-    private void notifyPaymentListener(){
+    private void notifyPaymentListener(NotifierPaymentListener notifier){
+        for (PaymentListener listener:paymentListeners){
+            notifier.perform(listener);
+        }
+    }
 
+    private interface NotifierPaymentListener{
+        void perform(PaymentListener listener);
     }
 }
 

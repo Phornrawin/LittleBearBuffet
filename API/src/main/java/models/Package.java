@@ -5,6 +5,9 @@ public class Package {
     private String name;
     private double price;
 
+    public Package() {
+    }
+
     public Package(int id, String name, double price) {
         this.id = id;
         this.name = name;

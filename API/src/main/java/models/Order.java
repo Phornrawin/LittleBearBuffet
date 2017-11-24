@@ -12,6 +12,9 @@ public class Order implements ModelObserable<Order> {
     private String status;
     private Set<ModelObserver<Order>> observers;
 
+    public Order() {
+    }
+
     public Order(String id, int amount, Item item, Payment payment) {
         this.id = id;
         this.amount = amount;
@@ -67,6 +70,7 @@ public class Order implements ModelObserable<Order> {
     public void setPayment(Payment payment) {
         this.payment = payment;
     }
+
 
     @Override
     public String toString() {
