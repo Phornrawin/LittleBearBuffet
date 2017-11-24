@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.CashierMainView">
    <children>
-      <FlowPane layoutX="916.0" layoutY="235.0" prefHeight="483.0" prefWidth="360.0">
+      <FlowPane layoutX="800.0" layoutY="238.0" prefHeight="483.0" prefWidth="360.0">
          <children>
             <Button fx:id="btn_7" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" text="7">
                <font>
@@ -125,22 +125,22 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <TextField fx:id="tf_receive" alignment="CENTER_RIGHT" layoutX="325.0" layoutY="431.0" prefHeight="77.0" prefWidth="367.0" promptText="0.00">
+      <TextField fx:id="tf_receive" alignment="CENTER_RIGHT" layoutX="325.0" layoutY="431.0" prefHeight="77.0" prefWidth="318.0" promptText="0.00">
          <font>
             <Font size="36.0" />
          </font>
       </TextField>
-      <TextField fx:id="tf_change" alignment="CENTER_RIGHT" editable="false" layoutX="325.0" layoutY="577.0" prefHeight="77.0" prefWidth="367.0" promptText="0.00" style="-fx-background-color: #D0D3D4;">
+      <TextField fx:id="tf_change" alignment="CENTER_RIGHT" editable="false" layoutX="325.0" layoutY="577.0" prefHeight="77.0" prefWidth="318.0" promptText="0.00" style="-fx-background-color: #D0D3D4;">
          <font>
             <Font size="36.0" />
          </font>
       </TextField>
-      <Label layoutX="709.0" layoutY="594.0" text="Baht.">
+      <Label layoutX="654.0" layoutY="589.0" text="Baht.">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="709.0" layoutY="448.0" text="Baht.">
+      <Label layoutX="654.0" layoutY="443.0" text="Baht.">
          <font>
             <Font size="36.0" />
          </font>
@@ -155,5 +155,15 @@
             <Font size="36.0" />
          </font>
       </Label>
+      <Button fx:id="btn_pay" layoutX="1161.0" layoutY="239.0" mnemonicParsing="false" prefHeight="240.0" prefWidth="120.0" text="Pay">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_clear" layoutX="1161.0" layoutY="479.0" mnemonicParsing="false" prefHeight="240.0" prefWidth="120.0" text="Clear">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
