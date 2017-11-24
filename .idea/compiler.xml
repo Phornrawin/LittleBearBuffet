@@ -7,16 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="API" />
-        <module name="BuffetCashier" />
         <module name="Cashier" />
         <module name="Customer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="API" target="1.8" />
+      <module name="API" target="1.5" />
       <module name="BuffetCashier" target="1.8" />
+      <module name="Cashier" target="1.5" />
       <module name="Customer" target="1.8" />
-      <module name="LittleBearBuffet" target="1.8" />
+      <module name="LittleBearBuffet" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

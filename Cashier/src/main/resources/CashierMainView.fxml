@@ -8,15 +8,10 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #fffbfb;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <FlowPane layoutX="976.0" layoutY="315.0" prefHeight="316.0" prefWidth="302.0">
          <children>
-            <Button fx:id="btn_6" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="6">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Button>
             <Button fx:id="btn_7" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="7">
                <font>
                   <Font size="36.0" />
@@ -38,6 +33,11 @@
                </font>
             </Button>
             <Button fx:id="btn_5" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="5">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_6" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="6">
                <font>
                   <Font size="36.0" />
                </font>
@@ -67,16 +67,16 @@
                   <Font size="36.0" />
                </font>
             </Button>
-            <Button fx:id="btn_delete" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+            <Button fx:id="btn_delete" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="C">
                <font>
                   <Font size="36.0" />
                </font>
             </Button>
          </children>
       </FlowPane>
-      <Label layoutX="23.0" layoutY="14.0" text="Little Bear Cashier">
+      <Label alignment="CENTER" layoutX="-1.0" prefHeight="79.0" prefWidth="1282.0" style="-fx-background-color: orange;" text="Little Bear Cashier">
          <font>
-            <Font size="36.0" />
+            <Font size="48.0" />
          </font>
       </Label>
       <Label layoutX="23.0" layoutY="91.0" text="Table No:">
@@ -84,28 +84,28 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <ComboBox fx:id="cb_table" layoutX="331.0" layoutY="95.0" prefHeight="44.0" prefWidth="278.0" />
-      <Label layoutX="23.0" layoutY="178.0" text="People Amount:">
+      <ComboBox fx:id="cb_table" layoutX="210.0" layoutY="95.0" prefHeight="44.0" prefWidth="167.0" />
+      <Label layoutX="547.0" layoutY="167.0" text="People Amount:">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="lb_peopleAmt" layoutX="331.0" layoutY="178.0" text="2">
+      <Label fx:id="lb_peopleAmt" layoutX="865.0" layoutY="167.0" text="2">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="23.0" layoutY="265.0" text="Total Price:">
+      <Label layoutX="23.0" layoutY="262.0" text="Total Price:">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="lb_totalPrice" layoutX="331.0" layoutY="265.0" text="200 Baht.">
+      <Label fx:id="lb_totalPrice" layoutX="325.0" layoutY="262.0" text="200 Baht.">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="109.0" layoutY="354.0" text="Each:">
+      <Label layoutX="110.0" layoutY="354.0" text="Each:">
          <font>
             <Font size="36.0" />
          </font>
@@ -115,32 +115,42 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="16.0" layoutY="431.0" text="Received Money:">
+      <Label layoutX="23.0" layoutY="443.0" text="Received Money:">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="26.0" layoutY="571.0" text="Change Money:">
+      <Label layoutX="23.0" layoutY="589.0" text="Change Money:">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <TextField fx:id="tf_receive" alignment="CENTER_RIGHT" layoutX="325.0" layoutY="419.0" prefHeight="77.0" prefWidth="367.0">
+      <TextField fx:id="tf_receive" alignment="CENTER_RIGHT" layoutX="325.0" layoutY="431.0" prefHeight="77.0" prefWidth="367.0">
          <font>
             <Font size="36.0" />
          </font>
       </TextField>
-      <TextField fx:id="tf_change" alignment="CENTER_RIGHT" editable="false" layoutX="325.0" layoutY="559.0" prefHeight="77.0" prefWidth="367.0">
+      <TextField fx:id="tf_change" alignment="CENTER_RIGHT" editable="false" layoutX="325.0" layoutY="577.0" prefHeight="77.0" prefWidth="367.0" style="-fx-background-color: #D0D3D4;">
          <font>
             <Font size="36.0" />
          </font>
       </TextField>
-      <Label layoutX="709.0" layoutY="576.0" text="Baht.">
+      <Label layoutX="709.0" layoutY="594.0" text="Baht.">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="709.0" layoutY="436.0" text="Baht.">
+      <Label layoutX="709.0" layoutY="448.0" text="Baht.">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="547.0" layoutY="91.0" text="Package:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb_package" layoutX="865.0" layoutY="91.0" text="Panda">
          <font>
             <Font size="36.0" />
          </font>
