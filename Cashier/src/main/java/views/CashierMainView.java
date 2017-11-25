@@ -8,7 +8,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.input.InputMethodEvent;
 import javafx.util.StringConverter;
 import models.Payment;
 
@@ -50,6 +49,8 @@ public class CashierMainView implements Initializable, CashierView {
     }
 
     public void onPayComplete(Payment payment) {
+
+
 
 
     }
@@ -97,10 +98,8 @@ public class CashierMainView implements Initializable, CashierView {
             @Override
             public void handle(ActionEvent event) {
                 String price = tf_receive.getText() + num;
-//                Payment payment = (Payment) cb_table.getValue();
-//                double totalChange = Double.parseDouble(tf_receive.getText()) - payment.getaPackage().getPrice();
                 tf_receive.setText(price);
-//                tf_change.setText(totalChange + "");
+
             }
         });
     }
@@ -116,14 +115,6 @@ public class CashierMainView implements Initializable, CashierView {
     }
 
     public void onActionTextField(){
-//        tf_receive.setOnInputMethodTextChanged(new EventHandler<InputMethodEvent>() {
-//            @Override
-//            public void handle(InputMethodEvent event) {
-//                Payment payment = (Payment) cb_table.getValue();
-//                double totalChange = Double.parseDouble(tf_receive.getText()) - payment.getaPackage().getPrice();
-//                tf_change.setText(totalChange + "");
-//            }
-//        });
         tf_receive.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
@@ -154,6 +145,7 @@ public class CashierMainView implements Initializable, CashierView {
                     alert.showAndWait();
                     clear();
                     payments.remove(payment);
+                    System.out.println("payments = " + payments);
 
                 }
             }

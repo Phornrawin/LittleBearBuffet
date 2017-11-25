@@ -53,5 +53,29 @@
     <orderEntry type="library" name="Maven: com.google.apis:google-api-services-storage:v1-rev100-1.22.0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.8.0-alpha2" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-nop:1.8.0-alpha2" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../fontbox-2.0.8.jar!/" />
+          <root url="jar://$MODULE_DIR$/../pdfbox-2.0.8.jar!/" />
+          <root url="jar://$MODULE_DIR$/../pdfbox-app-2.0.8.jar!/" />
+          <root url="jar://$MODULE_DIR$/../pdfbox-tools-2.0.8.jar!/" />
+          <root url="jar://$MODULE_DIR$/../preflight-2.0.8.jar!/" />
+          <root url="jar://$MODULE_DIR$/../preflight-app-2.0.8.jar!/" />
+          <root url="jar://$MODULE_DIR$/../xmpbox-2.0.8.jar!/" />
+          <root url="file://$MODULE_DIR$/.." />
+          <root url="file://$MODULE_DIR$/.." />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../API/src/main/java" />
+          <root url="file://$MODULE_DIR$/../API/src/test/java" />
+          <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/test/java" />
+          <root url="file://$MODULE_DIR$/../Customer/src/main/java" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/.." recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
