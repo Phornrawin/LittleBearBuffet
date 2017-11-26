@@ -40,32 +40,39 @@ public class CashierMainView implements Initializable, CashierView {
         onActionTextField();
         onClickOtherButton();
 
+        initComboBoxTable();
+
     }
 
     public void setAvailable(List<Payment> payments) {
         this.payments = payments;
-        System.out.println("payments.size = " + payments.size());
-        initComboBoxTable();
+//        initComboBoxTable();
+        refresh();
+    }
+
+    private void refresh(){
+        cb_table.getItems().clear();
+        cb_table.getItems().addAll(payments);
     }
 
     public void onPayComplete(Payment payment) {
-
+        // TODO handle pay complete event
 
 
 
     }
 
     public void onPayFailure(Payment payment) {
-
+        // TODO handle pay failure event
     }
 
     public void setController(PaymentController controller) {
         this.controller = controller;
-
     }
 
     public void initComboBoxTable() {
-        cb_table.getItems().addAll(payments);
+//        cb_table.getItems().clear();
+//        cb_table.getItems().addAll(payments);
         cb_table.getSelectionModel().selectFirst();
         cb_table.setConverter(new StringConverter() {
             @Override

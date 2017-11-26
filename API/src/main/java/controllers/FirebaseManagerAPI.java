@@ -73,12 +73,24 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
     }
 
     private void initPaymentListener() {
+        System.out.println("initPaymentListener");
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("payment");
         ref.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                Payment payment = dataSnapshot.getValue(Payment.class);
-                System.out.println("new payment " + payment);
+                Package pk = dataSnapshot.child("aPackage").getValue(Package.class);
+                Date startTime = dataSnapshot.child("startTime").getValue(Date.class);
+                Date payTime = dataSnapshot.child("payTime").getValue(Date.class);
+                String id = dataSnapshot.child("id").getValue().toString();
+                int amt = Integer.parseInt(dataSnapshot.child("amt").getValue().toString());
+                int table = Integer.parseInt(dataSnapshot.child("table").getValue().toString());
+                boolean paid = Boolean.parseBoolean(dataSnapshot.child("paid").getValue().toString());
+//                Payment payment = dataSnapshot.getValue(Payment.class);
+                Payment payment = new Payment(amt, pk, paid, table);
+                payment.setStartTime(startTime);
+                payment.setPayTime(payTime);
+                payment.setId(id);
+                System.out.println("new payment = " + payment);
                 notifyPaymentListener((listener -> {
                     listener.onPaymentAdd(payment);
                 }));
@@ -86,7 +98,22 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
+                Package pk = dataSnapshot.child("aPackage").getValue(Package.class);
+                Date startTime = dataSnapshot.child("startTime").getValue(Date.class);
+                Date payTime = dataSnapshot.child("payTime").getValue(Date.class);
+                String id = dataSnapshot.child("id").getValue().toString();
+                int amt = Integer.parseInt(dataSnapshot.child("amt").getValue().toString());
+                int table = Integer.parseInt(dataSnapshot.child("table").getValue().toString());
+                boolean paid = Boolean.parseBoolean(dataSnapshot.child("paid").getValue().toString());
+//                Payment payment = dataSnapshot.getValue(Payment.class);
+                Payment payment = new Payment(amt, pk, paid, table);
+                payment.setStartTime(startTime);
+                payment.setPayTime(payTime);
+                payment.setId(id);
+                System.out.println("change payment = " + payment);
+                notifyPaymentListener((listener -> {
+                    listener.onPaymentChange(payment);
+                }));
             }
 
             @Override

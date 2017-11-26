@@ -18,6 +18,7 @@ public class Payment {
     public Payment() {
     }
 
+
     public Payment(int amt, Package aPackage, boolean isPaid, int table) {
         this.amt = amt;
         this.aPackage = aPackage;
@@ -25,24 +26,7 @@ public class Payment {
         this.table = table;
     }
 
-    public Payment(String id, int table, int amt, Package aPackage, boolean isPaid, Date startTime, Date payTime) {
-        this.id = id;
-        this.table = table;
-        this.amt = amt;
-        this.aPackage = aPackage;
-        this.isPaid = isPaid;
-        this.startTime = startTime;
-        this.payTime = payTime;
-    }
 
-    public Payment(String id, int table, int amt, Package aPackage, boolean isPaid, Date startTime) {
-        this.id = id;
-        this.table = table;
-        this.amt = amt;
-        this.aPackage = aPackage;
-        this.isPaid = isPaid;
-        this.startTime = startTime;
-    }
 
     public Payment(String id, int table, int amt, Package aPackage, boolean isPaid) {
         this.id = id;
@@ -108,6 +92,7 @@ public class Payment {
     public void setaPackage(Package aPackage) {
         this.aPackage = aPackage;
     }
+
 
     @Override
     public String toString() {

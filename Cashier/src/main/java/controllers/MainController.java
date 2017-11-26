@@ -32,6 +32,7 @@ public class MainController implements PaymentController, PaymentListener{
     public void setView(CashierView view) {
         this.cashierView = view;
         cashierView.setAvailable(payments);
+
     }
 
     public void setDbManager(RealTimeDatabaseManager dbManager){
@@ -50,7 +51,13 @@ public class MainController implements PaymentController, PaymentListener{
     }
 
     public void onPaymentChange(Payment payment) {
-
+        int i = 0;
+        while (i<payments.size()){
+            if (payments.get(i).getId().equals(payment.getId()))
+                payments.remove(i);
+            i++;
+        }
+        cashierView.setAvailable(payments);
     }
 
     public void onPaymentRemove(Payment payment) {
