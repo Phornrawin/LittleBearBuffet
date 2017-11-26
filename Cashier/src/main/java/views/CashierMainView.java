@@ -1,6 +1,7 @@
 package views;
 
 import controllers.PaymentController;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -57,8 +58,14 @@ public class CashierMainView implements Initializable, CashierView {
 
     public void onPayComplete(Payment payment) {
         // TODO handle pay complete event
-
-
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("Pay complete");
+                alert.showAndWait();
+            }
+        });
 
     }
 
@@ -71,8 +78,6 @@ public class CashierMainView implements Initializable, CashierView {
     }
 
     public void initComboBoxTable() {
-//        cb_table.getItems().clear();
-//        cb_table.getItems().addAll(payments);
         cb_table.getSelectionModel().selectFirst();
         cb_table.setConverter(new StringConverter() {
             @Override
@@ -147,9 +152,6 @@ public class CashierMainView implements Initializable, CashierView {
                 }else{
                     Payment payment = (Payment) cb_table.getValue();
                     controller.pay(payment);
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Pay complete");
-                    alert.showAndWait();
                     clear();
                     payments.remove(payment);
                     System.out.println("payments = " + payments);
