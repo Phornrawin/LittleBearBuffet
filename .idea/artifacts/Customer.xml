@@ -53,6 +53,7 @@
       <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.8.0-alpha2" />
       <element id="library" level="project" name="Maven: org.slf4j:slf4j-nop:1.8.0-alpha2" />
       <element id="file-copy" path="$PROJECT_DIR$/serviceAccountKey.json" />
+      <element id="dir-copy" path="$PROJECT_DIR$/Customer/src/main/resources/images" />
     </root>
   </artifact>
 </component>

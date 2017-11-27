@@ -46,7 +46,12 @@ public class ItemView extends VBox implements ModelObserver<Item> {
             menuImage.setImage(new Image(createUrl()));
             menuImage.setEffect(null);
         } catch (Exception e) {
-            System.out.println("createUrl() = " + createUrl());
+            System.out.println("load image error " + createUrl());
+            try{
+                menuImage.setImage(new Image(item.getName() + ".jpg"));
+            } catch (Exception e1){
+                System.out.println("load image error " + item.getName());
+            }
         }
     }
     private void buildUnavailable(){
