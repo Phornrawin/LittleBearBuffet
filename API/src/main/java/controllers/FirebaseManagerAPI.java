@@ -70,6 +70,44 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
         fetchCategories();
         initOrderListener();
         initPaymentListener();
+        initItemListener();
+    }
+
+    private void initItemListener() {
+        System.out.println("initItemListener");
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("item");
+        ref.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                System.out.println("onItemChange");
+                String name = dataSnapshot.child("name").getValue().toString();
+                int id = Integer.parseInt(dataSnapshot.getKey());
+                int amt = Integer.parseInt(dataSnapshot.child("balance").getValue().toString());
+                System.out.println(name + " " + amt);
+                Item item = itemMap.get(id);
+                item.setBalance(amt);
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     private void initPaymentListener() {
@@ -326,12 +364,25 @@ public class FirebaseManagerAPI implements RealTimeDatabaseManager{
     public void addOrder(Order order, OnResult<Order> callback) {
         System.out.println("addOrder in db " + order);
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("order").push();
+        DatabaseReference iref = FirebaseDatabase.getInstance().getReference("item").child(order.getItem().getId() + "");
         ref.setValue(order)
-                .addOnCompleteListener((task -> callback.onComplete(order)))
+                .addOnCompleteListener((task ->callback.onComplete(order)))
                 .addOnFailureListener(e -> {
                     e.printStackTrace();
                     callback.onFailure(order);
                 });
+        iref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                int balance = Integer.parseInt(dataSnapshot.child("balance").getValue().toString());
+                iref.child("balance").setValue(balance-order.getAmount());
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     @Override

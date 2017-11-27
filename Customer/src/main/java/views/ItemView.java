@@ -44,6 +44,7 @@ public class ItemView extends VBox implements ModelObserver<Item> {
     private void buildAvailable(){
         try {
             menuImage.setImage(new Image(createUrl()));
+            menuImage.setEffect(null);
         } catch (Exception e) {
             System.out.println("createUrl() = " + createUrl());
         }
@@ -77,11 +78,12 @@ public class ItemView extends VBox implements ModelObserver<Item> {
 
     @Override
     public void onModelChange(Item model) {
-        System.out.println("onModelChange");
+        System.out.println("onModelChange " + previousStatus + " " + model.isAvailable());
         if (previousStatus != model.isAvailable()) {
             previousStatus = model.isAvailable();
-            if (item.isAvailable())
+            if (item.isAvailable()){
                 buildAvailable();
+            }
             else
                 buildUnavailable();
         }
