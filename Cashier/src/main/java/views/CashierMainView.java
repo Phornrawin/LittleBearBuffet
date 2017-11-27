@@ -130,10 +130,14 @@ public class CashierMainView implements Initializable, CashierView {
         tf_receive.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                System.out.println("in focused");
-                Payment payment = (Payment) cb_table.getValue();
-                double totalChange = Double.parseDouble(tf_receive.getText()) - payment.getaPackage().getPrice()*payment.getAmt();
-                tf_change.setText(totalChange + "");
+                try {
+                    Payment payment = (Payment) cb_table.getValue();
+                    double totalChange = Double.parseDouble(tf_receive.getText()) - payment.getaPackage().getPrice()*payment.getAmt();
+                    tf_change.setText(totalChange + "");
+                }catch (NumberFormatException e){
+                    System.out.println("TextField empty when click pay");
+                }
+
             }
         });
     }
