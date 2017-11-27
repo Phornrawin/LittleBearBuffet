@@ -49,6 +49,11 @@ public class Order implements ModelObserable<Order> {
         notifyObservers();
     }
 
+    public void decreaseAmount(int amt){
+        this.amount -= amt;
+        notifyObservers();
+    }
+
     public void setStatus(String status){
         this.status = status;
         notifyObservers();
