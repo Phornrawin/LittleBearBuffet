@@ -70,6 +70,17 @@ public class OrderBarView extends StackPane implements Initializable{
 
         if (orderList != null)
             tableOrder.setItems(orderList);
+
+        tableOrder.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Order order = tableOrder.getSelectionModel().getSelectedItem();
+                if (event.getClickCount() == 2 && order != null){
+                    //TODO Delete order
+
+                }
+            }
+        });
     }
 
     public void showTopicInformation(){
