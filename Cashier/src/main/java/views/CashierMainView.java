@@ -1,5 +1,6 @@
 package views;
 
+import controllers.BillPDFController;
 import controllers.PaymentController;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
@@ -61,9 +62,11 @@ public class CashierMainView implements Initializable, CashierView {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
+                BillPDFController.createBill(payment);
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setHeaderText("Pay complete");
                 alert.showAndWait();
+
             }
         });
 
