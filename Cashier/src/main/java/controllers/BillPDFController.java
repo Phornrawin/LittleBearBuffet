@@ -18,7 +18,7 @@ import java.util.Date;
 
 public class BillPDFController {
 
-    public static void createBill(Payment payment){
+    public static void createBill(Payment payment, double received){
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy  HH:mm");
 
         try {
@@ -48,6 +48,10 @@ public class BillPDFController {
             contentStream.showText(String.format("%20s%20s", "Each:", payment.getAmt() + " persons"));
             contentStream.newLine();
             contentStream.showText(String.format("%20s%20s", "Total:", payment.getAmt() * payment.getaPackage().getPrice()+" Baht"));
+            contentStream.newLine();
+            contentStream.showText(String.format("%20s%20s", "Received:", received + " Baht"));
+            contentStream.newLine();
+            contentStream.showText(String.format("%20s%20s", "Change:", (received -  payment.getAmt() * payment.getaPackage().getPrice())+ " Baht"));
             contentStream.newLine();
             contentStream.newLine();
             contentStream.showText(String.format("%50s", StringUtils.center("****Thank you*****", 50)));

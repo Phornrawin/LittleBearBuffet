@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="">
+    <list default="true" id="26c81b70-aee4-48ca-870b-e52b62fd865a" name="Default" comment="Cashier: implement BillPDFController">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cashier/src/main/java/controllers/BillPDFController.java" afterPath="$PROJECT_DIR$/Cashier/src/main/java/controllers/BillPDFController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java" afterPath="$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java" />
@@ -66,15 +66,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BillPDFController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BillPDFController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/controllers/BillPDFController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+            <state relative-caret-position="1185">
+              <caret line="53" column="136" lean-forward="false" selection-start-line="53" selection-start-column="136" selection-end-line="53" selection-end-column="136" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2877#2878#0" expanded="true" />
-                <element signature="e#2928#2929#0" expanded="true" />
+                <element signature="e#3214#3215#0" expanded="true" />
+                <element signature="e#3265#3266#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,17 +117,17 @@
         <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/CashierApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-12">
-              <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+              <caret line="11" column="53" lean-forward="false" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CashierMainView.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CashierMainView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+            <state relative-caret-position="321">
+              <caret line="65" column="61" lean-forward="false" selection-start-line="65" selection-start-column="61" selection-end-line="65" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -228,8 +228,8 @@
         <option value="$PROJECT_DIR$/Cashier/src/main/java/controllers/MainController.java" />
         <option value="$PROJECT_DIR$/Customer/src/main/java/views/ItemView.java" />
         <option value="$PROJECT_DIR$/Cashier/src/main/java/FakeMain.java" />
-        <option value="$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java" />
         <option value="$PROJECT_DIR$/Cashier/src/main/java/controllers/BillPDFController.java" />
+        <option value="$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java" />
       </list>
     </option>
   </component>
@@ -409,6 +409,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LittleBearBuffet" type="462c0819:PsiDirectoryNode" />
+              <item name="Cashier" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LittleBearBuffet" type="b2602c69:ProjectViewProjectNode" />
@@ -815,13 +823,6 @@
       <option name="presentableId" value="Default" />
       <updated>1506170873937</updated>
     </task>
-    <task id="LOCAL-00010" summary="implement SocketManager">
-      <created>1506331667178</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1506331667178</updated>
-    </task>
     <task id="LOCAL-00011" summary="implement content for MenuView and MenuBarGrilled">
       <created>1506489393409</created>
       <option name="number" value="00011" />
@@ -1158,7 +1159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511770897904</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Cashier: implement BillPDFController">
+      <created>1511786490987</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1511786490987</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1192,7 +1200,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1204,7 +1211,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49430525" sideWeight="0.34425348" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16511628" sideWeight="0.60687435" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29069766" sideWeight="0.60687435" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27209303" sideWeight="0.6557465" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4255814" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1295,7 +1302,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix bug for push" />
     <MESSAGE value="implement structure interface" />
     <MESSAGE value="implement OrderrdBar view" />
     <MESSAGE value="implement CustomerManager and MainController" />
@@ -1320,7 +1326,8 @@
     <MESSAGE value="Cashier: implement CashierMainView complete" />
     <MESSAGE value="Cashier: add PDFBox library" />
     <MESSAGE value="Cashier: fix bug onActionTextfiled" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cashier: fix bug onActionTextfiled" />
+    <MESSAGE value="Cashier: implement BillPDFController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cashier: implement BillPDFController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1628,18 +1635,8 @@
     <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/CashierApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-12">
-          <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+          <caret line="11" column="53" lean-forward="false" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1661,12 +1658,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/controllers/BillPDFController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+        <state relative-caret-position="1185">
+          <caret line="53" column="136" lean-forward="false" selection-start-line="53" selection-start-column="136" selection-end-line="53" selection-end-column="136" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2877#2878#0" expanded="true" />
-            <element signature="e#2928#2929#0" expanded="true" />
+            <element signature="e#3214#3215#0" expanded="true" />
+            <element signature="e#3265#3266#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cashier/src/main/java/views/CashierMainView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="65" column="61" lean-forward="false" selection-start-line="65" selection-start-column="61" selection-end-line="65" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

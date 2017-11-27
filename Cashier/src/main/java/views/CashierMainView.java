@@ -23,6 +23,7 @@ public class CashierMainView implements Initializable, CashierView {
     @FXML private Label lb_peopleAmt, lb_totalPrice, lb_eachPrice, lb_package;
     @FXML private Button btn_delete, btn_dot, btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_pay, btn_clear;
     @FXML private TextField tf_receive, tf_change;
+    private double receive;
     private List<Payment> payments = new ArrayList<>();
     private PaymentController controller;
 
@@ -62,7 +63,7 @@ public class CashierMainView implements Initializable, CashierView {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                BillPDFController.createBill(payment);
+                BillPDFController.createBill(payment, receive);
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setHeaderText("Pay complete");
                 alert.showAndWait();
@@ -159,6 +160,7 @@ public class CashierMainView implements Initializable, CashierView {
                 }else{
                     Payment payment = (Payment) cb_table.getValue();
                     controller.pay(payment);
+                    receive = Double.parseDouble(tf_receive.getText());
                     clear();
                     payments.remove(payment);
                     System.out.println("payments = " + payments);
