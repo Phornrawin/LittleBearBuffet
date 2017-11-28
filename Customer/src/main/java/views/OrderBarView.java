@@ -5,14 +5,12 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -48,8 +46,12 @@ public class OrderBarView extends StackPane implements Initializable{
                 property.setValue(param.getValue().getItem().getName());
                 return property;
             }
+
         });
         amount.setCellValueFactory(new PropertyValueFactory<Order, Integer>("amount"));
+
+
+
 
         tableOrder.getColumns().addAll(nameMenu, amount);
 
@@ -58,6 +60,7 @@ public class OrderBarView extends StackPane implements Initializable{
         tableLayout.getChildren().add(tableOrder);
 
         this.setAlignment(btnConfirm, Pos.BOTTOM_CENTER);
+
         btnConfirm.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -68,25 +71,50 @@ public class OrderBarView extends StackPane implements Initializable{
             }
         });
 
-        if (orderList != null)
+        if (orderList != null){
             tableOrder.setItems(orderList);
+            tableOrder.getSelectionModel().selectFirst();
+        }
 
-
-
-        tableOrder.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        tableOrder.setRowFactory(new Callback<TableView<Order>, TableRow<Order>>() {
             @Override
-            public void handle(MouseEvent event) {
-                Order order = tableOrder.getSelectionModel().getSelectedItem();
-                if (event.getClickCount() == 2 && order != null){
-                    System.out.println("on double click order");
-                    order.decreaseAmount(1);
-                    order.getItem().increaseBalance(1);
-                    if (order.getAmount() == 0)
-                        orderList.remove(order);
-                    tableOrder.refresh();
-                }
+            public TableRow<Order> call(TableView<Order> param) {
+                TableRow<Order> row = new TableRow<>();
+                row.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        Order order = row.getItem();
+                        if (event.getClickCount() == 2 && order != null){
+                            System.out.println("on double click order");
+                            order.decreaseAmount(1);
+                            order.getItem().increaseBalance(1);
+                            if (order.getAmount() == 0)
+                                orderList.remove(order);
+                            tableOrder.refresh();
+                        }
+                    }
+                });
+                return row;
             }
         });
+
+
+
+
+//        tableOrder.setOnMouseClicked(new EventHandler<MouseEvent>() {
+//            @Override
+//            public void handle(MouseEvent event) {
+//                Order order = tableOrder.getSelectionModel().getSelectedItem();
+//                if (event.getClickCount() == 2 && order != null){
+//                    System.out.println("on double click order");
+//                    order.decreaseAmount(1);
+//                    order.getItem().increaseBalance(1);
+//                    if (order.getAmount() == 0)
+//                        orderList.remove(order);
+//                    tableOrder.refresh();
+//                }
+//            }
+//        });
     }
 
     public void showTopicInformation(){
