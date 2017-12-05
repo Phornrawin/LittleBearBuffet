@@ -22,7 +22,7 @@ public class BillPDFController {
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy  HH:mm");
 
         try {
-            File file = new File("D:/SE/LittleBearBuffet/out/Bill/testPdf.pdf");
+            File file = new File("./Bill/testPdf.pdf");
             PDDocument document = PDDocument.load(file);
 
             PDPage page = document.getPage(0);
@@ -66,7 +66,7 @@ public class BillPDFController {
 
             contentStream.close();
 
-            document.save(new File("D:/SE/LittleBearBuffet/out/Bill/" + payment.getId() +".pdf"));
+            document.save(new File("./Bill/" + payment.getId() +".pdf"));
 
             document.close();
 

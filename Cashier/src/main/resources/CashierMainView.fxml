@@ -90,7 +90,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="lb_peopleAmt" layoutX="865.0" layoutY="169.0" text="2" textFill="BLUE">
+      <Label fx:id="lb_peopleAmt" layoutX="865.0" layoutY="169.0" textFill="BLUE">
          <font>
             <Font size="36.0" />
          </font>
@@ -100,7 +100,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="lb_totalPrice" layoutX="325.0" layoutY="262.0" text="200 Baht." textFill="BLUE">
+      <Label fx:id="lb_totalPrice" layoutX="325.0" layoutY="262.0"  textFill="BLUE">
          <font>
             <Font size="36.0" />
          </font>
@@ -110,7 +110,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="lb_eachPrice" layoutX="325.0" layoutY="354.0" text="200 Baht." textFill="BLUE">
+      <Label fx:id="lb_eachPrice" layoutX="325.0" layoutY="354.0" textFill="BLUE">
          <font>
             <Font size="36.0" />
          </font>
@@ -150,7 +150,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="lb_package" layoutX="865.0" layoutY="93.0" text="Panda" textFill="BLUE">
+      <Label fx:id="lb_package" layoutX="865.0" layoutY="93.0" textFill="BLUE">
          <font>
             <Font size="36.0" />
          </font>
